@@ -150,11 +150,14 @@ If thesis tick log unreachable: deliver brief with thesis status from THESIS_STA
 
 ## Skills stack
 
-- `thesis-active-autonomy` — active autonomy protocol
-- `research-integrity-protocol` — methodology rigor
-- `grounded-citations` — citation discipline
-- `evaluating-llms-harness` — eval methodology
-- `academic-thesis-paper-first` — thesis structure
+- `academic-thesis-paper-first`
+- `data-science`
+- `evaluating-llms-harness`
+- `grounded-citations`
+- `research`
+- `research-integrity-protocol`
+- `thesis-active-autonomy`
+- `thesis-autonomous-tick-discipline`
 
 ## Source-materials policy
 

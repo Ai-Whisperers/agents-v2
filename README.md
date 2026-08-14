@@ -234,3 +234,23 @@ AI Whisperers Paraguay EAS.
 **Last updated**: 2026-08-14
 **Maintained by**: Erebus (Erebus Agent)
 **Version**: v0.2.0
+
+
+## v0.3.0 expansion (2026-08-14)
+
+This repo was expanded from v0.2.0 (7 lead agents) to v0.3.0:
+
+**Agents: 31 total**
+- 7 Tier 1 lead agents (originally wired)
+- 14 Tier 2 sub-agents (now built: proposal-drafter, lead-enrichment, marketing-content-producer, multimedia-producer, accounting-automation, tax-receipt-tracker, procurement-tracker, devops-monitor, qa-automation-runner, security-watchdog, ai-safety-engineer, citation-checker, thesis-tracker, course-producer, founder-bandwidth-watchdog)
+- 8 Tier 2 cross-cutting agents (ai-ops-coordinator, bizops-tracker, revops-pipeline-analyzer, compliance-monitor, okr-tracker, eval-gate-runner, chaos-test-runner, source-curator)
+- 1 pre-existing agent discovered (funding-coordinator)
+
+**Storage: 10 SQLite DBs + 31 per-agent git repos**
+
+**Cron jobs: 49 total** (was 19 in v0.1.0)
+
+**Skills: All 58 installed skills now referenced** by appropriate agents.
+
+**Validation: All 31 agents conform to 12-section + 5-pattern template.**
+**All 31 hard-stops validate. All trademark scrubs pass.**

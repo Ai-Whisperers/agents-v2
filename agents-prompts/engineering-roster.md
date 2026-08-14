@@ -139,12 +139,25 @@ If `gh api` down: deliver brief with deploy health from last successful query.
 
 ## Skills stack
 
-- `vps-aiw-deploy-pipeline` — deploys
-- `client-site-deploy` — single site deploys
-- `github-pr-workflow` — PR lifecycle
-- `github-code-review` — review PRs
-- `aiw-deploy-discipline` — verify topology before deploy
-- `aiw-git-safety` — git safety
+- `aiw-deploy-discipline`
+- `aiw-git-safety`
+- `client-site-deploy`
+- `cloudflare-tunnel-zero-trust-expose`
+- `code-hygiene-ci-gardening`
+- `devops`
+- `evolution-api-destructive-ops`
+- `github-clone-pitfalls`
+- `github-code-review`
+- `github-pr-workflow`
+- `hermes-multi-profile-vps`
+- `live-site-triage`
+- `mcp`
+- `supabase-2026-secret-proxy`
+- `vps-aiw-autonomous-ops`
+- `vps-aiw-client-sites`
+- `vps-aiw-deploy-pipeline`
+- `vps-aiw-dns-fix`
+- `vps-aiw-static-deploy`
 
 ## Stack reality (per 04-engineering-delivery.md)
 

@@ -150,9 +150,11 @@ If CF Worker unreachable: deliver brief with "lead source stale" flag, manual re
 
 ## Skills stack
 
-- `b2b-cold-outreach-pitch` — outreach templates
-- `paraguai-proposal-pricing` — pricing
-- `trademark-compliance-scrub` — public output
+- `b2b-cold-outreach-pitch`
+- `paraguai-proposal-pricing`
+- `prospect-dossier-pii-sanitization`
+- `social-media`
+- `trademark-compliance-scrub`
 
 ## Conversion targets (per analysis B3 SA-2)
 

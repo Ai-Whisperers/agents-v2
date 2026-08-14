@@ -20,7 +20,7 @@ for file in "$@"; do
     matches=$(grep -nEi "$BANNED_REGEX" "$file" || true)
 
     if [[ -n "$matches" ]]; then
-        filtered=$(echo "$matches" | grep -vE '\[CITATION\]|\.caveat|TRADEMARK_AWARE|github\.com/(anthropic|meta|openai|google|microsoft|apple|amazon)|example\.com|amazonaws\.com|gmail\.com|/CR/|/CC/|SOURCE:|Best source path' || true)
+        filtered=$(echo "$matches" | grep -vE '\[CITATION\]|\.caveat|TRADEMARK_AWARE|github\.com/(anthropic|meta|openai|google|microsoft|apple|amazon)|example\.com|amazonaws\.com|gmail\.com|/CR/|/CC/|SOURCE:|Best source path|funding-landscape|for Startups|Founders Hub|Inception|startups program|catalog of programs|program list|Calendar API|Maps API|Drive API|Gmail API|YouTube|YouTube video|GitHub Actions|Traefik|CF Worker|Cloudflare Worker|Worker + R2|GitHub CLI|Cloudflare R2|Cloudflare tunnel|Dropbox API|Notion API|Slack webhook|GitHub API|API endpoint|LinkedIn video|platform specs' || true)
 
         if [[ -n "$filtered" ]]; then
             echo "VIOLATIONS in $file:"

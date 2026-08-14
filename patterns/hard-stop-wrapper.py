@@ -22,6 +22,23 @@ STANDARD_ACTIONS = {
     "comment_on_issue", "close_issue", "modify_curriculum",
     "update_thesis_metadata", "submit_arxiv", "publish_course_module",
     "send_invoice", "update_deal_stage",
+    # Additional actions (Tier 2 sub-agents + cross-cutting)
+    "git_push", "git_force_push",  # thesis-tracker
+    "publish_module", "publish_paper",  # course-producer, citation-checker
+    "rotate_credential", "block_ip",  # security-watchdog
+    "comment_on_pr", "block_merge",  # qa-automation-runner
+    "approve_new_vendor",  # procurement-tracker
+    "generate_media", "publish_media",  # multimedia-producer
+    "block_output", "modify_golden",  # eval-gate-runner
+    "send_message",  # founder-bandwidth-watchdog
+    "restart_service",  # devops-monitor
+    "file_tax_return",  # tax-receipt-tracker
+    "read_external", "collect_pii",  # lead-enrichment
+    "sign_eu_contract", "approve_compliance_officer",  # compliance-monitor
+    "disable_eval_gate",  # ai-ops-coordinator
+    "disable_hardstop", "modify_eval_gates",  # ai-safety-engineer
+    "publish_post", "send_external",  # marketing-content-producer
+    "add_source", "retire_source",  # source-curator
 }
 
 

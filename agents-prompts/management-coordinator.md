@@ -130,8 +130,11 @@ Caps: open_stuck ≤ 10, decisions_for_ivan ≤ 3.
 
 ## Skills stack
 
-- `aiw-ops-discipline` — operational tone
-- `aiw-git-safety` — git operations
+- `aiw-git-safety`
+- `aiw-ops-discipline`
+- `diagramming`
+- `github-auto-merge-permissive-protection`
+- `org-repo-audit`
 
 ## What I do NOT do
 

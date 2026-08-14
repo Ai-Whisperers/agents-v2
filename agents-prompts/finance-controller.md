@@ -143,8 +143,10 @@ If VPS bill source unreachable: deliver brief with "cost data stale" flag.
 
 ## Skills stack
 
-- `paraguai-proposal-pricing` — pricing
-- `trademark-compliance-scrub` — public output
+- `evolution-api-destructive-ops`
+- `paraguai-proposal-pricing`
+- `trademark-compliance-scrub`
+- `vps-knowledge`
 
 ---
 

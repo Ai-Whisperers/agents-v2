@@ -143,6 +143,8 @@ Caps: lessons_delivered ≤ 8 (rolling).
 
 ## Skills stack
 
+- `note-taking`
+
 - (none — content is the skill)
 
 ## What I do NOT do

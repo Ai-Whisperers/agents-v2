@@ -1,0 +1,33 @@
+# State files (contain secrets)
+backups/
+db/*.db
+db/*.db-journal
+db/*.db-wal
+
+# Logs (may contain PII)
+*.log
+*.tmp
+
+# Backups of original files
+*.bak
+*.pre-sqlite.bak
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+*.swp
+*.swo
+*~
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Outbox contents (kept private, versioned per-agent)
+outbox/*.md
+
+# But keep .gitkeep in outbox
+!outbox/.gitkeep

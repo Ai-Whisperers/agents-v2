@@ -1,7 +1,5 @@
 #!/bin/bash
-# aiw-eval-gate-runner.sh — Scan all agent outboxes and score briefs
-# Runs hourly via cron, logs results to /opt/data/db/eval-gate.db
-
+# aiw-eval-gate-runner.sh — Agent-aware eval-gate cron
 set -euo pipefail
 AGENTS_DIR="/opt/data/agents"
 TODAY=$(date -u +%Y-%m-%d)
@@ -11,15 +9,13 @@ TOTAL=0
 RESULTS=""
 
 for agent_dir in "$AGENTS_DIR"/*/; do
-    # Skip if not a real agent (no PROMPT.md)
     [[ ! -f "$agent_dir/PROMPT.md" ]] && continue
     agent=$(basename "$agent_dir")
-    # Check both outbox/ and lessons/ dirs
     for subdir in "outbox" "lessons"; do
         brief="$agent_dir$subdir/${TODAY}.md"
         if [[ -f "$brief" ]]; then
             TOTAL=$((TOTAL + 1))
-            if python3 /opt/data/eval/eval-business-analyst.py "$brief" 2>&1 | grep -q "Verdict: PASS"; then
+            if python3 /opt/data/eval/eval-agent-aware.py "$brief" 2>&1 | grep -q "Verdict: PASS"; then
                 PASS=$((PASS + 1))
                 RESULTS="$RESULTS\n  PASS: $agent/$subdir"
             else

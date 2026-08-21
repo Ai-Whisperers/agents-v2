@@ -84,4 +84,11 @@ def main():
 
 
 if __name__ == "__main__":
+    import argparse
+    parser = argparse.ArgumentParser(description="AIW Admin Dashboard Server")
+    parser.add_argument("--port", type=int, default=8090, help="Port to listen on")
+    parser.add_argument("--dry-run", action="store_true", help="Show what would happen")
+    parser.add_argument("--verbose", action="store_true", help="Verbose output")
+    args = parser.parse_args()
+    PORT = args.port
     main()

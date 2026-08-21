@@ -229,4 +229,9 @@ def estimate_runs_per_day(cron_expr: str) -> float:
 
 
 if __name__ == "__main__":
-    main()
+    import argparse
+    parser = argparse.ArgumentParser(description="""Script description not available""")
+    parser.add_argument("--dry-run", action="store_true", help="Show what would happen")
+    parser.add_argument("--verbose", action="store_true", help="Verbose output")
+    args = parser.parse_args()
+

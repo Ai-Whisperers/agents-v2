@@ -1,12 +1,15 @@
-# AI Whisperers — Org Buildout v0.2.0
+# AI Whisperers — Org Buildout v0.3.0
 
 > **Complete org-as-code for a 2-founder AI-native company.**
-> 6 canonical departments, 7 lead agents, ~14 sub-agents, 5 mandatory patterns,
-> per-agent git repos + SQLite storage, full constitution at v0.2.0.
+> 6 canonical departments, 7 lead agents, ~46 sub-agents, 5 mandatory patterns,
+> per-agent git repos + SQLite storage, full constitution at v0.2.0 → v0.3.0.
 
 **Repository**: https://github.com/Ai-Whisperers/agents-v2
-**Version**: 0.2.0 (2026-08-14)
-**Status**: Active — Phase 9 complete, awaiting 7-day self-running verification
+**Version**: 0.3.0 (2026-08-23, was v0.2.0 at 2026-08-14)
+**Status**: Phase 24 complete — all 12-factor gaps closed, 9.0/10 audit avg, 86.6% eval-gate pass rate
+
+> 📜 **Read this first for the cumulative 10-day upgrade story:** [`MASTER-UPGRADE-CHANGELOG.md`](./MASTER-UPGRADE-CHANGELOG.md)
+> Consolidates Tier 1-4 reports + PHASE-0 through PHASE-24 + 7 cron-discovered gaps into one canonical view.
 
 ---
 

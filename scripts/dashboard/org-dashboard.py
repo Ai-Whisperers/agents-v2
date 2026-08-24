@@ -174,6 +174,17 @@ def route_skills():
     return out
 
 
+
+
+def route_conversion():
+    import subprocess
+    r = subprocess.run(
+        ["python3", "/opt/data/scripts/conversion-dashboard.py"],
+        capture_output=True, text=True, timeout=30
+    )
+    return r.stdout
+
+
 def main():
     routes = {
         "pulse": route_pulse,
@@ -184,6 +195,7 @@ def main():
         "briefs": route_briefs,
         "errors": route_errors,
         "skills": route_skills,
+        "conversion": route_conversion,
     }
     
     if len(sys.argv) < 2:
@@ -193,9 +205,9 @@ def main():
     
     route = sys.argv[1]
     if route == "all":
-        for name, fn in routes.items():
+        for name in routes:
             print("\n" + "=" * 60 + "\n")
-            print(fn())
+            print(routes[name]())
     elif route in routes:
         print(routes[route]())
     else:
@@ -205,9 +217,5 @@ def main():
 
 
 if __name__ == "__main__":
-    import argparse
-    parser = argparse.ArgumentParser(description="""Script description not available""")
-    parser.add_argument("--dry-run", action="store_true", help="Show what would happen")
-    parser.add_argument("--verbose", action="store_true", help="Verbose output")
-    args = parser.parse_args()
+    main()
 

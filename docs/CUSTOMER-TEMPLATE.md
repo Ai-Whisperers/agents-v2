@@ -1,678 +1,272 @@
-# Customer Template — Reusable Deployment Skeleton
-
-> **Last updated:** 2026-08-26 (v0.1.0)
-> **Companion to:** `TOOLING-TIERS.md`. Read that first to understand what the customer is buying.
-> **Source docs:** `/opt/data/agents/ORG-AGENTS.md`, `/opt/data/agents-v2/PHASE-13-COMPLETE-UPDATED-PLAN.md`,
-> `/opt/data/agents/research/200-ai-coaching-companies.md`,
-> `/opt/data/agents-v2/docs/COMPLETE-EXPLANATION.md`,
-> `paraguayan-client-preengagement` skill, `client-site-kickoff` skill,
-> `vertical-client-extension-playbook` skill.
-> **Why this exists:** the August 13, 2026 transcription surfaced the missing piece — *"Should be a
-> template that customers can use later. 'Oh, you want to have marketing? Okay, you want to have these
-> roles, which one do you want to have automated?' And then AI does its best."* This doc is that template.
-
----
-
-## 1. How the template fits in the deploy pipeline
-
-```
-Customer signs Tier (1, 2, or 3)
-            │
-            ▼
-1. INTAKE  ──►   200-question structured form (this doc §2)
-            │     - identity, profile, services, ops, web, content, SEO, marketing, security
-            │
-            ▼
-2. CONFIG  ──►   Configuration knobs (this doc §3)
-            │     - which agents on/off
-            │     - vertical preset (legal / dental / beauty / RE / e-commerce)
-            │     - trilingual bundle
-            │
-            ▼
-3. VERTICAL ──►  Vertical profiles (this doc §4)
-            │     - role selection decision tree (this doc §5)
-            │     - which roles per vertical are default-on
-            │
-            ▼
-4. PRICING ──►   Pricing calculator (this doc §6)
-            │     - input: headcount + verticals + add-ons
-            │     - output: tier + setup fee + monthly
-            │
-            ▼
-5. TIMELINE ──►  Onboarding timeline (this doc §7)
-            │     - week 1 / month 1 / month 3
-            │     - self-running milestone target
-            │
-            ▼
-6. LIMITS  ──►   Customization limits (this doc §8)
-                    - what's in scope, what's a separate SKU
-```
-
----
-
-## 2. Intake checklist (200-question pattern)
-
-Mirrors the `client-site-kickoff` skill (10 sections × ~30 questions = 300 questions; AIW customer
-template = 200 questions across 9 sections to avoid the casual "tell me everything" intake).
-
-The schema for every question:
-
-```json
-{
-  "id": "<SECTION>-<NN>",
-  "category": "<sub-category>",
-  "question": "<full question text>",
-  "type": "text|textarea|select|boolean|tags|file|url|email|tel|range|number|date",
-  "required": true,
-  "default": null,
-  "options": ["a", "b"],
-  "example": "<example answer>",
-  "hint": "<guidance for the client>",
-  "accepted_formats": ["pdf", "jpg"]
-}
-```
-
-### Section A — Identidad corporativa + perfil del fundador (20 Qs)
-
-Identity, brand, founder profile. Drives the trilingual voice + the founder-as-Person JSON-LD.
-
-| ID range | Topic | Count |
-|----------|-------|-------|
-| ID-01 to ID-08 | Razón social, denominaciones, marca, paleta, idioma operativo | 8 |
-| ID-09 to ID-13 | Bio del fundador, matrículas, formación, idiomas | 5 |
-| ID-14 to ID-20 | Visión, misión, valores, tagline, voz de marca | 7 |
-
-### Section B — Servicios / oferta (25 Qs)
-
-Vertical-specific services + pricing tier (per `TOOLING-TIERS.md` §5).
-
-| ID range | Topic | Count |
-|----------|-------|-------|
-| SV-01 to SV-10 | Listado completo de servicios/productos | 10 |
-| SV-11 to SV-15 | Pricing público (o "solicitar cotización"), descuentos, bundles | 5 |
-| SV-16 to SV-20 | Garantías, SLA, política de devolución | 5 |
-| SV-21 to SV-25 | Roadmap de servicios (próximos 6 meses) | 5 |
-
-### Section C — Operaciones + equipo (25 Qs)
-
-Drives the people-hr + ai-ops-coordinator setup + the cron schedule.
-
-| ID range | Topic | Count |
-|----------|-------|-------|
-| OP-01 to OP-08 | Horarios, ubicación, canales de atención | 8 |
-| OP-09 to OP-14 | Equipo actual: roles, headcount, nombres (opcional) | 6 |
-| OP-15 to OP-20 | Herramientas ya en uso (Notion / Linear / Trello / Sheets / WA / etc.) | 6 |
-| OP-21 to OP-25 | Pain points diarios que el customer quiere automatizar | 5 |
+# Customer Deployment Template
 
-### Section D — Web, audiencia, KPIs (20 Qs)
+> Version 1.0.0 · 2026-08-26 · Controlled deployment worksheet, not a public sales page.
+> Sources: `TOOLING-TIERS.md`, `ORG-AGENTS.md`, `ROLLBACK-PLAYBOOK.md`, and the supplied coaching research briefs. Prices are planning anchors, refresh currency, tax, hosting, model, and support costs before signature.
 
-Drives the static-site Worker + lead API per `client-site-kickoff` Step 4.
+## 1. Purpose and completion gate
 
-| ID range | Topic | Count |
-|----------|-------|-------|
-| WB-01 to WB-08 | URL actual, hosting, TLS, dominio | 8 |
-| WB-09 to WB-13 | Audiencia objetivo, KPIs de negocio | 5 |
-| WB-14 to WB-20 | Sitemap deseado, secciones prioritarias | 7 |
+Use this worksheet to qualify a customer, choose the smallest functioning org slice, record which roles are automated, price the scope, and move through Week 1 / Month 1 / Month 3 gates. The intake is deliberately broad: a 200-question pattern prevents architecture from being built on assumptions. “Complete” means every must-answer item has an owner, every data source has a classification, every integration has a test credential or an explicit deferred status, and the tier and role manifest are signed.
 
-### Section E — Contenido + UX + microcopy (20 Qs)
-
-Drives the marketing-content + multimedia-producer agents.
-
-| ID range | Topic | Count |
-|----------|-------|-------|
-| CT-01 to CT-08 | Hero copy candidates, eslogan, prueba social | 8 |
-| CT-09 to CT-13 | Testimonios disponibles, fotos (placeholders marcados) | 5 |
-| CT-14 to CT-20 | Idioma del contenido (ES/EN/NL), tono de voz | 7 |
-
-### Section F — SEO + legal + compliance (25 Qs)
-
-Drives the compliance-monitor + trademark scrub at deploy time.
-
-| ID range | Topic | Count |
-|----------|-------|-------|
-| SE-01 to SE-08 | Keywords objetivo, schema.org markup, sitemap.xml | 8 |
-| SE-09 to SE-13 | LGPD / GDPR / EU AI Act / Ley 1682/01 (PY) — qué compliance aplica | 5 |
-| SE-14 to SE-20 | Política de cookies, privacidad, disclaimers | 7 |
-| SE-21 to SE-25 | Marca registrada, nombres protegidos, banlist propio del cliente | 5 |
-
-### Section G — Marketing + comercial + conversión (20 Qs)
-
-Drives the sales-pipeline + lead-enrichment + proposal-drafter agents.
-
-| ID range | Topic | Count |
-|----------|-------|-------|
-| MK-01 to MK-08 | Tono, claims prohibidos, embudo | 8 |
-| MK-09 to MK-13 | Automation permitido (emails / reminders / follow-ups) | 5 |
-| MK-14 to MK-20 | Conversión objetivo (lead-to-customer %), ventana de tiempo | 7 |
-
-### Section H — Seguridad + operaciones de TI (20 Qs)
-
-Drives the security-auditor + eval-gate-runner + cron-secret hygiene.
-
-| ID range | Topic | Count |
-|----------|-------|-------|
-| SC-01 to SC-08 | Hosting, TLS, backups, uptime SLA | 8 |
-| SC-09 to SC-13 | 2FA, gestión de secretos, rotación de claves | 5 |
-| SC-14 to SC-20 | Monitoring, alerting, runbook de incidentes | 7 |
-
-### Section I — Roles del AI-employee (25 Qs)
-
-Drives the role-selection decision tree (§5 below). The most productised section.
-
-| ID range | Topic | Count |
-|----------|-------|-------|
-| AR-01 to AR-08 | ¿Qué departamentos querés activar? (financiero/ventas/ops/etc.) | 8 |
-| AR-09 to AR-13 | Por cada departamento: ¿qué roles querés automatizar? | 5 |
-| AR-14 to AR-20 | Por cada rol: ¿humano-en-loop o auto-run? | 7 |
-| AR-21 to AR-25 | Coaching-as-producto: ¿se lo querés revender a tus clientes? | 5 |
-
-**Total: 200 questions, 9 sections.** Stored under `customers/<slug>/intake/01-09-*.json` per the
-`client-site-kickoff` schema.
-
----
-
-## 3. Configuration knobs
-
-After intake is submitted, these knobs control what ships. All knobs are version-pinned in
-`customers/<slug>/config.yaml`.
-
-```yaml
-# customers/<slug>/config.yaml — customer deployment config (v0.1.0 schema)
-
-# Tier selection (mutually exclusive)
-tier: micro                # micro | small | medium
-
-# Vertical preset (one or more; compound = +15% on price, see §6)
-verticals:
-  - legal                  # legal | dental | beauty | real_estate | ecommerce
-
-# Language bundle
-languages:
-  primary: es              # es | en | nl
-  secondary: en            # optional, included in Tier 2+
-  tertiary: nl             # optional, included in Tier 3 only by default
-
-# Agent-by-agent override (default: tier rule set)
-agents:
-  business-analyst:        # Tier 1 lead
-    enabled: true
-    class: HITL_AGENT      # FULL_AGENT | HITL_AGENT | CRON_WORKFLOW | HUMAN_ONLY
-    cron: "30 10 * * *"    # daily 06:30 PYT (PYT = UTC-4)
-    model: reasoning
-    provider: litellm
-    toolsets: [notion, whatsapp, sheets]
-  sales-pipeline: { enabled: true, class: HITL_AGENT, cron: "0 13,16 * * *" }
-  lead-enrichment: { enabled: true, class: CRON_WORKFLOW, cron: "30 9 * * *" }
-  ai-ops-coordinator: { enabled: true, class: FULL_AGENT, cron: "0 8 * * *" }
-  # ... etc. Each tier's agent manifest is templated from /opt/data/agents/ORG-AGENTS.md §1.
+**Required hard stops**
 
-# Self-running target (per SELF-RUNNING-CRITERIA.md)
-self_running:
-  target_date: 2026-09-30  # 30 days post-deploy for micro, 14 for small, 7 for medium
-  observation_window_days: 7
+- The customer authorises every connected data source and system.
+- Personal data, credentials, client legal records, health information, and intimate coaching content never appear in public output.
+- Personalized external messages require human approval; automated acknowledgements are allowed only within the approved flow.
+- Never fabricate testimonials, metrics, team members, compliance claims, or pricing statements.
+- Never publish numeric prices or internal identifiers on public surfaces.
+- Run the trademark scan before releasing public or client-facing copy.
+- The AI coach is non-evaluative, non-therapeutic, and not a source of licensed legal, medical, tax, or financial advice.
+- A human operator can pause, inspect, correct, export, and delete a session.
 
-# Hard stops (always-on, inherited from vertical-client-extension-playbook)
-hard_stops:
-  trademark_banlist: enforce
-  price_privacy: enforce
-  no_fabrication: enforce
-  pii_hard_stop: enforce
-  no_private_repo_writes: enforce
-  # Customer-specific additions go here (e.g. no_paid_social: enforce)
+Unknowns become tasks. A positive answer is not a decision until its evidence, owner, and date are recorded.
 
-# Auth + secret storage
-secrets:
-  backend: bws             # bws (Bitwarden Secrets) | env-injected | vault
-  rotation_days: 90
+## 2. Customer decision record
 
-# Output channels
-output_channels:
-  morning_brief: email
-  weekly_brief: whatsapp
-  escalation_target: founder_email
+| Field | Answer |
+|---|---|
+| Legal company / individual | |
+| Trading name | |
+| Country and primary operating region | |
+| City, timezone, business hours | |
+| Website and canonical production host | |
+| Customer owner / decision maker | |
+| Technical owner | |
+| Privacy or legal contact | |
+| Finance approver | |
+| Incident contact and backup | |
+| Preferred working language | |
+| Secondary languages | |
+| Headcount today / in 90 days | |
+| Locations / jurisdictions | |
+| Data residency requirement | |
+| Desired go-live date | |
+| Intended tier: Micro / Small / Medium | |
+| Intended start date | |
+| Intake version and last update | |
 
-# Eval-gate strictness (strict | warn | off)
-eval_gate_strictness: strict
+If headcount crosses a tier boundary, use the higher tier for the next billing cycle unless the contract says otherwise. A 5-person company may be placed in Small when the selected roles, departments, or compliance needs exceed Micro; record why.
 
-# Customisation limits (template — see §8)
-limits:
-  max_custom_agents: 0     # tier 1
-  # tier 2: 2, tier 3: 10
-  max_trilingual_content: true
-  custom_branding: true
-```
+## 3. The 200-question intake pattern
 
-### 3.1 What changes per tier (config knobs)
+Answer in numbered clusters. The first item in each cluster is a blocker. For every “yes,” attach a source document or system record. For every “no,” name the owner and review date.
 
-| Knob | Tier 1 (default) | Tier 2 (adds) | Tier 3 (adds) |
-|------|------------------|----------------|----------------|
-| `agents.*.enabled` | 4 true, 43 false | 12 true, 35 false | 47 all true |
-| `self_running.target_date` | deploy + 30d | deploy + 14d | deploy + 7d |
-| `eval_gate_strictness` | strict | strict (cron-driven) | strict + trending |
-| `secrets.backend` | env-injected | bws | bws + customer-VPC |
-| `output_channels.escalation_target` | founder_email | founder_email + WhatsApp | founder_email + dedicated operator |
-| `limits.max_custom_agents` | 0 | 2 | 10 |
-| `languages.tertiary` | — | available | included |
+### A. Business and outcomes (A1–A20)
 
----
+A1. What customer problem does the organization solve? A2. What outcome should be achieved in 90 days? A3. Which metric measures it? A4. What are the baseline and target? A5. Which team owns it? A6. What must remain human-owned? A7. Which work repeats weekly? A8. What is delayed by a founder bottleneck? A9. What is monthly request volume? A10. What are operating hours and service expectations? A11. Which teams need one source of truth? A12. Which decisions may be automated with review? A13. Which decisions require explicit approval? A14. What would stop the pilot? A15. What is the implementation budget? A16. Who approves a new integration? A17. Who approves an external report? A18. Which existing software is mandatory? A19. What can be retired? A20. What manual work should stop?
 
-## 4. Five vertical profiles
+### B. Roles and operating model (B1–B20)
 
-Each vertical presets default agent behaviour, KPI priorities, and tone. Compound verticals
-(+15% per stack level) — e.g. `legal+dental` is one vertical at full price, plus 50% of a vertical
-add-on.
+B1. Which departments exist? B2. Which are founder-led? B3. Which roles have no written process? B4. What needs daily attention? B5. What needs weekly attention? B6. What is monthly or quarterly? B7. Who receives the morning brief? B8. Who acts on escalations? B9. Who approves a proposal? B10. Who approves a purchase? B11. Who reviews coaching transcripts? B12. Who handles human coach escalation? B13. Who handles complaints? B14. Who owns the incident channel? B15. Who may change prompts? B16. Who may change schedules? B17. Who may rotate credentials? B18. Who is the backup approver? B19. Which automations are disabled at launch? B20. Which role is intentionally human-only?
 
-### 4.1 Legal (PY + NL + EU)
+### C. Data and systems inventory (C1–C20)
 
-**Source of authority:** Lex/RP legal site style (per `client-site-kickoff` §1 personas).
+C1. List customer, lead, invoice, and staff systems. C2. Which is the canonical customer record? C3. Which is the canonical sales pipeline? C4. Which is the canonical finance ledger? C5. Which is the canonical people directory? C6. Which tools contain documents? C7. Which contain voice or video? C8. Which contain sensitive personal data? C9. Which have APIs? C10. Which require browser-only access? C11. Which export CSV or JSON? C12. Which offer read-only access? C13. Which accept webhooks? C14. Which credentials exist? C15. Where are credentials stored? C16. Which expire? C17. Which data must stay in the customer region? C18. Which may be processed in a secondary region? C19. What is each retention period? C20. What is the deletion and export procedure?
 
-| Default-on | Default-off | Notes |
-|------------|-------------|-------|
-| `business-analyst`, `sales-pipeline`, `lead-enrichment`, `proposal-drafter` | `marketing-content` (tone restriction — legal cannot use ad copy) | |
-| `compliance-monitor` (always-on) | `multimedia-producer` | |
-| `citation-checker` (always-on legal citations) | | |
-| `compliance-monitor` escalation: **URGENT** for `penal` practice areas (per `client-site-kickoff` §6.1 lead API Worker pattern — `URGENT <30 min, NORMAL <24h`) |
+### D. Privacy, security, and compliance (D1–D20)
 
-**KPI priority:** lead response time, scholarship-of-process, compliance incidents.
+D1. Is any data special-category or similarly sensitive? D2. Is health information processed? D3. Are beliefs, union membership, sexuality, or disability involved? D4. Is data about children or vulnerable people involved? D5. Is legal advice or strategy discussed? D6. Is medical advice discussed? D7. Is financial or tax advice discussed? D8. What is the lawful purpose? D9. Who is the controller? D10. Who is the processor? D11. What is the retention schedule? D12. Which consent language is approved? D13. Is explicit opt-in required per session? D14. May content be used for model improvement? Default: no. D15. May recordings be reviewed for quality? If yes, who may listen? D16. Is a data processing agreement required? D17. Is a transfer impact assessment required? D18. Who receives breach notification? D19. What is the incident severity matrix? D20. Who signs risk acceptance?
 
-**Voice:** formal, restrained, evidence-first. Optional NL copy for Dutch-speaking clients.
+### E. Sales and marketing (E1–E20)
 
-### 4.2 Dental (PY + BR + AR)
+E1. What is the ideal customer profile? E2. Which lead sources are trusted? E3. How are leads scored? E4. Which pipeline stages exist? E5. Who qualifies a lead? E6. What may a bot request? E7. What may a bot never request? E8. Which messages are pre-approved? E9. Which require an editor? E10. What is the follow-up policy? E11. What is the opt-out policy? E12. How are proposals generated? E13. Which pricing rules may be automatic? E14. Which discounts require approval? E15. How are proposals versioned? E16. How is an account created? C17. How is a won or lost decision recorded? C18. What evidence is required for a case study? C19. Which public channels are approved? C20. Which paid acquisition channels are not approved?
 
-**Source of authority:** clinical reference sites (Ometzdental weekly refresh in
-`ORG-AGENTS.md` §1.6 — first client site shipped).
+### F. Finance, legal, and vendors (F1–F20)
 
-| Default-on | Default-off | Notes |
-|------------|-------------|-------|
-| `marketing-content` (always-on — content calendar) | `funding-coordinator` | |
-| `multimedia-producer` (always-on — patient education videos) | `proposal-drafter` (SOWs rare) | |
-| `lead-enrichment` (3 mins SLA on inbound) | | |
-| `bizops-tracker` (recall + patient lifetime KPI) | | |
+F1. Which accounting periods are used? F2. Which tax or reporting rules apply? F3. Who prepares an invoice? F4. Who approves an expense? F5. Which recurring costs are monitored? F6. Which vendors are mandatory? F7. Which are optional? F8. What service levels apply? F9. Which contracts need renewal alerts? F10. Which purchases need quotes? F11. What is each approver’s limit? F12. What is the unpaid-invoice threshold? F13. Which legal documents are generated? F14. Which templates have counsel approval? F15. Which documents are client-confidential? F16. How are vendor incidents reported? F17. How is a vendor replaced? F18. Which records are audit-required? F19. How long are records retained? F20. Who signs final acceptance?
 
-**KPI priority:** appointments booked, recall rate, patient reviews, treatment-plan conversion.
+### G. People and coaching operations (G1–G20)
 
-**Voice:** warm, educational, multilingual (ES/PT/EN).
+G1. Who participates? G2. Who is eligible? G3. What is the session language? G4. What is session length? G5. What is cadence? G6. Is it async text, live audio, or roleplay? G7. What is the first useful outcome? G8. Which goals suit coaching? G9. Which goals require a specialist or licensed professional? G10. What is the crisis escalation rule? G11. How is a human coach selected? G12. How is credential evidence collected? G13. What is the coach response target? G14. How is handoff performed? G15. How is a session summarized? G16. Who may read the summary? G17. How is participant feedback collected? G18. How are complaints handled? G19. How is a participant withdrawn? G20. What is the renewal and cancellation policy?
 
-### 4.3 Beauty / wellness (PY + BO + BR)
+### H. Technology, resilience, and acceptance (H1–H20)
 
-**Source of authority:** content-driven verticals (social-feed-driven).
+H1. Where will the runtime run? H2. Is a customer-managed VPS required? H3. Is EU residency required? H4. Is a database required per tenant? H5. How many tenants? H6. How many records? H7. How many agent calls daily? H8. What is live-call latency tolerance? H9. What transcription error rate is acceptable? H10. Which model providers are allowed? H11. Which must be avoided? H12. Which language pairs require tests? H13. How is quality measured? H14. How is cost measured? H15. How is output evaluated? H16. How are errors logged? H17. Who receives alerts? H18. What is the rollback trigger? H19. What is the recovery-time objective? H20. What evidence proves completion?
 
-| Default-on | Default-off | Notes |
-|------------|-------------|-------|
-| `marketing-content` (M-W-F cadence) | `compliance-monitor` (less regulatory load) | |
-| `multimedia-producer` (always-on) | `funding-coordinator` | |
-| `lead-enrichment` | `proposal-drafter` | |
-| `coach-*` (optional — wellness verticals often buy coaching alongside) | | |
+### I. Language and regional culture (I1–I20)
 
-**KPI priority:** content engagement, booking conversion, repeat customer rate.
+I1. What is the participant’s first language? I2. What is the organization’s default business language? I3. Is Spanish primary in Paraguay or the surrounding market? I4. Is Dutch preferred for the Netherlands or Belgium? I5. Is English required for cross-border teams? I6. Should one language be used throughout? I7. What happens when a participant code-switches? I8. Which terms require literal translation? I9. Which require cultural adaptation? I10. Is formal address appropriate? I11. Is direct feedback expected? I12. Is a slower, warmer opening appropriate? I13. Which goal and commitment terms are preferred? I14. Which regional examples should be removed? I15. Which should be added? I16. Who reviews Spanish? I17. Who reviews Dutch? I18. Who reviews English? I19. How is translation regression tested? I20. Which language is used for incident notices?
 
-**Voice:** aspirational, sensory, before/after evidence.
+### J. Acceptance, measurement, and pilot close (J1–J20)
 
-**Restriction (NEW 2026-08-26):** beauty verticals must not auto-post to trademark-banned social
-platforms. Marketing content drafted to customer's CMS for manual approval only.
+J1. Which three outcomes are success metrics? J2. What is the baseline period? J3. Who measures them? J4. What is acceptance test one? J5. What is test two? J6. What is test three? J7. What is the brief quality threshold? J8. What is the maximum failed-tick rate? J9. What is the maximum human review time? J10. What is support path one? J11. What is path two? J12. What is the incident channel? J13. How is a failed session corrected? J14. How is a bad coaching recommendation reported? J15. How is a privacy complaint investigated? J16. How is a correction made without rewriting history? J17. What is the pilot completion date? J18. Who decides renewal? J19. What evidence is required for an upsell? J20. What is explicitly out of scope?
 
-### 4.4 Real estate (PY + AR + NL — Mark NL active prospect)
+## 4. Configuration knobs
 
-**Source of authority:** transaction-heavy vertical (closing-focused).
+Record every knob as `enabled`, `disabled`, or `deferred`. The tier definitions are in `TOOLING-TIERS.md`.
 
-| Default-on | Default-off | Notes |
-|------------|-------------|-------|
-| `proposal-drafter` (heavy SOW volume) | `compliance-monitor` (in-house closer handles disclosures) | |
-| `lead-enrichment` (high cadence) | `coach-*` | |
-| `marketing-content` (listing descriptions) | `funding-coordinator` | |
-| `citation-checker` (legal citations on listings) | | |
+| Knob | Micro (1–5) | Small (5–20) | Medium (20+) | Customer choice |
+|---|---|---|---|---|
+| Functional agents | 4 | 12 | 47 full matrix, optional agents | |
+| Departments | 3 | 6 | 16 surfaces | |
+| Finance | business analyst | adds accounting and tax | adds controller/funding | |
+| Sales | pipeline + enrichment | adds proposal and RevOps | adds conversion/renewal | |
+| Operations | AI ops coordinator | adds bizops/procurement | adds coordinator, OKR, security, eval | |
+| Marketing | disabled | content + multimedia | research, content, coaching content | |
+| Research | disabled | research + source curator | research intelligence + citations | |
+| People | disabled | people/HR | coaching and people leads | |
+| Engineering | disabled | limited QA | roster, QA, drift, chaos opt-in | |
+| Monitoring | heartbeat + safety | plus eval/compliance | four-writer cluster | |
+| Webhook endpoints | 1 | 4 | 14+ | |
+| MCP surface | 0–2 | 0–6 | 16 | |
+| Cloudflare Workers | 0 | 2 | 6+ | |
+| Data residency | customer default | customer default | EU pack when required | |
+| Human coach network | no | no | add-on or dedicated partner | |
+| EU/LATAM compliance pack | no | add-on | add-on or custom scope | |
+| Chaos testing | off | off | opt-in | |
 
-**KPI priority:** listings posted, qualified leads, transactions closed, average days-on-market.
+### “What roles do you want automated?” decision tree
 
-**Voice:** direct, location-specific, evidence-led. NL copy required for Dutch-speaking prospects
-(Mark NL per `200-ai-coaching-companies.md` preface).
+1. Is the work a conversation with a person? If no, go to 2. If yes, go to 3.
+2. Does it require professional judgment about law, medicine, tax, safety, hiring, firing, compensation, or performance? If yes, mark `HUMAN_ONLY`; otherwise go to 4.
+3. Is it coaching, sales roleplay, intake, or follow-up? Coaching loads `coaching-conversation-framework`, `coaching-trilingual-glossary`, `coaching-privacy-protocol`, and the selected vertical profile. Add `coaching-coach-network` only for human handoff. Sales roleplay loads pipeline, proposal, RevOps, privacy, and compliance roles. Intake loads enrichment, privacy, and the vertical prompt. Follow-up uses a template acknowledgement unless a reviewed workflow is approved.
+4. Is the task a repeatable decision with a measurable rule? If no, mark `HUMAN_ONLY` or `HITL_AGENT`.
+5. Can it be checked by a deterministic test or human reviewer? If no, keep approval in the workflow. If yes, enable the relevant agent with an eval gate.
+6. Does it touch personal, confidential, regulated, or cross-border data? If yes, load `coaching-privacy-protocol` and settle purpose, residency, retention, and deletion before test data is processed.
+7. Is a human coach or live call needed? If yes, enable Pro-level capability, load `coaching-coach-network`, and define response and escalation SLAs.
+8. Is the team above 20 or operating in multiple jurisdictions? If yes, use Medium and run full compliance, monitoring, and rollback review. Otherwise stay in the smallest package that covers the selected roles.
 
-### 4.5 E-commerce (PY + BR + global)
+Every role manifest includes agent name, purpose, input, output, class (`FULL_AGENT`, `HITL_AGENT`, `CRON_WORKFLOW`, or `HUMAN_ONLY`), cadence, owner, provider, hard stops, data class, test, escalation path, rollback trigger, and evidence location.
 
-**Source of authority:** operational vertical (lots of catalog data, returns, refunds).
+## 5. Pricing calculator
 
-| Default-on | Default-off | Notes |
-|------------|-------------|-------|
-| `accounting-automation` (always-on — refund-heavy) | `coach-*` | |
-| `lead-enrichment` | `proposal-drafter` (catalog-driven, not SOW) | |
-| `marketing-content` (M-W-F product highlights) | | |
-| `tax-receipt-tracker` (weekly) | | |
-| `bizops-tracker` (LTV, AOV, refund rate KPI) | | |
+### Inputs
 
-**KPI priority:** AOV, refund rate, repeat customer %, cart-abandon recovery rate.
+| Input | Value |
+|---|---|
+| Team size | |
+| Primary vertical | |
+| Additional verticals | |
+| Languages: ES / EN / NL | |
+| Async, live, or both | |
+| Human coach network | yes / no |
+| EU data residency | yes / no |
+| EU/LATAM compliance pack | yes / no |
+| Custom methodology | yes / no |
+| Dedicated private runtime | yes / no |
+| Number of workers | |
+| Monthly model budget | |
+| Currency: PYG / USD / EUR | |
 
-**Voice:** transactional, scannable, plain language. Heavily localised ES/PT depending on
-primary market.
+### Tier output
 
----
+| Team size | Tier | Agents | Monthly anchor | Setup anchor |
+|---|---:|---:|---:|---:|
+| 1–5 | Micro | 4 functional | $250 / €350 / ₲1,800,000 | $250 / €350 / ₲1,800,000 |
+| 5–20 | Small | 12 functional | $600 / €900 / ₲4,500,000 | $500 / €700 / ₲3,600,000 |
+| 20+ | Medium | 47 total, optional agents | $2,000 / €2,800 / ₲14,400,000 | $1,000 / €1,400 / ₲7,200,000 |
 
-## 5. Decision tree — "What roles do you want automated?"
+These anchors come from `TOOLING-TIERS.md` §§2–4. Medium pricing scales at $80/employee/month above the 20-employee baseline, capped at +$2,000 in the source; validate the local-currency equivalent with finance before signature.
 
-This is the **core template interaction** from the August 13 quote: *"you want to have marketing,
-which roles do you want automated?"* Below is the flow per department.
+### Vertical planning anchors
 
-```
-START — Customer has selected a department
-        │
-        ▼
-Q1. ¿Cuántas horas por semana gasta el customer en este departamento?
-   ├─ <2h/wk   → RESPUESTA = "Skip this department"
-   ├─ 2-10h/wk → Q2
-   └─ >10h/wk  → Q2 + suggest Tier ≥ 2
+| Vertical | Quick-win | S / setup ladder | M | L | Market |
+|---|---|---:|---:|---:|---|
+| Dental | free audit/mock sessions | ₲500K | ₲1.2M setup + ₲400K/mo | ₲2.5M setup + ₲900K/mo | Paraguay |
+| Beauty/wellness | free booking-confirmation audit | ₲300K | ₲800K setup + ₲250K/mo | ₲1.5M setup + ₲500K/mo | Paraguay / LATAM |
+| Legal | free triage audit | ₲2M | ₲4.5M setup + ₲1.3M/mo | ₲9M setup + ₲2.5M/mo | Paraguay |
+| Real estate | free intake/SalesFlow audit | €500 | €1,200 setup + €350/mo | €2,500 setup + €800/mo | Netherlands / EU |
+| E-commerce | separate scope required | $300-style anchor | $800 setup + $250/mo | $1,500 setup + $500/mo | USD / cross-border |
 
-Q2. ¿Hay variabilidad semanal en el trabajo?
-   ├─ Alta (cada cliente es distinto) → Q3 HUMAN-IN-LOOP
-   └─ Baja (rutina repetible)        → Q4 AUTO-RUN
+The e-commerce anchor is explicitly labelled a planning reference because the supplied research’s fifth vertical is fitness/education, not e-commerce. Do not promise a unique e-commerce price without a written scope.
 
-Q3. ¿Quién aprueba el output? (humano-en-loop)
-   ├─ Founder                              → class: HITL_AGENT
-   ├─ Department manager                   → class: HITL_AGENT + assign approver
-   └─ Cliente final (no approval step)     → class: FULL_AGENT + disclaimer
+### Coaching subscription cross-check
 
-Q4. ¿Qué pasa si el agent falla?
-   ├─ Sales-blocking → class: HITL_AGENT + escalation=HIGH
-   ├─ Compliance-blocking → class: HITL_AGENT + escalation=CRITICAL
-   └─ Cosmetic-only → class: FULL_AGENT + escalation=LOW
-```
+| Plan | Setup | Seat/month | Minimum | Typical use |
+|---|---:|---:|---:|---|
+| A · Coach Lite | $500 | $200 | 5 | async ES+EN, GROW, ICF-aligned |
+| B · Coach Pro | $2,000 | $500 | 10 | trilingual, live calls, hybrid escalation, CBT patterns |
+| C · Coach Enterprise | $10,000 | $1,500 | 50 | EU controls, custom methodology, dedicated coach, EU residency |
 
-### 5.1 Department-specific role-selections
+`monthly subscription = active seats × seat price`; add setup, approved compliance, private runtime, and human-coach fees separately. Quote in one currency. The research’s working references are approximately 7,300 PYG/USD and 0.92 EUR/USD; refresh them before quote.
 
-Once the customer has answered Q1-Q4 per department, they get a per-role checklist drawn from
-`/opt/data/agents-v2/ROLES-INVENTORY.md` (~135 roles; default-on per vertical in §4):
+**Output:** `Recommended tier:`, `Setup fee:`, `Base monthly:`, `Seats:`, `Seat price:`, `Seat monthly:`, `Compliance:`, `Runtime:`, `Human coach:`, `Model budget:`, `Contingency:`, `First invoice:`, `Renewal total:`, `Currency:`, `Rate/date:`, `Approver:`.
 
-#### Marketing department (6 roles — choose 1-6)
+## 6. Onboarding timeline
 
-- ☐ **Content Marketing Manager** (Marketing Manager de contenido) — editorial calendar
-- ☐ **Marketing Manager** — estrategia y mix de canales
-- ☐ **SEO Specialist** — keyword research + technical SEO
-- ☐ **Email Marketing Specialist** — lifecycle email + drip
-- ☐ **Brand Manager** — brand identity, voice
-- ☐ **Growth Marketer** — experimentation, A/B
+### Week 1 — Safety and first useful loop
 
-#### Sales department (6 roles — choose 1-6)
+Day 1: assign owner, confirm jurisdiction, collect the intake, classify data, and stop unsafe requirements. Day 2: choose tier and roles, complete the manifest, and name system owners. Day 3: configure the canonical host, state, schedules, secrets, and rollback contacts. Day 4: load methodology, vertical, language, privacy, and hard stops. Day 5: use synthetic data and run the quick-win audit. Day 6: test approval, pause, delete, export, and escalation. Day 7: run evaluation and decide continue, reduce, or stop.
 
-- ☐ **SDR (Sales Development Rep)** — outbound, qualification
-- ☐ **Account Executive (AE)** — closing
-- ☐ **Proposal Writer** — SOWs y cotizaciones
-- ☐ **Sales Engineer** — technical pre-sales
-- ☐ **Customer Success Manager (CSM)** — post-sale retention
-- ☐ **Channel Sales Manager** — referral + integrations
+**Exit:** one useful deliverable, zero unresolved critical data risks, healthy first tick, no public release, and a named human owner.
 
-#### Finance department (4 roles — choose 1-4)
+### Month 1 — Stabilize
 
-- ☐ **Bookkeeper** — AP/AR, expense categorization
-- ☐ **Tax Specialist** — quarterly filings
-- ☐ **Procurement Officer** — vendor sourcing
-- ☐ **FP&A Analyst** — forecasting + budgets
+Train the team, run language tests, establish weekly briefs, add only approved integrations, review regulated-decision boundaries, test one agent and one state-file rollback, and record adoption, quality, latency, and human-review metrics.
 
-#### Engineering department (4 roles — choose 1-4)
+**Exit:** 14 days without a critical incident, stable canonical data, working human approval, and a go/no-go decision.
 
-- ☐ **DevOps / SRE** — infrastructure, CI/CD
-- ☐ **QA Engineer** — testing + eval
-- ☐ **Frontend / Backend / Full-stack** (pick one) — client-side / server-side / both
-- ☐ **AI Safety Engineer** — hard-stop enforcement (recommended Tier 3)
-
-#### People department (3 roles — choose 1-3)
+### Month 3 — Prove and govern
 
-- ☐ **Performance Coach** — coaching individual
-- ☐ **Recognition Lead** — milestone rituals
-- ☐ **Head of People / VP HR** — hiring + comp
-
-#### Operations department (4 roles — choose 1-4)
-
-- ☐ **Operations Lead** — day-to-day
-- ☐ **Repo Steward** — GitHub hygiene
-- ☐ **Watchdog Engineer** — cron liveness + alerting
-- ☐ **Compliance Watchdog** — regulatory + trademark
+Compare outcomes with baseline, remove low-value agents, review privacy, language, coach load, and role fit, decide whether to add a department, second vertical, live calls, or EU residency, and run a full security, privacy, eval, and rollback review.
 
-#### Legal department (3 roles — choose 1-3)
+**Exit:** accepted value evidence, no unresolved critical privacy finding, reproducible rollback, named owner for every enabled role, and signed next-quarter scope.
 
-- ☐ **Legal Counsel** — contract review, IP (external contractor)
-- ☐ **Compliance Officer** — GDPR / LGPD / EU AI Act
-- ☐ **Contract Drafter** — NDAs, MSAs, SOWs
+## 7. Customization limits
 
-#### Multimedia department (3 roles — choose 1-3)
-
-- ☐ **Multimedia Producer** — image / video / audio
-- ☐ **Brand Manager** — voice + visual identity
-- ☐ **Performance Marketing Manager** — *NOT available on trademark-banned platforms*
-
-### 5.2 Default-on per vertical (covers ≥3 roles by default)
-
-| Vertical | Default-on departments + roles |
-|----------|--------------------------------|
-| **Legal** | Operations + Legal + Finance (compliance + tax) — 4 roles default-on |
-| **Dental** | Marketing + Sales + Multimedia — 4 roles default-on |
-| **Beauty** | Marketing + Multimedia + Sales — 4 roles default-on |
-| **RE** | Sales + Operations + Legal — 4 roles default-on |
-| **E-commerce** | Finance + Marketing + Sales + Operations — 5 roles default-on |
-
-After default-on, customer is asked: *"Anything else?"* — every additional role is at the per-role
-rate from the calculator (§6).
-
----
-
-## 6. Pricing calculator
-
-Inputs the customer provides in the intake form:
-
-| Input | Type | Example |
-|-------|------|---------|
-| `headcount` | int | 8 |
-| `verticals[]` | enum list | `[legal]` |
-| `selected_roles[]` | enum list | `[content_marketing, sdr, lead_enrichment, compliance_monitor]` |
-| `tier` | enum | `small` |
-| `languages[]` | enum list | `[es, en]` |
-| `addons[]` | enum list | `[trilingual_content, dedicated_operator]` |
-| `billing_cycle` | enum | `monthly` \| `annual` |
-
-Output the calculator returns:
-
-```yaml
-result:
-  tier: small
-  base_price_usd: 600               # from TOOLING-TIERS.md §3.7
-  vertical_multiplier: 1.0          # single vertical: 1.0; +0.15 per additional
-  trilingual_addon_usd: 0           # bundled in Tier 2+
-  selected_role_count: 4
-  role_overage_usd: 0               # 4 roles included in Tier 2; overage @ $40/role/mo in Tier 1 only
-  addons_usd: 0
-  billing_discount_pct: 0           # 10% / 15% / 20% for annual
-  setup_fee_usd: 500                # from TOOLING-TIERS.md §3.7
-  monthly_total_usd: 600
-  setup_total_usd: 500
-  year_1_total_usd: 7700            # 500 + 12*600
-  year_1_arr_usd: 7200              # 12*600 (operational ARR only)
-```
-
-### 6.1 Calculator rules
-
-1. **Base price** = tier base × billing cycle (annual = 0.85 / 0.80 of monthly).
-2. **Vertical multiplier** = 1.0 + 0.15 × max(0, len(verticals) − 1). Two verticals +15%, three +30%.
-3. **Role overage** (Tier 1 only): each role beyond the 4 included = $40/mo USD / €50 / ₲250K.
-   Tier 2 includes 6 roles; Tier 3 includes all 47 (no overage).
-4. **Trilingual add-on**: $0 in Tier 2+, $50/mo USD in Tier 1, €60 / ₲300K.
-5. **Dedicated operator add-on**: $300/mo / €350 / ₲1,800K (Tier 3 only).
-6. **Custom agent authoring add-on**: $400/agent one-time setup + $50/agent/mo.
-7. **Annual discount**: 10% (Micro), 15% (Small), 20% (Medium).
-8. **Hard cap**: setup fee never exceeds 1× monthly at the same tier.
-
-### 6.2 Worked examples
-
-**Example 1: PY law firm, 8 employees, ES only, Tier 2, single legal vertical:**
-- base $600 × 1.0 × 1.0 = $600/mo
-- 4 selected roles, included
-- 12-month discount 15% → $6120/yr (vs $7200 undiscounted)
-- setup $500 one-time
-
-**Example 2: NL dental practice, 12 employees, NL+EN, Tier 2, dental + beauty compound:**
-- base $600 × 1.15 × 1.0 (NL included) = $690/mo
-- trilingual addon $0 (already Tier 2)
-- 8 roles selected, included (Tier 2 has 6 default + 2 overage-free)
-- annual − 15% → $7038/yr
-- setup $500
-
-**Example 3: PY e-commerce, 35 employees, ES+PT, Tier 3, e-commerce only:**
-- base $2000 × 1.0 × 1.0 = $2000/mo
-- 12 roles selected, all included (Tier 3 has 47 included)
-- annual − 20% → $19,200/yr
-- setup $1000
-- + 2 custom agents × ($400 + $50/mo × 12) = $2000 setup extra + $1200/yr
-
----
-
-## 7. Onboarding timeline
-
-### Week 1 — Foundation
-
-| Day | Activity | Owner |
-|-----|----------|-------|
-| D1 | Intake form submitted (200 Qs filled) | Customer + AIW operator |
-| D1 | Vertical preset + tier recommendation auto-emailed | Calculator (§6) |
-| D2 | Contract signed, setup fee invoiced | Customer + AIW |
-| D2-3 | VPS / CF account / OAuth credentials collected | Customer |
-| D3 | PROMPT.md files seeded, state schemas instantiated | AIW Erebus |
-| D4-5 | Agents wired to customer's data sources (Notion / WA / Sheets) | AIW Erebus |
-| D5 | First cron tick fires for every agent in tier | AIW Erebus |
-| D6 | First morning-brief delivered; eval-gate runs on the brief | AIW Erebus |
-| D7 | Trademark scrub + 12-factor audit + custom-config validation | AIW Erebus + customer |
-| D7 | **Week 1 gate**: customer can review their first week's briefs | Customer |
-
-### Month 1 — Stabilisation
-
-| Week | Activity | Owner |
-|------|----------|-------|
-| W2 | Eval-gate tuning; cron schedule reviewed | AIW Erebus |
-| W2 | Customer feedback round-1 (5 questions from operator) | Customer |
-| W3 | HARD/HIGH decisions routed to founder per `ROLLBACK-PLAYBOOK.md` §1.2 | AIW + customer |
-| W3 | First weekly brief + bizops-tracker readout | AIW |
-| W4 | Self-running check #1 — Tier 1 + 2 eligible for declaration | AIW |
-| W4 | Review monthly KPIs vs original intake | AIW + customer |
-| W30 | **Month 1 gate**: customer should have 0 escalation blockers; org-state fresh every <5 min | AIW |
-
-### Month 3 — Self-running declaration
-
-| Week | Activity | Owner |
-|------|----------|-------|
-| W5-8 | Coaching phase opt-in (Tier 3 only): `coach-onboarding`, `coach-practitioner`, `coach-lead-finder` | AIW Erebus + customer |
-| W8 | Chaos test runner opt-in (Tier 3 only) | AIW Erebus |
-| W9-12 | Eval-gate trending review; quality drift detection | AIW |
-| W12 | Self-running declaration + v1.0.0 lock | AIW + customer + Iván |
-| W12 | **Final gate**: handover to customer-led ops | AIW |
-
-### 7.1 Self-running declaration (per `SELF-RUNNING-CRITERIA.md`)
-
-For each tier, the declaration lands at:
-
-| Tier | Days post-deploy | What's required |
-|------|------------------|-----------------|
-| **Micro** | Day 30 | 0 cron errors in 30d window + 0 founder "is X live?" messages |
-| **Small** | Day 14 | Same + eval-gate trending clean |
-| **Medium** | Day 7 (after Foundation gates F1/F2/F3 from `PHASE-13` §4.2) | All of: 0 errors + 0 messages + chaos test A pass + 12-factor ≥ 9.0 |
-
-After declaration:
-- AIW stops touching customer PROMPTs and cron schedules.
-- Customer takes ownership of state rollback per `ROLLBACK-PLAYBOOK.md`.
-- AIW retains kill-switch access (one cron `hermes cron disable` away).
-
----
-
-## 8. Customisation limits
-
-### 8.1 In scope (per `vertical-client-extension-playbook` pattern)
-
-- **Pick which agents are enabled.** Per `agents.*.enabled` in §3 config.
-- **Pick the cadence** (cron schedule per agent).
-- **Pick the tools** (`toolsets` per agent).
-- **Pick the language bundle** (`languages[]`).
-- **Pick the vertical preset** (single or compound).
-- **Brand colours, fonts, copy voice** (per-vertical defaults, overrideable).
-- **Webhook destinations** (Email / WhatsApp / Linear / Notion — customer's choice).
-- **Output channels** (where morning-brief + escalation land).
-
-### 8.2 Out of scope (separate SKUs)
-
-- **Custom agent authoring** beyond the 47-agent matrix — billed per agent (see §6.1 #6).
-- **Multi-tenant SSO** beyond Notion + Workspace — separate project.
-- **EU AI Act + GDPR + LGPD turnkey compliance pack** — bundled Tier 3 only, separate SKU otherwise.
-- **Real-human 1:1 coaching sessions** — the AI agents write the briefs; humans run the sessions.
-  Customer pays AIW-referred coaches separately.
-- **Trademark-banned paid acquisition channels** (paid social / paid search / paid video-placement) — never sold.
-- **Mobile native apps** — Web Workers only at this SKU.
-
-### 8.3 Hard-stop ceiling (per `vertical-client-extension-playbook` §"Rejection Patterns")
-
-The template will refuse configurations that violate org-constitution rules:
-
-| Rejection | Why |
-|-----------|-----|
-| Add 7+ Tier-1 departments | Org constitution hard-caps at 6 Tier-1 (per `vertical-client-extension-playbook` table) |
-| Use `model: fast` for P1 hygiene agents | Single-tool only; multi-tool batch fails |
-| Use `model: primary` for cron jobs | Subscription expired risk; silent 402 |
-| Use `provider: minimax-oauth` for any agent | Rate-limited; not reliable for 7-day self-running |
-| Auto-commit to customer's private repo | Per `no_private_repo_writes` hard stop |
-| Wire WhatsApp automated personalised replies | Template acks only (per `COMPLETE-EXPLANATION.md` §3) |
-| Publish prices / fabricate testimonials on public surfaces | Daily guard agent (`compliance-monitor`) blocks |
-| Skip Phase 0 foundations (canonical host cutover + orphan routes + redirects) | 2 hours of code; saves months of drift |
-| Build trademark-banned marketing channels | Banlist applies to OUR surfaces; we don't ship them |
-| L3 git repos in early phases | Defer until self-running criteria met (Phase 6 only) |
-
----
-
-## 9. Validation gates (run on every deploy)
-
-Before "week 1 gate" (§7):
-
-- [ ] Intake form complete (200 Qs, 0 unanswered required)
-- [ ] Trademark scan clean on `customers/<slug>/config.yaml` and all seeded PROMPT.md files
-- [ ] All cron jobs registered with `provider=litellm, model=reasoning`
-- [ ] `eval-gate.py` runs end-to-end on at least 1 seeded brief
-- [ ] Morning-brief cron delivered at least once before customer-facing kickoff
-- [ ] `state/org-state.json` mtime < 5 min (sanity check on heartbeat)
-- [ ] 12-factor audit score ≥ 9.0 (`PHASE-21-12-FACTOR-COMPLETE.md` reference)
-- [ ] Disaster-recovery runbook handed to customer (`ROLLBACK-PLAYBOOK.md` §3)
-- [ ] Hard-stops profile signed by customer (5 mechanical + tier-specific)
-- [ ] Escalation route tested end-to-end (founder receives a test page)
-
-If any fails, the deploy is **not done**. Fix first, then re-validate.
-
----
-
-## 10. Open questions for Iván
-
-1. **Do we offer a "free quick-win" tier as a marketing funnel?** Per the existing coaching
-   conversion flow (`COMPLETE-EXPLANATION.md` §3), the 30-min free session is the conversion
-   trigger. Should the customer template offer a 30-min "AI scan of your workflow" instead?
-2. **Per-vertical pricing tiers — does each vertical deserve its own setup fee?** Currently
-   the setup fee is flat per tier. Legal verticals need more intake rigor; e-commerce needs more
-   catalog data. Per-vertical setup fees would price that risk in.
-3. **Multi-currency pricing**: does the ₲ / € / $ conversion track parallel-market rate, or
-   fixed business rates? The current doc uses parallel rate (₲7,200/USD), which is more
-   customer-friendly but exposes AIW to FX volatility.
-4. **EU AI Act + GDPR turnkey compliance pack** — bundle Tier 3 or separate SKU?
-5. **Customer-portal self-serve tier upgrade/downgrade** — required before scaling, or
-   manual-conversation-only is fine for the first 10 customers?
-
----
-
-## 11. Cross-references
-
-- **Companion:** `TOOLING-TIERS.md` — three pricing tiers, what's included/excluded.
-- **Agent matrix:** `/opt/data/agents/ORG-AGENTS.md` — 47-agent roster.
-- **Roles inventory:** `/opt/data/agents-v2/ROLES-INVENTORY.md` — 135 roles this template draws from.
-- **Vertical extension:** `vertical-client-extension-playbook` — single-client extension pattern.
-- **Customer-site kickoff:** `client-site-kickoff` skill — 200-question intake + sample demo.
-- **Plan:** `/opt/data/agents-v2/PHASE-13-COMPLETE-UPDATED-PLAN.md` §4 (six phases, 90-day build order).
-- **Rollback:** `/opt/data/agents/ROLLBACK-PLAYBOOK.md` — per-state + per-cron + per-deploy.
-- **Self-running milestone:** `/opt/data/agents-v2/SELF-RUNNING-CRITERIA.md`.
-- **Trademark banlist:** `/opt/data/scripts/trademark-scan.py`.
-- **Trilingual context:** `/opt/data/skills/coaching/coaching-trilingual-glossary/` —
-  es/en/nl coaching vocabulary + AIW positioning.
-- **Market context:** `/opt/data/agents/research/200-ai-coaching-companies.md` — BetterUp/CoachHub/Valence
-  spend anchors ($4-15K/employee/year).
-- **Coaching research continuation:** `/opt/data/agents/research/coaching-continuation-plan.md` —
-  5-track plan.
-
----
-
-**End of CUSTOMER-TEMPLATE.md** — see `TOOLING-TIERS.md` for the pricing side of the same SKU.
+**Configurable:** brand, language, time zone, business hours, prompts, output, cadence, escalation destination, approved data sources, vertical vocabulary, goal templates, and report recipients. All changes pass privacy, trademark, eval, and human-approval gates.
+
+**Tier-limited:** Micro is a small finance/sales/operations loop, not a full compliance, research, people, or coaching organization. Small adds marketing, research, accounting/tax, procurement, people/HR, two workers, and more evaluation, not the full matrix. Medium enables broad surfaces and optional coaching/compliance but still cannot claim licensed legal, medical, tax, employment, or performance-evaluation authority. Live human calls and a dedicated coach require Pro/Enterprise capability and the coach-network protocol. EU residency, full controls, custom methodology, and white-label infrastructure require approved scope.
+
+**Not configurable:** turning the system into therapy or a licensed professional; silently broadening retention; sending personalized messages without review; fabricating proof; bypassing hard stops; moving regulated data to an unapproved region; or representing alignment as accreditation. “ICF-aligned” maps the design to published competencies; it is not ICF accreditation. “Compliance-ready” means implemented controls and documentation; it is not a legal opinion.
+
+## 8. Risk disclosures
+
+The statement of work must disclose: AI output can be wrong, incomplete, biased, mistranslated, or unsuitable; coaching can surface distress and must escalate; special-category and confidential data increase breach impact; cross-border processing creates transfer and residency risk; provider, speech, or model outages can delay sessions; language coverage is not equal across dialects and domains; automation creates false confidence; integrations, credentials, schedules, and state can drift; and pricing can change with usage, residency, tax, support, and human-coach cost. The research’s eight-month average enterprise ROI latency is not a customer guarantee.
+
+The system is not a complete replacement for a mature internal system. The customer must accept a human fallback, pause path, limited pilot, explicit scope, and measurable outcomes.
+
+**Risk fields:** `ID`, `description`, `likelihood`, `impact`, `mitigation`, `owner`, `acknowledgement`, `review date`, `stop trigger`.
+
+## 9. Acceptance and sign-off
+
+- [ ] 200-question intake reviewed by owner and technical lead.
+- [ ] Data inventory and classifications approved.
+- [ ] Tier and role manifest signed.
+- [ ] One-currency quote has a current rate and date.
+- [ ] Approval, pause, delete, export, and escalation paths tested.
+- [ ] Synthetic-data tests pass before live data.
+- [ ] Language tests pass for selected languages.
+- [ ] Trademark scan passes for public/client artifacts.
+- [ ] Rollback tested and snapshot location recorded.
+- [ ] No agent makes licensed professional decisions.
+- [ ] Week 1, Month 1, and Month 3 criteria accepted.
+- [ ] Risks acknowledged.
+
+Customer owner: `__________________` Date: `____________`  
+Technical owner: `__________________` Date: `____________`
+
+## 10. Source register
+
+- `coaching-skills-gap-audit.md` §§2–5: gap analysis, tier distinction, product requirements, and intake pattern.
+- `coaching-funnel-playbook.md` §§2–5: funnel, five profiles, S/M/L ladder, product SKUs, and risks.
+- `coaching-strategic-implications.md` §§1–5: market context, productized SKUs, pricing, positioning, and mitigations.
+- `TOOLING-TIERS.md` §§2–6: Micro/Small/Medium counts, departments, setup, monitoring, maintenance, anchors, and hard stops.
+- `ORG-AGENTS.md` §§1–7: 47-agent roster, producer/consumer dependencies, escalation, cron paths, and onboarding.
+- `ROLLBACK-PLAYBOOK.md` §§1–5: snapshots, atomic restore, cron disable, deployment rollback, RTO, and post-rollback verification.
+
+Regulatory language is an operational checklist, not legal advice. Obtain qualified counsel review before EU, medical, employment, education, or cross-border deployment and record the applicable law and guidance version.
+
+## Common pitfalls
+
+1. Treating intake as a formality instead of evidence gathering.
+2. Choosing Medium because more agents appear more valuable.
+3. Enabling a role without input, output, owner, test, and rollback.
+4. Letting a free quick-win become an unapproved full deployment.
+5. Assuming model fluency without customer-language tests.
+6. Quoting local currency without date and rate.
+7. Calling the system compliant, accredited, therapeutic, or authoritative.
+8. Sending external copy or personalized messages without review.
+9. Adding a second vertical before the first is measurable.
+10. Reporting anecdotes while ignoring failed ticks, incidents, and withdrawals.
+
+## Verification checklist
+
+- [ ] 15–25 KB size band.
+- [ ] Every must-answer question has an owner or deferred date.
+- [ ] Every enabled role has class, cadence, owner, test, and escalation.
+- [ ] Tier is justified by headcount plus actual coverage.
+- [ ] Pricing is complete, consistent, dated, and one-currency.
+- [ ] Week 1 / Month 1 / Month 3 criteria are testable.
+- [ ] Limits and risks are acknowledged.
+- [ ] Claims point to the source register.
+- [ ] Public/client outputs pass trademark scan.

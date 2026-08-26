@@ -1,0 +1,29 @@
+timing_rules:
+  - id: sla-inbound-lead
+    match:
+      routing_tags: [lead, inbound]
+      department_id: sales
+    sla_reaction: PT2H
+    escalate_to: human:ivan
+    escalate_after: PT4H
+
+  - id: sla-content-ready
+    match:
+      routing_tags: [content]
+    sla_reaction: PT4H
+    escalate_to: apollo-sales-lead
+    escalate_after: PT8H
+
+  - id: sla-pipeline-feedback
+    match:
+      routing_tags: [pipeline, win-loss]
+    sla_reaction: PT24H
+    escalate_to: hera-marketing-lead
+    escalate_after: PT48H
+
+  - id: sla-pd-insight
+    match:
+      routing_tags: [insight]
+    sla_reaction: PT48H
+    escalate_to: athena-product-discovery-lead
+    escalate_after: P7D

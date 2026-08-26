@@ -1,0 +1,33 @@
+# Marketing signal definitions
+
+signal_types:
+  - id: marketing-content-ready
+    direction: out
+    type: cross_dept
+    recipients: [sales]
+    priority: normal
+    routing_tags: [content, pipeline]
+    payload_schema:
+      required: [subject, body, artifacts]
+    quorum: null
+
+  - id: marketing-campaign-brief
+    direction: out
+    type: cross_dept
+    recipients: [sales, product-discovery]
+    priority: normal
+    routing_tags: [campaign, brief]
+
+  - id: sales-pipeline-feedback
+    direction: in
+    type: cross_dept
+    sender: sales
+    routing_tags: [pipeline, win-loss]
+    sla_reaction: PT24H
+
+  - id: product-discovery-insight
+    direction: in
+    type: cross_dept
+    sender: product-discovery
+    routing_tags: [insight, validation]
+    sla_reaction: PT48H

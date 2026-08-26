@@ -1,0 +1,111 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://aiwhisperers.io/schemas/finance.schema.json",
+  "title": "Finance & Legal Department State Schema",
+  "description": "State file for finance-controller and downstream Finance dept agents (accounting-automation, tax-receipt-tracker, procurement-tracker, compliance-monitor).",
+  "type": "object",
+  "required": ["last_run", "runway_months", "mrr_usd", "burn_usd_monthly"],
+  "properties": {
+    "last_run": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "description": "ISO-8601 timestamp of last agent run."
+    },
+    "runway_months": {
+      "type": ["number", "null"],
+      "minimum": 0,
+      "description": "Months of operating runway at current burn. Page Ivan if < 3."
+    },
+    "mrr_usd": {
+      "type": "number",
+      "minimum": 0,
+      "default": 240,
+      "description": "Monthly recurring revenue in USD."
+    },
+    "burn_usd_monthly": {
+      "type": "number",
+      "minimum": 0,
+      "default": 500,
+      "description": "Average monthly spend (VPS + tools + subscriptions)."
+    },
+    "deals_open": {
+      "type": "array",
+      "description": "Pipeline deals currently in flight (mirrored from sales.json, finance-relevant subset).",
+      "items": {
+        "type": "object",
+        "required": ["name", "stage", "value_usd"],
+        "properties": {
+          "name": { "type": "string" },
+          "stage": { "type": "string", "enum": ["qualified", "proposal", "negotiation", "contract_sent"] },
+          "value_usd": { "type": "number" },
+          "expected_close_date": { "type": ["string", "null"], "format": "date" }
+        }
+      }
+    },
+    "deals_signed_this_week": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "value_usd": { "type": "number" },
+          "signed_at": { "type": "string", "format": "date-time" }
+        }
+      }
+    },
+    "compliance_flags": {
+      "type": "array",
+      "description": "Active compliance issues — trademark, regulatory, EU hard-stop attempts.",
+      "items": {
+        "type": "object",
+        "required": ["severity", "description"],
+        "properties": {
+          "severity": { "type": "string", "enum": ["low", "medium", "high"] },
+          "description": { "type": "string" },
+          "source": { "type": "string" },
+          "created_at": { "type": "string", "format": "date-time" }
+        }
+      }
+    },
+    "renewals_due_30d": {
+      "type": "array",
+      "description": "Vendor renewals due in next 30 days (from procurement-tracker).",
+      "items": {
+        "type": "object",
+        "properties": {
+          "vendor": { "type": "string" },
+          "renewal_date": { "type": "string", "format": "date" },
+          "monthly_cost_usd": { "type": "number" },
+          "decision_required_by": { "type": "string", "format": "date" }
+        }
+      }
+    },
+    "tax_summary_quarter": {
+      "type": ["object", "null"],
+      "description": "Quarterly tax totals (populated by tax-receipt-tracker).",
+      "properties": {
+        "quarter": { "type": "string", "pattern": "^[0-9]{4}-Q[1-4]$" },
+        "receipts_total_pyg": { "type": "number" },
+        "iva_collected_pyg": { "type": "number" },
+        "anomalies": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "invoices_issued_this_week": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "invoice_id": { "type": "string" },
+          "client": { "type": "string" },
+          "amount_usd": { "type": "number" },
+          "issued_at": { "type": "string", "format": "date-time" }
+        }
+      }
+    },
+    "override_possible": {
+      "type": "boolean",
+      "default": true,
+      "description": "When true, allows idempotency-key override (emergency re-run)."
+    }
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://aiwhisperers.io/schemas/sales.schema.json",
+  "title": "Sales & Growth Department State Schema",
+  "description": "State file for sales-pipeline and downstream Sales dept agents.",
+  "type": "object",
+  "required": ["last_run", "leads_in_flight", "funnel_30d"],
+  "properties": {
+    "last_run": {
+      "type": ["string", "null"],
+      "format": "date-time"
+    },
+    "leads_in_flight": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "icp", "stage"],
+        "properties": {
+          "name": { "type": "string" },
+          "company": { "type": "string" },
+          "role": { "type": "string" },
+          "icp": { "type": "string", "enum": ["solo_entrepreneur", "sme_ops_manager", "corporate_innovation_lead"] },
+          "icp_match_score": { "type": "number", "minimum": 0, "maximum": 100 },
+          "stage": { "type": "string", "enum": ["new", "enriching", "qualified", "call_booked", "call_done", "proposal_drafted", "proposal_sent", "negotiation", "contract_sent", "won", "lost"] },
+          "value_usd": { "type": "number" },
+          "intent_signals": { "type": "array", "items": { "type": "string" } },
+          "next_action": { "type": "string" },
+          "blocker": { "type": ["string", "null"] },
+          "created_at": { "type": "string", "format": "date-time" }
+        }
+      }
+    },
+    "funnel_30d": {
+      "type": "object",
+      "properties": {
+        "leads": { "type": "number", "default": 0 },
+        "calls_booked": { "type": "number", "default": 0 },
+        "proposals_sent": { "type": "number", "default": 0 },
+        "contracts_signed": { "type": "number", "default": 0 }
+      }
+    },
+    "outreach_queue_today": {
+      "type": "array",
+      "description": "Drafts awaiting Ivan approval (HITL).",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": { "type": "string", "enum": ["outreach_dm", "outreach_email", "proposal", "linkedin_post", "blog_post", "multimedia_spec"] },
+          "target": { "type": "string" },
+          "draft_path": { "type": "string" },
+          "icp_match": { "type": "number" },
+          "value_usd": { "type": "number" },
+          "status": { "type": "string", "enum": ["drafted", "approved", "sent", "rejected"] },
+          "created_at": { "type": "string", "format": "date-time" }
+        }
+      }
+    },
+    "stalled_deals": {
+      "type": "array",
+      "description": "Deals with no movement > 14 days.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "stage": { "type": "string" },
+          "days_since_action": { "type": "number" }
+        }
+      }
+    },
+    "override_possible": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

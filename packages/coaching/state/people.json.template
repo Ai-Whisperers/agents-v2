@@ -1,0 +1,27 @@
+{
+  "last_run": null,
+  "kiki_lesson_streak_weeks": 0,
+  "kiki_total_lessons_completed": 0,
+  "kiki_current_focus": null,
+  "thesis": {
+    "chapter": null,
+    "chapter_title": null,
+    "last_commit": null,
+    "target_date": null,
+    "blocker": null
+  },
+  "course_modules_ready": [],
+  "contractors_active": [],
+  "founder_bandwidth_audit": {
+    "ivan": { "billable_hours_week": null, "internal_hours_week": null },
+    "kiki": { "billable_hours_week": null, "internal_hours_week": null }
+  },
+  "milestones_recent": [],
+  "coaching_funnel_30d": {
+    "free_resource_downloads": 0,
+    "discovery_calls_booked": 0,
+    "pilots_started": 0,
+    "contracts_signed": 0
+  },
+  "override_possible": true
+}

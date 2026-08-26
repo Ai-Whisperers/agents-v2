@@ -1,0 +1,89 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://aiwhisperers.io/schemas/coord.schema.json",
+  "title": "Operations / Coord State Schema",
+  "description": "State for management-coordinator and the wider Operations dept rollup (business-analyst, bizops-tracker).",
+  "type": "object",
+  "required": ["last_run", "open_stuck", "stale_repos", "decisions_for_ivan"],
+  "properties": {
+    "last_run": {
+      "type": ["string", "null"],
+      "format": "date-time"
+    },
+    "open_stuck": {
+      "type": "array",
+      "maxItems": 10,
+      "description": "Items stuck across repos (issues/PRs older than threshold with no movement).",
+      "items": {
+        "type": "object",
+        "properties": {
+          "repo": { "type": "string" },
+          "issue_number": { "type": "integer" },
+          "title": { "type": "string" },
+          "stuck_since": { "type": "string", "format": "date" },
+          "owner": { "type": "string" }
+        }
+      }
+    },
+    "stale_repos": {
+      "type": "array",
+      "description": "Repos with no pushes in 14+ days.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "last_push": { "type": "string", "format": "date" },
+          "days_stale": { "type": "integer" }
+        }
+      }
+    },
+    "decisions_for_ivan": {
+      "type": "array",
+      "maxItems": 3,
+      "description": "Open decisions awaiting Ivan's input (rolling cap).",
+      "items": {
+        "type": "object",
+        "properties": {
+          "topic": { "type": "string" },
+          "context": { "type": "string" },
+          "created_at": { "type": "string", "format": "date-time" }
+        }
+      }
+    },
+    "kpi_snapshot": {
+      "type": "object",
+      "description": "Filled by business-analyst.",
+      "properties": {
+        "pipeline_usd": { "type": ["number", "null"] },
+        "mrr_usd": { "type": ["number", "null"] },
+        "leads_24h": { "type": "number", "default": 0 },
+        "sites_up": { "type": "integer", "default": 0 },
+        "sites_down": { "type": "integer", "default": 0 }
+      }
+    },
+    "founder_bandwidth": {
+      "type": "object",
+      "description": "Filled by founder-bandwidth-watchdog.",
+      "properties": {
+        "ivan": {
+          "type": "object",
+          "properties": {
+            "hours_week": { "type": ["number", "null"] },
+            "severity": { "type": "string", "enum": ["low", "medium", "high", "critical"] }
+          }
+        },
+        "kiki": {
+          "type": "object",
+          "properties": {
+            "hours_week": { "type": ["number", "null"] },
+            "severity": { "type": "string", "enum": ["low", "medium", "high", "critical"] }
+          }
+        }
+      }
+    },
+    "override_possible": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

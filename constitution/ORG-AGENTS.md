@@ -129,7 +129,7 @@ All agents in this org are built using the patterns documented in **`Ai-Whispere
 - **Memory management** — state/*.json files roll forward, decisions auto-prune
 - **Exception handling** — every script has graceful degradation when a tool (gh, jq) is missing
 - **Human-in-the-loop** — Ivan + Kiki are explicit HITL gates for high-stakes decisions
-- **RAG** — department agents read canonical docs (CLAUDE.md, INDEX.md) before acting
+- **RAG** — department agents read canonical docs (MODELO DE IA.md, INDEX.md) before acting
 - **Inter-agent communication** — only via state/*.json files + chat; never direct call
 - **Resource-aware model routing** — analyst uses minimax-m3 (cheap), engineering uses bigger models for code reasoning
 - **Reasoning strategies** — chain-of-thought baked into prompt structure

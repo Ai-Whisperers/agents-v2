@@ -121,7 +121,7 @@ Outbound sequencing DEFERRED until:
 - 20+ inbound leads/week sustained 4 weeks
 - THEN add outbound agent
 
-**Why**: 2026 evidence shows inbound-first outperforms outbound. Plus trademark banlist blocks Meta/TikTok/paid acquisition.
+**Why**: 2026 evidence shows inbound-first outperforms outbound. Plus trademark banlist blocks Plataforma de Redes/Plataforma de videos cortos/paid acquisition.
 
 ## Test deal: richar-ruiz
 
@@ -151,7 +151,7 @@ The named deal in `/opt/data/richar-ruiz-outreach/`. Use as canary for entire pi
 
 ## Trademark compliance (hard rule)
 
-- **Banned**: Meta, TikTok, Twitter, Slack, Discord (per trademark-compliance-scrub)
+- **Banned**: Plataforma de Redes, Plataforma de videos cortos, Red social, Canal de comunicacion, Canal de comunicacion (per trademark-compliance-scrub)
 - **Required**: trademark-scrub.sh on every external artifact
 
 ## Escalation triggers

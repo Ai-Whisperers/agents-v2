@@ -21,7 +21,7 @@
 | Apply to BECAL | Need PY nationality + academic merit | Already qualify | $0 |
 | Apply to INNOVAPYME | Need PY SME | Already qualify (when S.A. formed) | $0 |
 | Apply to AI Grant | Need to verify 2026 status | TBD | $0 |
-| Apply to Anthropic Fellows | Need AI safety research portfolio | 8-16 weeks (build portfolio) | $0 |
+| Apply to Proveedor de IA Fellows | Need AI safety research portfolio | 8-16 weeks (build portfolio) | $0 |
 | Apply to NVIDIA Inception | Already qualify | 1 week | $0 |
 | Apply to Modal Startups | Already qualify | 1 week | $0 |
 | Apply to Cloudflare for Startups | Need $0-5M raised + <100 employees | Already qualify | $0 |
@@ -60,7 +60,7 @@
 WEEK 1 (Aug 14-21, 2026)
 ├── Apply: Cloudflare for Startups ✅ ALREADY QUALIFY
 ├── Apply: AWS Activate ✅ ALREADY QUALIFY
-├── Apply: Microsoft for Startups Founders Hub ✅ ALREADY QUALIFY
+├── Apply: Suite ofimatica for Startups Founders Hub ✅ ALREADY QUALIFY
 ├── Apply: NVIDIA Inception ✅ ALREADY QUALIFY
 ├── Apply: Modal Startups ✅ ALREADY QUALIFY
 ├── Apply: OnDeck Founders ✅ ALREADY QUALIFY

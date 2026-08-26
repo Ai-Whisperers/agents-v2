@@ -35,7 +35,7 @@ The agents run on open-source infrastructure (Cloudflare Workers, n8n, LiteLLM, 
 
 We are applying for **[PROGRAM NAME]** to **[SPECIFIC ASK]**:
 
-- **Compute credits**: To deploy 12 lead agents at full capacity (current MRR $240 < full compute cost $360/mo). Apply at: Cloudflare for Startups, AWS Activate, Microsoft for Startups Founders Hub, Modal Startups.
+- **Compute credits**: To deploy 12 lead agents at full capacity (current MRR $240 < full compute cost $360/mo). Apply at: Cloudflare for Startups, AWS Activate, Suite ofimatica for Startups Founders Hub, Modal Startups.
 - **Accelerator acceptance**: To access mentorship + investor network for closing first EU client + scaling to $5K MRR.
 - **Grant funding**: To fund Paraguay S.A. formation + first Compliance Officer for EU expansion.
 - **Visa + relocation**: To establish EU presence for serving LATAM + EU clients.

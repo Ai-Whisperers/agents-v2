@@ -65,7 +65,7 @@ def check_archived():
     today = datetime.now(timezone.utc)
     
     for skill_dir in SKILLS_ROOT.iterdir():
-        if skill_dir.name in ("_meta", "_agent-applications", "_collections", ".archive"):
+        if skill_dir.name in ("_objetivo", "_agent-applications", "_collections", ".archive"):
             continue
         skill_md = skill_dir / "SKILL.md"
         if not skill_md.exists():

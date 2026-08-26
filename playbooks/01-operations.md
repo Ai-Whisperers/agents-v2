@@ -7,7 +7,7 @@
 
 ## Operations — Department Charter
 
-**Mission**: Keep the agent platform itself alive, healthy, observable. Operations is the **meta-department** — it doesn't ship products, it makes sure every other department can ship.
+**Mission**: Keep the agent platform itself alive, healthy, observable. Operations is the **objetivo-department** — it doesn't ship products, it makes sure every other department can ship.
 
 **Head**: Ivan
 **Cross-cutting concerns**: AI Ops (Tier 2), BizOps (Tier 2)
@@ -59,7 +59,7 @@
 ### Asset Tracker
 - **Default**: Plain JSON inventory + spreadsheet
 - **OSS alt**: Snipe-IT (asset management)
-- **Premium**: Jamf (Apple-focused)
+- **Premium**: Jamf (Dispositivo personal-focused)
 
 ### Vendor Coordinator
 - **Default**: Spreadsheet + email

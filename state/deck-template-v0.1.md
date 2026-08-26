@@ -136,7 +136,7 @@ For IDB Lab:     "$50K to pilot agent-org with 3 LATAM SMBs"
 
 ## Tooling
 
-- Build with: Pitch.com, Google Slides, Figma, Canva
+- Build with: Pitch.com, Buscador principal Slides, Figma, Canva
 - Export to PDF for sharing
 - Host on paragu-ai.com/deck/ for permanent link
 - Always watermark with "Confidential — [Program name] application"

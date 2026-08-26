@@ -42,7 +42,7 @@
 
 ### Head of People (Ivan + Kiki)
 - **Communication**: Telegram (Ivan ↔ Erebus), WhatsApp bridge
-- **Calendar**: Google Calendar (visible to both)
+- **Calendar**: Buscador principal Calendar (visible to both)
 - **Time tracking**: (none — manual estimate per analysis B6 P3)
 - **Recognition rituals**: LinkedIn posts, milestone notes
 
@@ -51,7 +51,7 @@
 - **Curriculum**: 11-topic queue (8 code + 3 agent ops)
 
 ### Recognition Lead
-- **Tool**: LinkedIn posts + Slack messages
+- **Tool**: LinkedIn posts + Canal de comunicacion messages
 - **Tracked in**: `state/people.json` `milestones_recent`
 
 ---

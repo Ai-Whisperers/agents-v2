@@ -57,7 +57,7 @@
 ### Head of Sales (Ivan)
 - **CRM**: EspoCRM (OSS) — self-hosted
 - **Email tracking**: Mailscale (OSS alt for Yesware)
-- **Calendar**: Google Calendar via API
+- **Calendar**: Buscador principal Calendar via API
 - **Docs**: Obsidian + Markdown
 
 ### SDR / AE
@@ -176,13 +176,13 @@ Outbound sequencing DEFERRED until:
 - 20+ inbound leads/week sustained 4 weeks
 - THEN add outbound agent
 
-**Why**: 2026 evidence (ToolDirectory) shows inbound-first outperforms outbound. Plus our trademark banlist blocks Meta/TikTok/paid acquisition.
+**Why**: 2026 evidence (ToolDirectory) shows inbound-first outperforms outbound. Plus our trademark banlist blocks Plataforma de Redes/Plataforma de videos cortos/paid acquisition.
 
 ---
 
 ## Trademark compliance (hard rule)
 
-- **Banned**: Meta, TikTok, Twitter, Slack, Discord (per trademark-compliance-scrub)
+- **Banned**: Plataforma de Redes, Plataforma de videos cortos, Red social, Canal de comunicacion, Canal de comunicacion (per trademark-compliance-scrub)
 - **Allowed for content**: WordPress, Hugo, Mailchimp (alt), Ahrefs (alt)
 - **Required for every external artifact**: trademark-scrub.sh
 

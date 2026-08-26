@@ -112,7 +112,7 @@ Port 8081, self-hosted:
 
 Per Hostinger incident (2026-Q1): `mensajeconnect.paragu-ai.com` flagged as phishing impersonation.
 
-**Banned case-insensitive:** `mensaje mensajebusiness mensaje-web wpp facebook meta instagram insta messenger oculus paypal stripe google gmail youtube tiktok twitter x-com discord slack microsoft office365 apple icloud amazon aws- openai chatgpt anthropic claude`
+**Banned case-insensitive:** `texto mensajeria empresarial canal de texto web canal de texto red social principal objetivo red social de fotos red social de fotos canal de mensajeria gafas de realidad virtual pasarela de pagos secundaria pasarela de pagos buscador principal correo electronico plataforma de video plataforma de videos cortos red social red social canal de comunicacion canal de comunicacion suite ofimatica suite ofimatica dispositivo personal almacenamiento en la nube tienda en linea infraestructura-en-la-nube- proveedor de IA asistente de IA generativa proveedor de IA modelo de IA`
 
 **Carve-outs:** bare functional terms, upstream OSS names, existing package names.
 

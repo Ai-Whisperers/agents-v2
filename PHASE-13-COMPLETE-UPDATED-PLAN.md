@@ -22,13 +22,13 @@
 
 | Step | Deliverable | Status |
 |------|-------------|--------|
-| 1 | Documented Eneve framework structure (9 meta-rules, 3 invocation strategies, contract pattern, improvement loop, templars-vs-exemplars) | ✅ in `/opt/data/skills/software-development/skill-library-meta-framework/references/eve-cursor-framework.md` |
+| 1 | Documented Eneve framework structure (9 governance-rules, 3 invocation strategies, contract pattern, improvement loop, templars-vs-exemplars) | ✅ in `/opt/data/skills/software-development/skill-library-governance-framework/references/eve-cursor-framework.md` |
 | 2 | Built Python equivalent of `validate-rules.ps1` → `hermes-skills-audit.py` (41 KB, 12 commands: frontmatter, check, invocation, stale, review, inventory, sync, fix, opsec, crossrefs, dead, collections) | ✅ at `/opt/data/scripts/hermes-skills-audit.py` |
 | 3 | Built improvement-loop driver `process-skill-improvement-cycle.py` (18 KB, 5-stage cycle: find → fix → enhance → extract → condense) | ✅ at `/opt/data/scripts/process-skill-improvement-cycle.py` |
 | 4 | Migrated 170 skill frontmatters to Eneve-compliant format (`id`, `kind`, `version`, `globs`, `governs`, `requires`, `provenance`, `alwaysApply`) | ✅ 158 NOTES, 9 PASS, 3 HIGH, 0 FAIL |
-| 5 | Created 5 skill collections (client-site-deploy, vps-ops, research, security, creative) at `/opt/data/skills/_collections/*.yaml` | ✅ 4/5 PASS, 1 cycle found in meta-rules |
+| 5 | Created 5 skill collections (client-site-deploy, vps-ops, research, security, creative) at `/opt/data/skills/_collections/*.yaml` | ✅ 4/5 PASS, 1 cycle found in governance-rules |
 | 6 | Created 6 agent-application skills (coaching, creative, security, etc.) at `/opt/data/skills/_agent-applications/*.md` | ✅ |
-| 7 | Created `/opt/data/skills/_meta/` with 9 meta-rules + 1 templar + 1 exemplar | ✅ All PASS |
+| 7 | Created `/opt/data/skills/_governance/` with 9 governance-rules + 1 templar + 1 exemplar | ✅ All PASS |
 | 8 | Created cron job `aiw-skills-audit-weekly` (every Mon 09:00 UTC) | ✅ |
 | 9 | Identified 12 MORE Eneve patterns (Tier 1 improvements) | ✅ Documented in session outputs |
 | 10 | Identified 4 PowerShell→Python migrations (validate-yaml, archive-obsolete, find-dead, condense-prompts) | ⚠️ Documented, not yet implemented |
@@ -117,7 +117,7 @@ agents-v2/                                 652 KB total
 ```
 skills/
 ├── SKILL.md × 161                         (158 migrated + 3 new)
-├── _meta/                                 (9 meta-rules + 1 templar + 1 exemplar)
+├── _governance/                                 (9 governance-rules + 1 templar + 1 exemplar)
 ├── _agent-applications/ × 6               (coaching, creative, security, research, vps-ops, client-site-deploy)
 ├── _collections/ × 5                      (skill bundles)
 ├── .loop-state/                           (prompt-improvement-loop.json, 169/169 processed)
@@ -179,7 +179,7 @@ All using `provider=litellm, model=reasoning` — works for multi-tool but ~110s
 1. **LLM billing is broken** — Mistral dead, OpenRouter empty, NVIDIA 404, ZAI 429. Only `litellm/reasoning` works. Slow (~110s/turn).
 2. **Eneve cycle 1 missing skill** — `skill.core.vps-aiw-autonomous-ops.v1` not found by collections check (might be in archived dir, or name typo)
 3. **The 158 NOTES on skills audit** — all `low non_standard_first_section` — every skill needs `## Purpose & Scope` as first section. Style fix, not blocker.
-4. **Meta-rules cycle** — `file-structure → provenance-and-versioning → file-structure` real cycle (they require each other). Document but don't auto-fix.
+4. **Governance-rules cycle** — `file-structure → provenance-and-versioning → file-structure` real cycle (they require each other). Document but don't auto-fix.
 5. **4 PowerShell scripts not yet migrated to Python** (validate-yaml, archive-obsolete, find-dead, condense-prompts)
 6. **Config schema missing** — no `quality-config.yaml` defining severity thresholds, allowed patterns
 
@@ -239,7 +239,7 @@ All using `provider=litellm, model=reasoning` — works for multi-tool but ~110s
 |---|--------|------|--------|
 | 1 | Fix the 158 NOTES (add `## Purpose & Scope` as first section to all skills) | 2h | todo |
 | 2 | Implement 4 missing Python scripts: `validate-yaml`, `archive-obsolete`, `find-dead`, `condense-prompts` | 3h | todo |
-| 3 | Write `/opt/data/skills/_meta/quality-config.yaml` (severity thresholds, allowed patterns) | 1h | todo |
+| 3 | Write `/opt/data/skills/_objetivo/quality-config.yaml` (severity thresholds, allowed patterns) | 1h | todo |
 | 4 | Add `phase_deprecate()` to loop driver + `superseded_by` field rule + `.archive/` lifecycle | 2h | todo |
 
 #### Track F3: Resolve Eneve cycle 1 (collection completeness)
@@ -360,7 +360,7 @@ From the Eneve `.cursor/` framework, the 5 principles to copy are:
 4. **Templars + exemplars as separate artifacts** — not inline in skills. Pattern we just adopted.
 5. **The improvement loop** — periodic atomic cycles per artifact. We built this (`process-skill-improvement-cycle.py`).
 
-The 9 meta-rules governing how every other rule is written (from Eneve):
+The 9 governance-rules governing how every other rule is written (from Eneve):
 1. rule-authoring-overview
 2. rule-file-structure
 3. rule-naming-conventions
@@ -387,12 +387,12 @@ The 5-stage atomic improvement loop (per prompt):
 ### Decision 1: LLM provider
 
 **Options**:
-- **(A)** Top up OpenRouter (~$20/mo for Claude Haiku) — restores multi-tool at low cost
-- **(B)** Top up Anthropic API (~$20/mo for Claude Sonnet) — direct, fastest
+- **(A)** Top up OpenRouter (~$20/mo for Modelo de IA Haiku) — restores multi-tool at low cost
+- **(B)** Top up Proveedor de IA API (~$20/mo for Modelo de IA Sonnet) — direct, fastest
 - **(C)** Stay on `litellm/reasoning` (free, but 110s/turn — slow)
 - **(D)** Get a Mistral subscription (~$20/mo) — restores the original plan
 
-**Recommendation**: A — OpenRouter with Claude Haiku. Cheapest path to multi-tool.
+**Recommendation**: A — OpenRouter with Modelo de IA Haiku. Cheapest path to multi-tool.
 
 ### Decision 2: Run coaching agents in parallel or sequentially?
 
@@ -401,9 +401,9 @@ The 5-stage atomic improvement loop (per prompt):
 
 **Recommendation**: Sequential. Validate `coach-ivan` thoroughly before building `coach-kiki`.
 
-### Decision 3: Apply for Claude/Anthropic Max separately?
+### Decision 3: Apply for Modelo de IA/Proveedor de IA Max separately?
 
-You mentioned wanting to use your Anthropic subscription. The truth: **Anthropic's OAuth via `claude setup-token` does NOT consume Max credits** — it bills API usage separately (hermes label: "Required Extra Usage Credits to Use Subscription").
+You mentioned wanting to use your Proveedor de IA subscription. The truth: **Proveedor de IA's OAuth via `modelo de IA setup-token` does NOT consume Max credits** — it bills API usage separately (hermes label: "Required Extra Usage Credits to Use Subscription").
 
 **Recommendation**: Don't try to use Max for API. Top up OpenRouter or get a separate API key.
 
@@ -424,7 +424,7 @@ You mentioned wanting to use your Anthropic subscription. The truth: **Anthropic
 1. **Org foundation** (hermes-implementation session): 31 agents, 49 cron jobs, 6 dept specs, 158 Eneve-migrated skills — *built but not self-running yet*
 2. **Coaching product** (AI-coaching-research session): 197-company landscape, 14 coaching agents planned, 11 coaching skills planned, $89-150K ARR target — *researched but not built*
 
-**The convergence**: The 14 coaching agents are just MORE agents that go through the same pattern (PROMPT.md + cron job + DB + script + skill stack). The 11 coaching skills are just MORE skills that go through the same Eneve pattern (frontmatter + meta-rules + improvement loop).
+**The convergence**: The 14 coaching agents are just MORE agents that go through the same pattern (PROMPT.md + cron job + DB + script + skill stack). The 11 coaching skills are just MORE skills that go through the same Eneve pattern (frontmatter + governance-rules + improvement loop).
 
 **The first action**: Hit the self-running milestone (Days 15-30). Until then, NOTHING new should be built — we have to prove the foundation works.
 
@@ -438,10 +438,10 @@ You mentioned wanting to use your Anthropic subscription. The truth: **Anthropic
 The two sessions you asked about were:
 
 1. The hermes-implementation session: built Eneve framework migration
-   - 158 skills migrated to Eneve format (9 meta-rules + 1 templar + 1 exemplar + 5 collections + 6 agent-apps)
+   - 158 skills migrated to Eneve format (9 governance-rules + 1 templar + 1 exemplar + 5 collections + 6 agent-apps)
    - Python validators: hermes-skills-audit.py (12 commands), process-skill-improvement-cycle.py (5-stage loop)
    - Cron job aiw-skills-audit-weekly
-   - Found the missing skill `vps-aiw-autonomous-ops` and 1 cycle in meta-rules
+   - Found the missing skill `vps-aiw-autonomous-ops` and 1 cycle in governance-rules
 
 2. The AI-coaching-research session: 8 research docs in /opt/data/agents/research/
    - 197-company landscape, 30 research areas, 5 verticals, 14 agents planned, 11 skills planned
@@ -477,13 +477,13 @@ What I recommend we do next:
 | Phase 13 (this) | `/opt/data/agents-v2/PHASE-13-COMPLETE-UPDATED-PLAN.md` | This analysis |
 | Coaching research | `/opt/data/agents/research/200-ai-coaching-companies.md` + 7 others | 8 docs |
 | Coaching continuation | `/opt/data/agents/research/coaching-continuation-plan.md` | 5-track plan, 27 KB |
-| Skills | `/opt/data/skills/_meta/` + `_agent-applications/` + `_collections/` | 9 meta + 6 apps + 5 collections |
+| Skills | `/opt/data/skills/_governance/` + `_agent-applications/` + `_collections/` | 9 objetivo + 6 apps + 5 collections |
 | Validators | `/opt/data/scripts/hermes-skills-audit.py` + `process-skill-improvement-cycle.py` | 41 KB + 18 KB |
 | Loop state | `/opt/data/skills/.loop-state/prompt-improvement-loop.json` | 169/169 processed |
 | Eval-gate POC | `/opt/data/agents-v2/eval-gate.py` | 9-check scorer |
 | Self-running criteria | `/opt/data/agents-v2/SELF-RUNNING-CRITERIA.md` | Milestone gate |
 | 30/60/90 review | `/opt/data/agents/REVIEW-2026-Q4.md` | Checkpoints |
-| Eneve reference | `/opt/data/skills/software-development/skill-library-meta-framework/references/eve-cursor-framework.md` | 8.6 KB doc |
+| Eneve reference | `/opt/data/skills/software-development/skill-library-governance-framework/references/eve-cursor-framework.md` | 8.6 KB doc |
 | Cursor extract | `/opt/data/Company-Information/docs/handoff/EXTRACT_CURSOR_STANDARDS.md` | PowerShell extract plan |
 
 ## Last updated

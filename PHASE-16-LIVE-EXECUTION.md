@@ -70,7 +70,7 @@ Total: 223  ✓ PASS: 11  ℹ NOTES: 212  ⚠ HIGH: 0  ❌ FAIL: 0
 
 These briefs were generated **without LLM** because:
 1. OpenRouter free tier rate-limited (429)
-2. OpenAI/Claude/Anthropic credits depleted (402)
+2. Proveedor de IA/Modelo de IA/Proveedor de IA credits depleted (402)
 3. Only `litellm/reasoning` works for multi-tool, but slow
 
 The briefs are **methodologically-grounded** because:

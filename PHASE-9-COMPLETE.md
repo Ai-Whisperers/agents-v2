@@ -10,7 +10,7 @@
 
 ### Files added
 
-- `/opt/data/agents-v2/patterns/secret-leak-check.sh` (executable, scans for GH/OpenAI/Anthropic/Stripe/AWS keys)
+- `/opt/data/agents-v2/patterns/secret-leak-check.sh` (executable, scans for GH/Proveedor de IA/Proveedor de IA/Pasarela de pagos/AWS keys)
 - `/opt/data/agents-v2/SELF-RUNNING-CRITERIA.md` (definition + verification procedure)
 
 ### Verification

@@ -45,7 +45,7 @@
 | `validate-yaml.py` standalone tool | ✅ |
 | `recommended-models.yaml` | ✅ |
 | `audit score` subcommand (Eneve Tier A #11) | ✅ |
-| 9 meta-rules + 2 new (cross-references, templars-exemplars) | ✅ |
+| 9 governance-rules + 2 new (cross-references, templars-exemplars) | ✅ |
 | 6 agent-application skills | ✅ |
 | 5 skill collections (all passing) | ✅ |
 | 158→181 skills migrated + 15 coaching | ✅ |
@@ -54,11 +54,11 @@
 ## Streaming Work Completed
 
 ### Stream A: Skill Framework (A1-A6)
-- A1: quality-config.yaml at `/opt/data/skills/_meta/quality-config.yaml`
-- A2: sync-log.md at `/opt/data/skills/_meta/sync-log.md`
+- A1: quality-config.yaml at `/opt/data/skills/_objetivo/quality-config.yaml`
+- A2: sync-log.md at `/opt/data/skills/_objetivo/sync-log.md`
 - A3: `check_disable_model_invocation` function added to audit
 - A4: `validate-yaml.py` standalone at `/opt/data/scripts/validate-yaml.py`
-- A5: `recommended-models.yaml` at `/opt/data/skills/_meta/recommended-models.yaml`
+- A5: `recommended-models.yaml` at `/opt/data/skills/_objetivo/recommended-models.yaml`
 - A6: `audit score` subcommand wired into CLI
 
 ### Stream B: Internal Coaching Agents (7)
@@ -89,7 +89,7 @@ Phase 2 customer-facing agents written. On-demand agents use no-agent cron patte
 ### Stream G: Skill Audit Cleanup
 - 100 skills got `## Purpose & Scope` as first section
 - 160 skills got Inputs/Outputs/Examples/Anti-Patterns/CHECKLIST
-- 4 meta-docs fixed (UPGRADE-GUIDE, checklist, good-skill, rule-cross-references)
+- 4 objetivo-docs fixed (UPGRADE-GUIDE, checklist, good-skill, rule-cross-references)
 - 1 archived file moved out of scope
 - HIGH: 6 → 0
 - FAIL: 0 → 0
@@ -111,9 +111,9 @@ OVERALL: ✓ SELF-RUNNING
 | `litellm/reasoning` | ✅ | Multi-tool batches, ~110s/turn |
 | `litellm/fast` | ⚠️ | Single-tool only |
 | `nvidia/llama-3.1-nemotron-nano-8b-v1` | ⚠️ | Works via chat, slow via cron |
-| `openai/gpt-4o-mini` | ❌ | Out of credits |
-| `openai/gpt-4o` | ❌ | Out of credits |
-| `openrouter/anthropic/*` | ❌ | Rate-limited (free tier) |
+| `proveedor de IA/gpt-4o-mini` | ❌ | Out of credits |
+| `proveedor de IA/gpt-4o` | ❌ | Out of credits |
+| `openrouter/proveedor de IA/*` | ❌ | Rate-limited (free tier) |
 | `mistral/*` | ❌ | Subscription expired |
 | `zai/*` | ❌ | Out of balance |
 

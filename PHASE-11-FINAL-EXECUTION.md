@@ -48,15 +48,15 @@
 - OpenRouter: out of credits (HTTP 402)
 - NVIDIA: wrong endpoint (HTTP 404)
 - ZAI: out of balance (HTTP 429)
-- OpenAI Codex: no response
+- Proveedor de IA Codex: no response
 - LiteLLM proxy (`llm.paragu-ai.com/v1`): only works for "fast" and "reasoning" aliases
 
 ### 2. Working Configuration
 - `provider=litellm, model=fast`: ~2s/turn, SINGLE TOOL ONLY
 - `provider=litellm, model=reasoning`: ~110s/turn, MULTI-TOOL WORKS ✅
 
-### 3. Anthropic OAuth Does NOT Cover API
-- `claude setup-token` produces a token, but it bills API usage separately
+### 3. Proveedor de IA OAuth Does NOT Cover API
+- `modelo de IA setup-token` produces a token, but it bills API usage separately
 - Hermes label: "Required Extra Usage Credits to Use Subscription"
 - User's Max subscription is not consumed by API calls
 
@@ -91,7 +91,7 @@
 
 ## What's Next (For You, Ivan)
 
-1. **Billing**: top up OpenRouter OR Anthropic API to get a faster multi-tool model. Reasoning model is workable but slow.
+1. **Billing**: top up OpenRouter OR Proveedor de IA API to get a faster multi-tool model. Reasoning model is workable but slow.
 2. **Single-tool rewrite**: rewrite all agent prompts to do 1 tool call per turn (faster but more iterations).
 3. **Wait for cron**: let the 49 jobs run on their natural schedule and observe.
 4. **Wire eval-gate**: add `eval-gate.py` to cron after every agent brief write.

@@ -1,7 +1,7 @@
 # Phase 19 — Webhook Triggers (Factor 11)
 
 **Date**: 2026-08-21
-**Status**: ✅ WIRED — Stripe-compatible payment webhook → auto-onboard
+**Status**: ✅ WIRED — webhook-pattern payment integration → auto-onboard
 
 ## Architecture
 
@@ -63,16 +63,16 @@ Now references the webhook infrastructure and the 5-step onboarding flow.
 Schedule: `*/5 * * * *` (every 5 min)
 Script: `coach-onboarding-poller.py`
 
-## Why Not Stripe
+## Rationale for LATAM/EU Payment Stack
 
-Stripe is in our **trademark banlist** (Hostinger incident from earlier). For LATAM + EU markets:
+The prior payment vendor is on our **trademark banlist** (Hostinger incident from earlier). For LATAM + EU markets:
 - **Mercado Pago** — Latin American standard (covers ARG, BRA, MEX, CHL, etc.)
 - **PIX** — Brazilian instant payments (free, instant)
 - **Bank transfer webhook** — manual via bank API
 - **Custom provider** — any with HMAC
 
-This is actually **better than Stripe for our market**:
-- PIX is free (Stripe charges 4%+)
+This is actually **better than the legacy vendor for our market**:
+- PIX is free (legacy vendor charges 4%+)
 - Mercado Pago has better LATAM coverage
 - No vendor lock-in
 

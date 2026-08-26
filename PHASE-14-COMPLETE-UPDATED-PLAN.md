@@ -10,7 +10,7 @@
 > **Current state verified on disk**:
 > - 182 skills in registry (10 PASS, 166 NOTES, 6 HIGH, 0 FAIL)
 > - 5/5 collections passing
-> - 11 meta-rules + ENEVE-PATTERNS.md (575 lines) + UPGRADE-GUIDE.md (462 lines)
+> - 11 governance-rules + ENEVE-PATTERNS.md (575 lines) + UPGRADE-GUIDE.md (462 lines)
 > - 6 agent-applications deployed
 > - 31 agent PROMPT.md files, 49 cron jobs, 10 SQLite DBs
 > - **SELF-RUNNING ACHIEVED** at v0.2.0 (all 7 lead agents delivered in 7-day window)
@@ -48,7 +48,7 @@ The session ended with "ALL COMPLETE" but claimed vs. disk tells a different sto
 | 2 | Tag-based versioning automation (`process-skill-bump.py`) | ❌ Missing (1 day) |
 | 3 | CSL community skill import (`process-skill-import.py`) | ❌ Missing (1 day) |
 | 4 | `model_hints` actually passed to LLM (currently metadata only) | ❌ Missing (4h) |
-| 5 | 5-9 per-meta-rule exemplars (currently only 1 total) | ⚠️ Partial (2-3 days) |
+| 5 | 5-9 per-governance-rule exemplars (currently only 1 total) | ⚠️ Partial (2-3 days) |
 | 6 | `sync-log.md` writer (cron-driven) | ❌ Missing (4h) |
 | 7 | 18-tier gate expansion (11 more gates) | ⚠️ 11/18 done, 7 more (3 days) |
 | 8 | templar auto-extraction (>30 line blocks) | ❌ Missing (1 day) |
@@ -62,7 +62,7 @@ The session ended with "ALL COMPLETE" but claimed vs. disk tells a different sto
 | 1 | PowerShell scripts → Python migration | ❌ Missing (1-2 days) |
 | 2 | quality-config.yaml (severity thresholds, allowed patterns) | ❌ Missing (4h) |
 | 3 | Skill deprecation workflow (90-day timeline) | ❌ Missing (6h) |
-| 4 | Per-meta-rule exemplars (5-9 more) | ⚠️ Partial (2-3 days) |
+| 4 | Per-governance-rule exemplars (5-9 more) | ⚠️ Partial (2-3 days) |
 
 **Remaining Tier 1: 4 patterns × ~5-7 days of work**
 
@@ -188,7 +188,7 @@ PHASE 14-20 (Days 1-90): Complete the work across 7 streams
 
 | # | Action | Time | Priority |
 |---|--------|------|----------|
-| A1 | Create `/opt/data/skills/_meta/quality-config.yaml` (severity thresholds) | 4h | 🔴 P1 |
+| A1 | Create `/opt/data/skills/_objetivo/quality-config.yaml` (severity thresholds) | 4h | 🔴 P1 |
 | A2 | Create `sync-log.md` writer script + initial log | 4h | 🔴 P1 |
 | A3 | Implement `disable-model-invocation` field support in audit | 1h | 🟡 P2 |
 | A4 | Extract `validate-yaml.py` standalone tool | 30m | 🟡 P2 |
@@ -201,7 +201,7 @@ PHASE 14-20 (Days 1-90): Complete the work across 7 streams
 | A11 | GitHub Actions workflow for PR-time validation | 1 day | 🟢 P3 |
 | A12 | `process-skill-import.py` (CSL community import) | 1 day | 🟢 P3 |
 | A13 | Implement `model_hints` actually passing to LiteLLM | 4h | 🟢 P3 |
-| A14 | Write 5 more per-meta-rule exemplars | 2-3 days | 🟢 P3 |
+| A14 | Write 5 more per-governance-rule exemplars | 2-3 days | 🟢 P3 |
 | A15 | Templar auto-extraction (>30 line blocks) | 1 day | 🟢 P3 |
 
 ### 4.2 Stream B: Internal coaching agents (Days 1-30)
@@ -303,7 +303,7 @@ From the session's deep analysis, the 5 pillars to internalize:
 4. **Templars + exemplars as separate artifacts** — output shapes (templars) vs pattern examples (exemplars, never copied).
 5. **The improvement loop** — periodic atomic cycles per artifact (improve → enhance → extract → condense → script-extract).
 
-The 9 rule-authoring meta-rules governing how every other rule is written. We have all 9 + 2 new ones (cross-references, templars-and-exemplars) = **11 meta-rules total**.
+The 9 rule-authoring governance-rules governing how every other rule is written. We have all 9 + 2 new ones (cross-references, templars-and-exemplars) = **11 governance-rules total**.
 
 The 5-stage atomic improvement cycle:
 1. `find-prompts-needing-review`
@@ -457,11 +457,11 @@ Hit the self-running milestone (DONE ✅). Now:
 ## Files cited
 
 ### From session `41af5b` (Eneve migration):
-- `/opt/data/skills/_meta/ENEVE-PATTERNS.md` (23 KB, 575 lines)
-- `/opt/data/skills/_meta/UPGRADE-GUIDE.md` (16 KB, 462 lines)
-- `/opt/data/skills/_meta/rule-cross-references.md` (11 KB, 373 lines)
-- `/opt/data/skills/_meta/rule-templars-and-exemplars.md` (8.5 KB, 267 lines)
-- `/opt/data/skills/_meta/loop/prompt-improvement-loop.json`
+- `/opt/data/skills/_objetivo/ENEVE-PATTERNS.md` (23 KB, 575 lines)
+- `/opt/data/skills/_objetivo/UPGRADE-GUIDE.md` (16 KB, 462 lines)
+- `/opt/data/skills/_objetivo/rule-cross-references.md` (11 KB, 373 lines)
+- `/opt/data/skills/_objetivo/rule-templars-and-exemplars.md` (8.5 KB, 267 lines)
+- `/opt/data/skills/_objetivo/loop/prompt-improvement-loop.json`
 - `/opt/data/skills/_agent-applications/*.md` (6 files)
 - `/opt/data/skills/_collections/*.yaml` (5 files, all passing)
 - `/opt/data/scripts/hermes-skills-audit.py` (12 commands, 11/18 gates)

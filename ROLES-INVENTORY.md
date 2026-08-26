@@ -63,11 +63,11 @@
 | 3.7 | Proposal Writer | 🟢 T1 | Drafts proposals, SOWs, pricing. |
 | 3.8 | Marketing Manager | 🟢 T1 | Owns marketing strategy, channel mix, content calendar. |
 | 3.9 | Content Marketing Manager | 🟡 T2 | Editorial calendar, blog, thought leadership. |
-| 3.10 | Performance Marketing Manager | 🟠 T3 | Paid acquisition (Meta, Google, TikTok). Trademark-restricted. |
+| 3.10 | Performance Marketing Manager | 🟠 T3 | Paid acquisition (Plataforma de Redes, Buscador principal, Plataforma de videos cortos). Trademark-restricted. |
 | 3.11 | SEO Specialist | 🟡 T2 | SEO strategy, keyword research, technical SEO. |
 | 3.12 | Email Marketing Specialist | 🟡 T2 | Lifecycle email, drip campaigns, list management. |
-| 3.13 | Social Media Manager | 🟠 T3 | Social channels (Meta, Twitter, LinkedIn). Trademark-restricted on some. |
-| 3.14 | Community Manager | 🟠 T3 | Community channels (Discord banned, forums, social). |
+| 3.13 | Social Media Manager | 🟠 T3 | Social channels (Plataforma de Redes, Red social, LinkedIn). Trademark-restricted on some. |
+| 3.14 | Community Manager | 🟠 T3 | Community channels (Canal de comunicacion banned, forums, social). |
 | 3.15 | Brand Manager | 🟠 T3 | Brand identity, positioning, voice. |
 | 3.16 | Product Marketing Manager | 🟡 T2 | Use-case messaging, launch comms, sales enablement. |
 | 3.17 | Growth Marketer | 🟡 T2 | Experimentation, funnel optimization, A/B testing. |

@@ -99,7 +99,7 @@ prompts/
 
 - **21 files checked**
 - **0 violations in new artifacts** (PLAN-v5, ROLES-INVENTORY, etc.)
-- **8 false positives in existing dept specs** (all are the banlist itself, "meta-department" as prefix, "RAG" acronym)
+- **8 false positives in existing dept specs** (all are the banlist itself, "objetivo-department" as prefix, "RAG" acronym)
 
 These false positives in existing files are known and expected. They pre-date Phase 0 and don't block.
 

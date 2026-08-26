@@ -1,0 +1,27 @@
+# Revenue stack signal registry
+
+> DEMIURGE-032, DEMIURGE-040, DEMIURGE-046
+
+departments:
+  - marketing
+  - sales
+  - product-discovery
+
+three_way_loops:
+  - name: content-pipeline-insight
+    flow:
+      - clio collects customer signals
+      - athena synthesizes product-discovery-insight
+      - hera adapts marketing-campaign-brief
+      - apollo uses content in sales-inbound-lead follow-up
+      - apollo emits sales-pipeline-feedback
+    feedback_loop_id: loop-pipeline-to-content
+
+signals:
+  - marketing-content-ready
+  - marketing-campaign-brief
+  - sales-pipeline-feedback
+  - sales-inbound-lead
+  - sales-discovery-complete
+  - product-discovery-insight
+  - customer-signal-raw

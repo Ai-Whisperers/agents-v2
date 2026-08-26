@@ -196,7 +196,7 @@ When this agent is registered as a cron job for the first time:
 4. Prepare the **first batch** of 5 Tier S applications:
    - Cloudflare for Startups
    - AWS Activate
-   - Microsoft for Startups Founders Hub
+   - Suite ofimatica for Startups Founders Hub
    - NVIDIA Inception
    - Modal Startups
 5. For each, generate application-form.md per the template

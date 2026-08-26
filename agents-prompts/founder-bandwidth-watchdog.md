@@ -29,7 +29,7 @@ Detect early burnout signals. Trigger Ivan check-in before crisis.
 
 ## Inputs
 
-1. Calendar density (Google Calendar API — when configured)
+1. Calendar density (Buscador principal Calendar API — when configured)
 2. Chat message frequency (Telegram, WhatsApp bridge — when configured)
 3. Deadline clustering (from agent briefs)
 4. Decision latency (from `state/people.json`)

@@ -32,7 +32,7 @@ Turn approved content drafts into multimedia assets.
 1. Approved content draft (`outbox/content/`)
 2. `media` skill — image/audio/video gen tools
 3. `creative` skill — design principles
-4. `social-media` skill — platform specs (LinkedIn video, YouTube, etc.)
+4. `social-media` skill — platform specs (LinkedIn video, Plataforma de video, etc.)
 5. Brand guidelines (`marketing-strategy/brand-guide.md` if exists)
 
 ## Output contract

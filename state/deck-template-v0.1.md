@@ -27,7 +27,7 @@ But they still need finance, sales, engineering, research.
 Result: single-founder burnout.
 Or: no ops function at all.
 
-→ 50M+ LATAM SMBs underserved by AI-native ops.
+→ 50M+ economic units in PY+AR+BR+MX+CO+CL (99.5% MIPYMES — OECD/SELA 2024).
 ```
 
 ## Slide 3 — Solution
@@ -85,10 +85,10 @@ C · Setup Gs. 4.5M + Gs. 2.5M/mo    — Corporate innovation
 ```
 LATAM SMB AI-native ops
 ────────────────────────
-▸ TAM: 50M+ LATAM SMBs (PY, AR, BR, MX, CO, CL)
-▸ SAM: 2M+ digitally-active SMBs in primary 6 countries
-▸ SOM: 50K+ SMBs with founder-burnout signal + consulting budget
-▸ Why now: AI agent tech mature, LATAM underfunded, OSS infra cheap
+▸ TAM: 50M+ economic units in 6 countries (99.5% MIPYMES — OECD/SELA 2024)
+▸ SAM: 2–4M digitally-active formal SMBs (5+ employees, e-invoice/payments)
+▸ SOM: 50k–150k founder-led service firms (legal, coaching, dental, accounting)
+▸ Why now: 54% LATAM SMEs use AI; 70% plan higher spend (LF 2025); OSS infra cheap
 ```
 
 ## Slide 8 — Team

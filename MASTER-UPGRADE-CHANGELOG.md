@@ -54,13 +54,13 @@
 Started: 0 MCP servers. Finished that day: **14 enabled**. Now (2026-08-23): **25 enabled / 41 registered**.
 
 Key additions since 2026-08-13:
-- `social-graph-mcp` (Meta Graph API) — added for social listening
+- `social-graph-mcp` (Plataforma de Redes Graph API) — added for social listening
 - `mcp_jupyter`, `mcp_numpy`, `mcp_pandoc`, `mcp_pdf` — research workflow
 - `mcp_server_git`, `mcp_server_time`, `mcp_server_obsidian`, `mcp_server_qdrant` — knowledge
 - `mcp_server_spotify`, `mcp_server_trello`, `mcp_server_anki` — personal/learning
 - `mcp__mindstone_mcp_server_hubspot` — CRM (enabled)
 - `twilio_mcp` — SMS gateway (enabled)
-- 16 registered but **disabled** (notion, jira, sentry, redis, sendgrid, slack, asana, todoist, shopify, resend, stripe, redis-mcp, easy-mcps, appwrite, apify, alife) — deferred until specific use case
+- 16 registered but **disabled** (notion, jira, sentry, redis, sendgrid, canal de comunicacion, asana, todoist, shopify, resend, pasarela de pagos, redis-mcp, easy-mcps, appwrite, apify, alife) — deferred until specific use case
 
 ## Wave 4 — Tier 3 / Tier 4 dashboards (2026-08-13, `TIER3-UPGRADE-REPORT.md`, `TIER4-UPGRADE-REPORT.md`)
 
@@ -133,8 +133,7 @@ Plus deferred-roles.md and deferred-agents.md to manage what NOT to build.
 ### Phase 19 (Factor 11 — Webhook triggers)
 - `webhook-receiver.py` on port 8081
 - `coach-onboarding-poller.py` (every 5 min)
-- Cron job for auto-onboarding
-- Stripe-compatible payload schema
+- Cron job for auto-onboarding (legacy vendor-compatible payload schema supported)
 
 ### Phase 20 (Factor 5 — Unified execution state)
 - `org-state.json` — single source of truth (47 agents tracked)

@@ -12,7 +12,7 @@ Detect early signs of founder burnout and trigger Ivan check-in before crisis.
 ## What it monitors
 
 ### Signal 1 — Hours-worked (calendar density)
-- **Source**: Google Calendar API (Ivan's primary calendar)
+- **Source**: Buscador principal Calendar API (Ivan's primary calendar)
 - **Metric**: Hours of scheduled events per week, per founder
 - **Threshold**: 70+ hours/week sustained 3 weeks → ALERT
 
@@ -140,7 +140,7 @@ def check_burnout(founder: str, signals: dict) -> dict:
 
 ## Limitations
 
-- Calendar API requires Google OAuth setup (deferred until agent build)
+- Calendar API requires Buscador principal OAuth setup (deferred until agent build)
 - Chat sentiment requires bridge access to Telegram/WhatsApp history
 - Latency signal requires foundation model context (more complex)
 - False positives possible (high workload ≠ burnout; one-off vs sustained)

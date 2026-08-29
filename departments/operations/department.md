@@ -18,9 +18,9 @@ source_catalog_id: catalog-operations
 | id | title | agent | status |
 |----|-------|-------|--------|
 | ops-lead | Head of Operations | kronos-operations-lead | active |
-| ops-management-coordinator | Management Coordinator | management-coordinator | skeleton |
-| ops-business-analyst | Business Analyst | business-analyst | skeleton |
-| ops-bizops-tracker | BizOps Tracker | bizops-tracker | skeleton |
+| ops-management-coordinator | Management Coordinator | management-coordinator | active |
+| ops-business-analyst | Business Analyst | business-analyst | active |
+| ops-bizops-tracker | BizOps Tracker | bizops-tracker | active |
 | ops-vendor-steward | Vendor Steward | — | deferred (SaaS tools > 10) |
 | ops-runbook-curator | Runbook Curator | — | deferred (first P1 without runbook) |
 | ops-cost-analyst | Cost Analyst | — | deferred (first paying customer) |

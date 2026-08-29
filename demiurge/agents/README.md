@@ -13,6 +13,11 @@
 | athena-product-discovery-lead | Athena | product-discovery | aiw-agent-athena-product-discovery-lead |
 | clio-customer-signal-collector | Clio | product-discovery | aiw-agent-clio-customer-signal-collector |
 | kronos-operations-lead | Kronos | operations | aiw-agent-kronos-operations-lead |
+| management-coordinator | Mgmt Coordinator | operations | aiw-agent-management-coordinator |
+| business-analyst | Business Analyst | operations | aiw-agent-business-analyst |
+| bizops-tracker | BizOps Tracker | operations | aiw-agent-bizops-tracker |
+| ai-ops-coordinator | AI Ops Coordinator | ai-ops | aiw-agent-ai-ops-coordinator |
+| compliance-monitor | Compliance Monitor | compliance | aiw-agent-compliance-monitor |
 | hermes-router-revenue | Hermes | router | aiw-agent-hermes-router-revenue |
 | argus-health-monitor | Argus | monitor | aiw-agent-argus-health-monitor |
 | themis-document-classifier | Themis | knowledge-mgmt | aiw-agent-themis-document-classifier |

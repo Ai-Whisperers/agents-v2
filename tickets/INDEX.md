@@ -66,3 +66,4 @@
 | DEMIURGE-076-ops-lead-agent | Design Operations lead agent soul + wire to router | 45m | AI | Phase 2 — Reference Dept (Operations) | completed |
 | DEMIURGE-077-terminology-lib | Terminology Library v1 — authoritative vocabulary for all system terms | 90m | AI+Ivan | Phase 1 — Identify + Stabilize | pending |
 | DEMIURGE-078-doc-intelligence | Document Intelligence System — classifier, archivist, miner, language quality, recordings | 120m | AI+Ivan | Phase 1 (design) / Phase 3 (build) | completed |
+| DEMIURGE-079-ops-legacy-agents | Migrate Operations legacy agents to DEMIURGE standard — souls, Tier 2 shells, cadences, signal emission | 120m | AI | Phase 2 — Reference Dept (Operations) | completed |

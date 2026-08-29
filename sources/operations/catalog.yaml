@@ -53,31 +53,31 @@ RevOps Co-op is Tier 2 (`revops`) but listed here intentionally — at <50 headc
 
 | signal_id | description | source_agent |
 |-----------|-------------|--------------|
-| `ops_incident_open_count` | Open incidents / P1-P3 | ai-ops-coordinator |
-| `ops_agent_health_anomaly` | Eval gate failures, hard-stop bypasses | ai-ops-coordinator |
-| `ops_stale_repo_count` | Repos with no push in 14+ days | management-coordinator |
-| `ops_cron_error_count` | Cron jobs in error state | business-analyst |
-| `ops_decision_queue_depth` | Pending decisions for Ivan | management-coordinator |
+| `ops-incident-open-count` | Open incidents / P1-P3 | ai-ops-coordinator |
+| `ops-agent-health-anomaly` | Eval gate failures, hard-stop bypasses | ai-ops-coordinator |
+| `ops-stale-repo-count` | Repos with no push in 14+ days | management-coordinator |
+| `ops-cron-error-count` | Cron jobs in error state | business-analyst |
+| `ops-decision-queue-depth` | Pending decisions for Ivan | management-coordinator |
 
 ### Weekly
 
 | signal_id | description | source_agent |
 |-----------|-------------|--------------|
-| `ops_okr_completion_pct` | OKR % complete per objective | bizops-tracker |
-| `ops_cycle_time_days` | Avg time issue open → closed | management-coordinator |
-| `ops_vendor_renewal_30d` | SaaS renewals due within 30 days | bizops-tracker |
-| `ops_cross_dept_blocker_count` | Cross-functional blockers surfaced | bizops-tracker |
-| `ops_compliance_flag_count` | Open compliance / trademark flags | compliance-monitor |
-| `ops_decision_latency_days` | Avg days from decision queued to resolved | bizops-tracker |
+| `ops-okr-completion-pct` | OKR % complete per objective | bizops-tracker |
+| `ops-cycle-time-days` | Avg time issue open → closed | management-coordinator |
+| `ops-vendor-renewal-30d` | SaaS renewals due within 30 days | bizops-tracker |
+| `ops-cross-dept-blocker-count` | Cross-functional blockers surfaced | bizops-tracker |
+| `ops-compliance-flag-count` | Open compliance / trademark flags | compliance-monitor |
+| `ops-decision-latency-days` | Avg days from decision queued to resolved | bizops-tracker |
 
 ### Monthly / Quarterly
 
 | signal_id | description | cadence |
 |-----------|-------------|---------|
-| `ops_burn_rate` | Monthly burn vs budget | monthly |
-| `ops_cost_per_transaction` | Unit economics per revenue event | monthly |
-| `ops_tool_sprawl_count` | Active SaaS tools vs last quarter | quarterly |
-| `ops_okr_reset` | Quarterly OKR review + reset | quarterly |
+| `ops-burn-rate` | Monthly burn vs budget | monthly |
+| `ops-cost-per-transaction` | Unit economics per revenue event | monthly |
+| `ops-tool-sprawl-count` | Active SaaS tools vs last quarter | quarterly |
+| `ops-okr-reset` | Quarterly OKR review + reset | quarterly |
 
 ## Community signals
 

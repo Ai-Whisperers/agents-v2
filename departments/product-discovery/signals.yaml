@@ -3,25 +3,31 @@ signal_types:
     direction: out
     type: cross_dept
     recipients: [marketing, sales]
+    priority: normal  # pending DEMIURGE-077 P0-P3 review
     routing_tags: [insight, validation]
-    quorum: quorum-pd-insight-review
+    quorum_required: quorum-pd-insight-review
 
   - id: marketing-campaign-brief
     direction: in
     type: cross_dept
     sender: marketing
+    priority: normal  # pending DEMIURGE-077 P0-P3 review
+    routing_tags: [campaign, brief]
 
   - id: sales-pipeline-feedback
     direction: in
     type: cross_dept
     sender: sales
-    routing_tags: [win-loss, customer-voice]
+    priority: normal  # pending DEMIURGE-077 P0-P3 review
+    routing_tags: [pipeline, win-loss]
 
   - id: customer-signal-raw
     direction: internal
     type: direct
     sender: clio-customer-signal-collector
     recipients: [athena-product-discovery-lead]
+    priority: normal  # pending DEMIURGE-077 P0-P3 review
+    routing_tags: [customer-voice]
 
 quorum_definitions:
   - id: quorum-pd-insight-review

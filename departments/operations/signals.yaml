@@ -8,6 +8,7 @@ signal_types:
     direction: internal
     type: kpi
     sender: ai-ops-coordinator
+    priority: normal  # pending DEMIURGE-077 P0-P3 review
     measurement_cadence: P1D
     routing_tags: [incident, daily]
 
@@ -15,6 +16,7 @@ signal_types:
     direction: in
     type: cross_dept
     sender: ai-ops
+    priority: normal  # pending DEMIURGE-077 P0-P3 review
     routing_tags: [eval-gate, drift, hard-stop]
     sla_reaction: PT1H
 
@@ -22,6 +24,7 @@ signal_types:
     direction: internal
     type: kpi
     sender: management-coordinator
+    priority: normal  # pending DEMIURGE-077 P0-P3 review
     measurement_cadence: P1D
     routing_tags: [repo-health, daily]
 
@@ -29,6 +32,7 @@ signal_types:
     direction: internal
     type: kpi
     sender: business-analyst
+    priority: normal  # pending DEMIURGE-077 P0-P3 review
     measurement_cadence: P1D
     routing_tags: [cron, daily]
 
@@ -36,15 +40,17 @@ signal_types:
     direction: internal
     type: kpi
     sender: management-coordinator
+    priority: normal  # pending DEMIURGE-077 P0-P3 review
     measurement_cadence: P1D
     routing_tags: [decision-queue, daily]
-    quorum: quorum-ops-decision-queue
+    quorum_required: quorum-ops-decision-queue
 
   # --- Weekly KPIs ---
   - id: ops-okr-completion-pct
     direction: internal
     type: kpi
     sender: bizops-tracker
+    priority: normal  # pending DEMIURGE-077 P0-P3 review
     measurement_cadence: P7D
     routing_tags: [okr, weekly]
 
@@ -52,6 +58,7 @@ signal_types:
     direction: internal
     type: kpi
     sender: management-coordinator
+    priority: normal  # pending DEMIURGE-077 P0-P3 review
     measurement_cadence: P7D
     routing_tags: [cycle-time, weekly]
 
@@ -59,6 +66,7 @@ signal_types:
     direction: internal
     type: kpi
     sender: bizops-tracker
+    priority: normal  # pending DEMIURGE-077 P0-P3 review
     measurement_cadence: P7D
     routing_tags: [vendor, renewal, weekly]
 
@@ -66,6 +74,7 @@ signal_types:
     direction: internal
     type: kpi
     sender: bizops-tracker
+    priority: normal  # pending DEMIURGE-077 P0-P3 review
     measurement_cadence: P7D
     routing_tags: [blocker, weekly]
 
@@ -73,6 +82,7 @@ signal_types:
     direction: in
     type: cross_dept
     sender: compliance
+    priority: normal  # pending DEMIURGE-077 P0-P3 review
     routing_tags: [compliance, trademark]
     sla_reaction: PT24H
 
@@ -80,6 +90,7 @@ signal_types:
     direction: internal
     type: kpi
     sender: bizops-tracker
+    priority: normal  # pending DEMIURGE-077 P0-P3 review
     measurement_cadence: P7D
     routing_tags: [decision-latency, weekly]
 
@@ -88,6 +99,7 @@ signal_types:
     direction: internal
     type: kpi
     sender: bizops-tracker
+    priority: normal  # pending DEMIURGE-077 P0-P3 review
     measurement_cadence: P30D
     routing_tags: [cost, monthly]
 
@@ -95,6 +107,7 @@ signal_types:
     direction: internal
     type: kpi
     sender: bizops-tracker
+    priority: normal  # pending DEMIURGE-077 P0-P3 review
     measurement_cadence: P30D
     routing_tags: [unit-economics, monthly]
 
@@ -102,6 +115,7 @@ signal_types:
     direction: internal
     type: kpi
     sender: bizops-tracker
+    priority: normal  # pending DEMIURGE-077 P0-P3 review
     measurement_cadence: P90D
     routing_tags: [vendor, quarterly]
 
@@ -109,6 +123,7 @@ signal_types:
     direction: internal
     type: kpi
     sender: bizops-tracker
+    priority: normal  # pending DEMIURGE-077 P0-P3 review
     measurement_cadence: P90D
     routing_tags: [okr, quarterly]
 
@@ -117,6 +132,7 @@ signal_types:
     direction: in
     type: cross_dept
     sender: ai-org-platform
+    priority: normal  # pending DEMIURGE-077 P0-P3 review
     routing_tags: [dept-activation]
     sla_reaction: PT24H
 
@@ -124,14 +140,16 @@ signal_types:
     direction: in
     type: cross_dept
     sender: ai-org-platform
+    priority: normal  # pending DEMIURGE-077 P0-P3 review
     routing_tags: [dept-health, kpi-breach]
     sla_reaction: PT4H
-    quorum: quorum-ops-health-breach
+    quorum_required: quorum-ops-health-breach
 
   - id: dept-kpi-signals
     direction: out
     type: cross_dept
     recipients: [ai-org-platform]
+    priority: normal  # pending DEMIURGE-077 P0-P3 review
     routing_tags: [kpi, rollup]
     sla_reaction: PT48H
 
@@ -139,6 +157,7 @@ signal_types:
     direction: out
     type: cross_dept
     recipients: [ai-org-platform]
+    priority: normal  # pending DEMIURGE-077 P0-P3 review
     routing_tags: [dept-request]
     sla_reaction: PT24H
 

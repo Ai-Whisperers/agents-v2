@@ -7,9 +7,9 @@ signal_types:
     recipients: [sales]
     priority: normal
     routing_tags: [content, pipeline]
-    payload_schema:
+    payload:
       required: [subject, body, artifacts]
-    quorum: null
+    quorum_required: null
 
   - id: marketing-campaign-brief
     direction: out
@@ -22,6 +22,7 @@ signal_types:
     direction: in
     type: cross_dept
     sender: sales
+    priority: normal  # pending DEMIURGE-077 P0-P3 review
     routing_tags: [pipeline, win-loss]
     sla_reaction: PT24H
 
@@ -29,5 +30,6 @@ signal_types:
     direction: in
     type: cross_dept
     sender: product-discovery
+    priority: normal  # pending DEMIURGE-077 P0-P3 review
     routing_tags: [insight, validation]
     sla_reaction: PT48H

@@ -1,8 +1,12 @@
 # AI Whisperers — Detailed Org Analysis + Organigram
 
+> **SNAPSHOT as-of 2026-08-14.** Numbers reflect the pre-DEMIURGE constitution design.
+> For current operational state see [ROADMAP-DEPT-EXPANSION.md](../ROADMAP-DEPT-EXPANSION.md).
+
 **Last Updated:** 2026-08-24
 **Status:** Production-ready, self-running, v0.4.0
-**Total Agents:** 51 across 18 departments
+**Total Agents (constitution design):** 51 across 18 departments
+**Operational (DEMIURGE):** 12 agents, 3 active departments
 
 ---
 

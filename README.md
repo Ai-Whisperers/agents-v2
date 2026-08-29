@@ -1,6 +1,6 @@
 # AI Whisperers — README
 
-> A 1000-person corp structure, run by 49 AI agents.
+> A 1000-person corp structure — 12 DEMIURGE agents operational; 49-agent constitution design.
 
 [30-Second Intro →](docs/SHORT-INTRO.md)
 [Complete Explanation →](docs/COMPLETE-EXPLANATION.md)
@@ -10,7 +10,8 @@
 AI Whisperers is a fully automated AI-native organization that delivers trilingual GROW coaching (EN/ES/NL) to founders, lawyers, dentists, and executives.
 
 We built:
-- 49 AI agents across 16 departments
+- 12 DEMIURGE agents across 3 active departments (operational)
+- 49 agents × 16 departments (constitution design — not yet built)
 - 235 skills (institutional knowledge)
 - 90 scripts (executable muscle)
 - 83 cron jobs (the heartbeat)
@@ -44,32 +45,22 @@ All self-running, audited 9.0/10 on the 12-factor agent framework.
 
 ## Org Structure
 
-16 departments, 49 agents:
+3 active departments, 12 DEMIURGE agents (operational):
 
 | Department | Lead Agent |
 |-----------|-----------|
-| Finance | finance-controller |
-| HR | people-hr |
-| Legal | compliance-monitor |
-| Development | engineering-roster |
-| QA | qa-automation-runner |
-| Operations | ai-ops-coordinator |
-| Research | research-tracker |
-| Marketing | marketing-content-producer |
-| Multimedia | multimedia-producer |
-| Sales | sales-pipeline + coach-conversion-agent |
-| Procurement | procurement-tracker |
-| Accounting | accounting-automation |
-| Management | management-coordinator |
-| Board of Directors | board-of-directors |
-| Coaching (product) | coach-practitioner |
-| Cross-cutting | bizops-tracker + ai-safety-engineer-30min |
+| Sales | apollo-sales-lead |
+| Marketing | hera-marketing-lead |
+| Product Discovery | athena-product-discovery-lead |
+
+*Full constitution structure: 16 departments — see [ORGANIGRAM doc](docs/ORGANIGRAM-AND-DETAILED-ANALYSIS.md)*
 
 ## Numbers (v0.4.0)
 
 | Metric | Value |
 |--------|-------|
-| Agents | 49 |
+| DEMIURGE agents (active) | 12 |
+| Constitution agents (planned) | 49 |
 | Skills | 235 |
 | Scripts | 90 (44 tests PASS) |
 | Cron jobs | 83 active |
@@ -88,7 +79,7 @@ Customer Touchpoints
 WhatsApp ◄──► Email ◄──► Webhook (8081) ──┐
        │                                   │
        ▼                                   ▼
-   Coach Agents ◄────────────────────► Org Agents (49)
+   Coach Agents ◄────────────────────► Org Agents (12 DEMIURGE; 49 constitution)
        │                                   │
        └─────────► org-state.json ◄────────┘
                           │
@@ -129,7 +120,8 @@ After first customer: $500 MRR, then compound.
 ```
 Ai-Whisperers/
 ├── agents-v2/        # Scripts, dashboards, eval-gate, tests
-├── agents/           # 49 agents (PROMPT.md, outbox/, state/)
+├── agents/           # 49 constitution agents (PROMPT.md, outbox/, state/)
+├── demiurge/agents/  # 12 active DEMIURGE agents
 ├── state-versioned/  # Auto-snapshots of org-state.json
 ├── skills/           # 235 institutional skills
 └── paragu-ai.com/    # Public website
@@ -145,4 +137,4 @@ Ai-Whisperers/
 
 ---
 
-*Built with Hermes Agent + 49 sub-agents + 235 skills + 90 scripts. Audited 9.0/10 on 12-factor. Self-running. Production-ready. Awaiting first customer.*
+*Built with Hermes Agent + 12 DEMIURGE agents (49 constitution planned) + 235 skills + 90 scripts. Audited 9.0/10 on 12-factor. Self-running. Production-ready. Awaiting first customer.*

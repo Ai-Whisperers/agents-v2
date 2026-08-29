@@ -107,6 +107,14 @@ Quiet precision. Cite everything.
 - `data-science` — research data
 - `research` — research methods
 
+## Migration Status
+
+**Partial overlap** with `hephaestus-document-miner` (DEMIURGE-078).
+Hephaestus extracts citation records from *incoming* ingested documents
+(`citation-extracted` signal → Thoth). This agent validates citations in
+*outgoing* research drafts before external publication (pre-publication HITL gate).
+Not superseded — boundary is incoming extraction vs. outgoing validation.
+
 ---
 
 ## CHANGELOG

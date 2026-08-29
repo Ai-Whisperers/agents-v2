@@ -34,6 +34,14 @@
 | Language Quality | peitho-language-quality | Peitho |
 | Recordings | orpheus-recordings-agent | Orpheus |
 
+## Legacy agents migration map (DEMIURGE-082)
+
+| Legacy file | Overlap | Disposition |
+|---|---|---|
+| `agents-prompts/citation-checker.md` | Hephaestus citation extraction (incoming) | Retained — outgoing pre-publication validation; not superseded |
+| `agents-prompts/source-curator.md` | Mnemosyne catalog health | Retained for `source-materials/` filesystem sweep; DI pipeline takes over after ingest |
+| `agents-prompts/research-tracker.md` | Hephaestus/Mnemosyne process research docs | Pointer added — route docs via `document-ingest`; agent itself not replaced |
+
 ## Pipeline
 
 ```

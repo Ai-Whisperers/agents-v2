@@ -89,6 +89,15 @@ fallback:
 
 When escalating, ship the 6-field JSON payload (see PROMPT-TEMPLATE.md).
 
+## Migration Status
+
+**Partial overlap** with `mnemosyne-document-archivist` (DEMIURGE-078).
+Mnemosyne owns document catalog health (`catalog/index.yaml`) for all DI-pipeline
+documents. This agent retains ownership of the `source-materials/` filesystem sweep
+(staleness, naming conventions, broken links). Once source-materials are ingested into
+the DI pipeline via `document-ingest`, ongoing freshness tracking for those documents
+passes to Mnemosyne.
+
 ---
 
 ## CHANGELOG

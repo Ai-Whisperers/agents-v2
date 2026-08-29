@@ -165,6 +165,15 @@ If thesis tick log unreachable: deliver brief with thesis status from THESIS_STA
 - `source-curator` agent (Tier 2) does mechanical curation
 - Ivan approves any add/retire decision
 
+## DI Pipeline Integration
+
+Research documents (theses, publications, arXiv papers) are a primary input class for
+the Document Intelligence pipeline (DEMIURGE-078). Route document files via the
+`document-ingest` signal so Hephaestus and Mnemosyne can extract structured assets
+(decisions, nuggets, citations, catalog entries) alongside this agent's weekly
+visibility reports. This agent is not replaced — it generates research visibility;
+the DI pipeline processes the underlying documents.
+
 ---
 
 ## CHANGELOG

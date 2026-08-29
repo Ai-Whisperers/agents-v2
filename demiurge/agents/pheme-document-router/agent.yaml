@@ -7,5 +7,7 @@ git_repo: https://github.com/Ai-Whisperers/aiw-agent-pheme-document-router
 departments: [knowledge-mgmt]
 roles: [document-router]
 cadence:
-  type: on_signal
-  routing_tags: [document-classified, quality-assessed, action-item-extracted, decision-logged, nugget-surfaced, quality-gate-cleared]
+  type: cron_and_signal
+  schedule: "*/5 6-22 * * *"
+  timezone: America/Asuncion
+  routing_tags: [quality-assessed, action-item-extracted, decision-logged, nugget-surfaced, quality-gate-cleared]

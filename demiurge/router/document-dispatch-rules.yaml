@@ -111,6 +111,15 @@ dispatch_rules:
         id: thoth-literature-scanner
     fan_out: first_available
 
+  - id: route-document-audience-operations
+    match:
+      signal_type: quality-assessed
+      routing_tags: [operations]
+    deliver_to:
+      - type: agent
+        id: kronos-operations-lead
+    fan_out: first_available
+
   - id: route-unresolved-audience
     match:
       signal_type: quality-assessed

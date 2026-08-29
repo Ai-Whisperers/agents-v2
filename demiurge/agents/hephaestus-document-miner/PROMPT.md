@@ -32,7 +32,7 @@ Write structured records under `mined/`:
 | Decision | `mined/decisions/{id}.yaml` | `decision-logged` |
 | Nugget | `mined/nuggets/{id}.yaml` | `nugget-surfaced` |
 | Term candidate | `mined/terminology-candidates/{id}.yaml` | `terminology-update` (to 077) |
-| Citation | forward to `thoth-literature-scanner` | via refs in decision/nugget |
+| Citation | `mined/citations/{id}.yaml` | `citation-extracted` |
 
 Decision records use DACI-inspired roles where inferable: `driver`, `approver`, `contributor`, `informed`.
 

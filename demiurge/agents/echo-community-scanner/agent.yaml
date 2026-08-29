@@ -4,7 +4,7 @@ display_name: Echo — Community Practice Scanner
 archetype: Curator
 status: active
 git_repo: https://github.com/Ai-Whisperers/aiw-agent-echo-community-scanner
-departments: [marketing, sales, product-discovery]
+departments: [marketing, sales, product-discovery, knowledge-mgmt]
 cadence:
   schedule: "0 7 * * 3"
   timezone: America/Asuncion

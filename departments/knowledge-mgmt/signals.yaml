@@ -99,3 +99,14 @@ signal_types:
     sender: peitho-language-quality
     routing_tags: [quality]
     sla_reaction: PT72H
+
+  - id: citation-extracted
+    direction: internal
+    type: dept
+    sender: hephaestus-document-miner
+    routing_tags: [citation, literature]
+    sla_reaction: PT48H
+    payload_schema:
+      required: [document_id, citation_ref]
+    subscribers:
+      - thoth-literature-scanner

@@ -4,7 +4,7 @@ display_name: Thoth — Literature Scanner
 archetype: Curator
 status: active
 git_repo: https://github.com/Ai-Whisperers/aiw-agent-thoth-literature-scanner
-departments: [marketing, sales, product-discovery]
+departments: [marketing, sales, product-discovery, knowledge-mgmt]
 roles: [literature-scanner]
 cadence:
   schedule: "0 6 * * 1"

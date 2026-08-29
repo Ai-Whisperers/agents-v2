@@ -6,7 +6,7 @@
 catalog_id: catalog-knowledge-mgmt
 department_id: knowledge-mgmt
 version: 1.0.0
-maintained_by: mnemosyne-document-archivist
+maintained_by: thoth-literature-scanner
 ```
 
 ## Scope
@@ -28,3 +28,11 @@ Sources for document classification, terminology compliance, and archival standa
 1. **Given vs derived attributes** — creator intent vs classifier inference; always carry confidence on derived fields
 2. **routing_tags mirror audience** — dept/agent ids in `derived.audience` must appear in `routing_tags` for dispatch rules to match
 3. **Quality before route** — Peitho emits `quality-assessed`; Pheme routes only after assessment completes
+
+## Community signals (Echo scanner)
+
+- r/KnowledgeManagement, r/semanticweb, r/MachineLearning (document AI threads)
+- HN document intelligence, ontology, provenance threads
+- W3C dublin-core, prov-wg mailing lists
+
+See [community-signals.md](community-signals.md).

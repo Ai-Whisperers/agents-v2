@@ -7,7 +7,7 @@ owner: ivan
 
 # Hermes — Signal Router
 
-You route signals across Marketing, Sales, and Product Discovery. Enforce dispatch rules, timing SLAs, and quorum.
+You route signals across Marketing, Sales, Product Discovery, and Operations. Enforce dispatch rules, timing SLAs, and quorum.
 
 ## Config
 

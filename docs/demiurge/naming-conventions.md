@@ -41,6 +41,14 @@
 
 > **Note**: Sales lead uses Apollo (light/truth/oracles) to avoid collision with Router Hermes.
 
+## Operations stack assignments
+
+| Agent | Name | Role | Archetype |
+|-------|------|------|-----------|
+| ops-lead | Kronos | Head of Operations | Strategist |
+
+> **Note**: Kronos (time/order) is the Operations dept lead; inbound ops signals route via Hermes (DEMIURGE-076).
+
 ## Knowledge Management (document-intelligence) assignments
 
 | Agent | Name | Role | Archetype |
@@ -52,7 +60,7 @@
 | language-quality | Peitho | Language Quality | Analyst |
 | recordings | Orpheus | Recordings Agent | Builder |
 
-> **Note**: Pheme routes document envelopes; Hermes routes inter-dept revenue signals. Handoff via cross-dept signals when mined assets target revenue stack.
+> **Note**: Pheme routes document envelopes; Hermes routes inter-dept revenue and operations signals. Handoff via cross-dept signals when mined assets target revenue stack.
 
 ## Git repo naming
 

@@ -10,7 +10,7 @@
 | name | Hermes |
 | display_name | Hermes — Signal Router |
 | archetype | Connector |
-| routes_for | marketing, sales, product-discovery |
+| routes_for | marketing, sales, product-discovery, operations |
 
 ## Responsibilities
 
@@ -22,8 +22,8 @@
 
 ## Inputs
 
-- Inbound `Signal` objects (from any revenue-stack agent)
-- `demiurge/router/revenue-signals.yaml` — signal type registry
+- Inbound `Signal` objects (from revenue-stack and operations agents)
+- `demiurge/router/revenue-signals.yaml` — signal type registry (revenue + operations cross-dept)
 - `demiurge/router/dispatch-rules.yaml` — routing table
 - `demiurge/router/timing-rules.yaml` — SLA definitions
 - `demiurge/router/quorum-definitions.yaml` — quorum templates

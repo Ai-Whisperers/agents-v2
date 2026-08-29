@@ -45,3 +45,35 @@ dispatch_rules:
       - type: agent
         id: clio-customer-signal-collector
     fan_out: first_available
+
+  - id: route-dept-activation
+    match:
+      routing_tags: [dept-activation]
+    deliver_to:
+      - type: agent
+        id: kronos-operations-lead
+    fan_out: first_available
+
+  - id: route-dept-health-breach
+    match:
+      routing_tags: [dept-health, kpi-breach]
+    deliver_to:
+      - type: agent
+        id: kronos-operations-lead
+    fan_out: first_available
+
+  - id: route-ops-agent-anomaly
+    match:
+      routing_tags: [eval-gate, drift, hard-stop]
+    deliver_to:
+      - type: agent
+        id: kronos-operations-lead
+    fan_out: first_available
+
+  - id: route-compliance-flag
+    match:
+      routing_tags: [compliance, trademark]
+    deliver_to:
+      - type: agent
+        id: kronos-operations-lead
+    fan_out: first_available

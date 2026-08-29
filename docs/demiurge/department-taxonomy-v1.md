@@ -7,7 +7,7 @@
 
 | id | name | status | priority |
 |----|------|--------|----------|
-| operations | Operations | skeleton | — |
+| operations | Operations | **active** | — |
 | finance-legal | Finance & Legal | skeleton | — |
 | sales | Sales | **active** | P0 |
 | engineering | Engineering & Delivery | skeleton | — |

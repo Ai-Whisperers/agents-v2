@@ -1,6 +1,6 @@
 # Router + Quorum Test Cases
 
-> DEMIURGE-052
+> DEMIURGE-052, DEMIURGE-076
 
 ## TC-R01 — Inbound lead dispatch
 
@@ -45,6 +45,32 @@
 **Given** calliope-content-producer status paused  
 **When** direct signal to Calliope  
 **Then** Router retries once; escalates to hera-marketing-lead
+
+## TC-R08 — Dept activation routing
+
+**Given** signal `dept-activation-ready` with tags `[dept-activation]`  
+**When** Router matches `route-dept-activation`  
+**Then** kronos-operations-lead receives within PT24H SLA
+
+## TC-R09 — Dept health breach routing
+
+**Given** signal `dept-health-breach` with tags `[dept-health, kpi-breach]`  
+**When** Router matches `route-dept-health-breach`  
+**Then** kronos-operations-lead receives within PT4H SLA  
+**And** quorum `quorum-ops-health-breach` opens (bizops-tracker reaction)
+
+## TC-R10 — Ops agent health anomaly
+
+**Given** signal `ops-agent-health-anomaly` with tags `[eval-gate, drift, hard-stop]`  
+**When** Router matches `route-ops-agent-anomaly`  
+**Then** kronos-operations-lead receives within PT1H SLA  
+**And** escalate to human:ivan after PT2H if unacked
+
+## TC-R11 — Compliance flag routing
+
+**Given** signal `ops-compliance-flag-count` with tags `[compliance, trademark]`  
+**When** Router matches `route-compliance-flag`  
+**Then** kronos-operations-lead receives within PT24H SLA
 
 ## Manual test procedure
 

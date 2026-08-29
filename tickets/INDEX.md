@@ -63,6 +63,6 @@
 | DEMIURGE-073-ai-org-platform | Define AI Org Platform dept — meta-agent framework skeleton | 60m | AI | Phase 1 — Identify + Stabilize | completed |
 | DEMIURGE-074-ops-research | Research Operations dept — sources, frameworks, state-of-the-art | 60m | AI | Phase 2 — Reference Dept (Operations) | completed |
 | DEMIURGE-075-ops-dept | Define Operations dept — mission, roles, signals, KPIs, cadences | 60m | AI | Phase 2 — Reference Dept (Operations) | completed |
-| DEMIURGE-076-ops-lead-agent | Design Operations lead agent soul + wire to router | 45m | AI | Phase 2 — Reference Dept (Operations) | pending |
+| DEMIURGE-076-ops-lead-agent | Design Operations lead agent soul + wire to router | 45m | AI | Phase 2 — Reference Dept (Operations) | completed |
 | DEMIURGE-077-terminology-lib | Terminology Library v1 — authoritative vocabulary for all system terms | 90m | AI+Ivan | Phase 1 — Identify + Stabilize | pending |
 | DEMIURGE-078-doc-intelligence | Document Intelligence System — classifier, archivist, miner, language quality, recordings | 120m | AI+Ivan | Phase 1 (design) / Phase 3 (build) | completed |

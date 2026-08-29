@@ -12,6 +12,7 @@
 | metis-proposal-drafter | Metis | sales | aiw-agent-metis-proposal-drafter |
 | athena-product-discovery-lead | Athena | product-discovery | aiw-agent-athena-product-discovery-lead |
 | clio-customer-signal-collector | Clio | product-discovery | aiw-agent-clio-customer-signal-collector |
+| kronos-operations-lead | Kronos | operations | aiw-agent-kronos-operations-lead |
 | hermes-router-revenue | Hermes | router | aiw-agent-hermes-router-revenue |
 | argus-health-monitor | Argus | monitor | aiw-agent-argus-health-monitor |
 | themis-document-classifier | Themis | knowledge-mgmt | aiw-agent-themis-document-classifier |

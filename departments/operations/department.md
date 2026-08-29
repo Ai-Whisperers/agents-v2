@@ -1,15 +1,15 @@
 # Operations Department
 
-> DEMIURGE-075
+> DEMIURGE-075, DEMIURGE-076
 
 ```yaml
 id: operations
 name: Operations
 tier: 1
-status: skeleton
+status: active
 mission: Run signal-driven daily operations — OKRs, incident response, vendor hygiene, cross-dept coordination, and cost control. Management spine for AI-native ops at <50 headcount.
-head_agent: —
-router_id: —
+head_agent: kronos-operations-lead
+router_id: hermes-router-revenue
 source_catalog_id: catalog-operations
 ```
 
@@ -17,7 +17,7 @@ source_catalog_id: catalog-operations
 
 | id | title | agent | status |
 |----|-------|-------|--------|
-| ops-lead | Head of Operations | — | deferred → DEMIURGE-076 |
+| ops-lead | Head of Operations | kronos-operations-lead | active |
 | ops-management-coordinator | Management Coordinator | management-coordinator | skeleton |
 | ops-business-analyst | Business Analyst | business-analyst | skeleton |
 | ops-bizops-tracker | BizOps Tracker | bizops-tracker | skeleton |

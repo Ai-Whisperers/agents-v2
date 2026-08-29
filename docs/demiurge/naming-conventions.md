@@ -41,6 +41,19 @@
 
 > **Note**: Sales lead uses Apollo (light/truth/oracles) to avoid collision with Router Hermes.
 
+## Knowledge Management (document-intelligence) assignments
+
+| Agent | Name | Role | Archetype |
+|-------|------|------|-----------|
+| document-classifier | Themis | Document Classifier | Analyst |
+| document-archivist | Mnemosyne | Document Archivist | Curator |
+| document-miner | Hephaestus | Document Miner | Builder |
+| document-router | Pheme | Document Router | Connector |
+| language-quality | Peitho | Language Quality | Analyst |
+| recordings | Orpheus | Recordings Agent | Builder |
+
+> **Note**: Pheme routes document envelopes; Hermes routes inter-dept revenue signals. Handoff via cross-dept signals when mined assets target revenue stack.
+
 ## Git repo naming
 
 ```

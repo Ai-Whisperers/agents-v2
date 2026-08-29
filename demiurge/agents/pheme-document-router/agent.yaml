@@ -1,0 +1,11 @@
+id: pheme-document-router
+name: Pheme
+display_name: Pheme — Document Router
+archetype: Connector
+status: active
+git_repo: https://github.com/Ai-Whisperers/aiw-agent-pheme-document-router
+departments: [knowledge-mgmt]
+roles: [document-router]
+cadence:
+  type: on_signal
+  routing_tags: [document-classified, quality-assessed, action-item-extracted, decision-logged, nugget-surfaced, quality-gate-cleared]

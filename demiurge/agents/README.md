@@ -14,6 +14,14 @@
 | clio-customer-signal-collector | Clio | product-discovery | aiw-agent-clio-customer-signal-collector |
 | hermes-router-revenue | Hermes | router | aiw-agent-hermes-router-revenue |
 | argus-health-monitor | Argus | monitor | aiw-agent-argus-health-monitor |
+| themis-document-classifier | Themis | knowledge-mgmt | aiw-agent-themis-document-classifier |
+| mnemosyne-document-archivist | Mnemosyne | knowledge-mgmt | aiw-agent-mnemosyne-document-archivist |
+| hephaestus-document-miner | Hephaestus | knowledge-mgmt | aiw-agent-hephaestus-document-miner |
+| pheme-document-router | Pheme | knowledge-mgmt | aiw-agent-pheme-document-router |
+| peitho-language-quality | Peitho | knowledge-mgmt | aiw-agent-peitho-language-quality |
+| orpheus-recordings-agent | Orpheus | knowledge-mgmt | aiw-agent-orpheus-recordings-agent |
 
 Souls: `demiurge/agents/<id>/PROMPT.md`  
 Manifests: `repo-manifest.yaml` (GitHub org `Ai-Whisperers`)
+
+Document Intelligence pipeline: Orpheus → Themis → (Mnemosyne, Hephaestus, Peitho) → quality-assessed → Pheme

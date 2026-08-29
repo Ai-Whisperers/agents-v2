@@ -3,7 +3,7 @@
 > DEMIURGE-011 — seeds agents-v2 functional area taxonomy
 > DEMIURGE-070 — add missing depts, fix status drift, restore original-20 entries
 
-## Tier 1 — Core (6)
+## Tier 1 — Core (7)
 
 | id | name | status | priority |
 |----|------|--------|----------|
@@ -13,6 +13,7 @@
 | engineering | Engineering & Delivery | skeleton | — |
 | research | Research & Education | skeleton | — |
 | people | People & Culture | skeleton | — |
+| ai-org-platform | AI Org Platform | skeleton | — |
 
 ## Tier 1 sub — Revenue (priority build)
 
@@ -29,7 +30,7 @@
 | bizops | BizOps | skeleton |
 | compliance | Compliance | skeleton |
 | revops | RevOps | skeleton |
-| knowledge-mgmt | Knowledge Management | skeleton |
+| knowledge-mgmt | Knowledge Management | active |
 | customer-success | Customer Success | skeleton |
 | ai-safety | AI Safety | skeleton |
 | procurement | Procurement | skeleton |

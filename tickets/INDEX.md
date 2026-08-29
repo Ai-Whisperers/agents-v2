@@ -57,3 +57,12 @@
 | DEMIURGE-053 | Write self-running milestone criteria for DEMIURGE | 30m | AI | Sprint 6 — Monitoring + Feedback | completed |
 | DEMIURGE-054 | Run first 7-day observation window | 0m | Observe | Sprint 6 — Monitoring + Feedback | pending |
 | DEMIURGE-055 | Write SPRINT-6-COMPLETE.md + feature list delta | 30m | AI | Sprint 6 — Monitoring + Feedback | completed |
+| DEMIURGE-070-taxonomy-v2 | Update department taxonomy v2 — add missing depts + fix status drift | 45m | AI | Phase 1 — Identify + Stabilize | completed |
+| DEMIURGE-071-doc-drift | Fix doc-impl drift — README counts, ORGANIGRAM, active-status mismatches | 30m | AI | Phase 1 — Identify + Stabilize | completed |
+| DEMIURGE-072-hermes-profiles | Inventory Ivan's Hermes dept profiles → stub agent.yaml per profile | 45m | Ivan+AI | Phase 1 — Identify + Stabilize | pending |
+| DEMIURGE-073-ai-org-platform | Define AI Org Platform dept — meta-agent framework skeleton | 60m | AI | Phase 1 — Identify + Stabilize | completed |
+| DEMIURGE-074-ops-research | Research Operations dept — sources, frameworks, state-of-the-art | 60m | AI | Phase 2 — Reference Dept (Operations) | pending |
+| DEMIURGE-075-ops-dept | Define Operations dept — mission, roles, signals, KPIs, cadences | 60m | AI | Phase 2 — Reference Dept (Operations) | pending |
+| DEMIURGE-076-ops-lead-agent | Design Operations lead agent soul + wire to router | 45m | AI | Phase 2 — Reference Dept (Operations) | pending |
+| DEMIURGE-077-terminology-lib | Terminology Library v1 — authoritative vocabulary for all system terms | 90m | AI+Ivan | Phase 1 — Identify + Stabilize | pending |
+| DEMIURGE-078-doc-intelligence | Document Intelligence System — classifier, archivist, miner, language quality, recordings | 120m | AI+Ivan | Phase 1 (design) / Phase 3 (build) | completed |

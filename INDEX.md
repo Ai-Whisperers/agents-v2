@@ -165,3 +165,15 @@ the coaching product" without copying the whole repo.
 
 **Document path**: `/opt/data/agents-v2/INDEX.md`
 **Last updated**: 2026-08-26 (package split)
+
+
+## Agent Naming (portmanteau framework)
+
+The org uses a portmanteau naming framework for all agents: [Domain Root] + [Personal Suffix]. Examples:
+- `sales-pipeline` → **Saleina**
+- `engineering-roster` → **Devin**
+- `finance-controller` → **Finus**
+- `ai-safety-engineer` → **Safina**
+- `kiki-coach` → **Magistra**
+
+Full reference (54 agents): `/opt/data/scratchpad/analysis/AGENT-NAMES-V2.md`

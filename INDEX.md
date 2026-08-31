@@ -142,5 +142,38 @@ These are placeholders / planned for future phases:
 
 ---
 
+## Per-department packages
+
+The mono-repo has been split into 6 per-department packages under
+`/opt/data/agents-v2/packages/`. Each package is independently
+deployable so customers can pick "just the sales agents" or "just
+the coaching product" without copying the whole repo.
+
+| # | Package | Lead agent | Use case |
+|---|---------|------------|----------|
+| 1 | `packages/finance/` | `finance-controller` | Cash flow, contracts, compliance, procurement |
+| 2 | `packages/sales/` | `sales-pipeline` | Lead capture, ICP scoring, outreach, proposals |
+| 3 | `packages/operations/` | `management-coordinator` | Cross-repo review, daily brief, AI-ops, OKRs, burnout watch |
+| 4 | `packages/coaching/` | `kiki-coach` | Coaching product: lessons, thesis, courses, conversion funnel |
+| 5 | `packages/engineering/` | `engineering-roster` | Deploys, infra monitoring, QA, security, AI safety, chaos tests |
+| 6 | `packages/research/` | `research-tracker` | Thesis, citations, course modules, OKRs, funding programs |
+
+**Master package index**: [`/opt/data/agents-v2/PACKAGE-INDEX.md`](./PACKAGE-INDEX.md)
+(34 agents, ~616 KB total, all packages MIT-licensed, all trademark-clean).
+
+---
+
 **Document path**: `/opt/data/agents-v2/INDEX.md`
-**Last updated**: 2026-08-14
+**Last updated**: 2026-08-26 (package split)
+
+
+## Agent Naming (portmanteau framework)
+
+The org uses a portmanteau naming framework for all agents: [Domain Root] + [Personal Suffix]. Examples:
+- `sales-pipeline` → **Saleina**
+- `engineering-roster` → **Devin**
+- `finance-controller` → **Finus**
+- `ai-safety-engineer` → **Safina**
+- `kiki-coach` → **Magistra**
+
+Full reference (54 agents): `/opt/data/scratchpad/analysis/AGENT-NAMES-V2.md`

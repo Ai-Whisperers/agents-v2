@@ -86,7 +86,7 @@ def fix_skill(skill_md: Path):
 def main():
     fixed = 0
     for skill_md in SKILLS_ROOT.rglob("SKILL.md"):
-        if any(p in str(skill_md) for p in ['_meta', '_agent-applications', '_collections', '.archive']):
+        if any(p in str(skill_md) for p in ['_objetivo', '_agent-applications', '_collections', '.archive']):
             continue
         if fix_skill(skill_md):
             fixed += 1

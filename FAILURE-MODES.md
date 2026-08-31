@@ -24,7 +24,7 @@ Each failure mode has:
 
 **Root cause** (common):
 - Model drift (provider/model changed since job created)
-- Tool unavailability (gh API down, OpenAI rate limit)
+- Tool unavailability (gh API down, Proveedor de IA rate limit)
 - State file corruption
 - Network partition
 
@@ -78,7 +78,7 @@ Each failure mode has:
 **What happens**: Agent starts but LLM call fails with 5xx.
 
 **Root cause**:
-- Provider outage (OpenAI, Anthropic, local model)
+- Provider outage (Proveedor de IA, Proveedor de IA, local model)
 - Rate limit exceeded
 - Network partition
 
@@ -226,7 +226,7 @@ Each failure mode has:
 
 ## F-9: Trademark violation in agent output
 
-**What happens**: Agent output contains banned trademark (e.g., mentions Slack).
+**What happens**: Agent output contains banned trademark (e.g., mentions Canal de comunicacion).
 
 **Root cause**:
 - Agent prompt has accidental mention
@@ -368,7 +368,7 @@ Each failure mode has:
 
 ## F-15: Billing dispute / chargeback
 
-**What happens**: Client disputes a charge. Stripe (banned vendor — using OSS alternative) flags it.
+**What happens**: Client disputes a charge. Pasarela de pagos (banned vendor — using OSS alternative) flags it.
 
 **Root cause**: Service quality issue, miscommunication, fraud.
 

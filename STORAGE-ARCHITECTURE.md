@@ -236,7 +236,7 @@ rm "$TARBALL"
 
 - Qdrant Cloud or self-hosted at `qdrant.paragu-ai.com`
 - One collection per agent: `agent_<name>_memory`
-- Vectors: 1536-dim (OpenAI ada-002 compatible) or via local embed model
+- Vectors: 1536-dim (Proveedor de IA ada-002 compatible) or via local embed model
 - Distance: cosine
 
 ## Collections

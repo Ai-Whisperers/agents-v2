@@ -25,7 +25,7 @@ The current catalog is grant/funding-heavy. It does NOT cover **direct revenue g
 
 | Platform | URL | Type | TM | Fit |
 |---|---|---|---|---|
-| **YouTube Partner Program** | https://www.youtube.com/ | Ad revenue, Super Thanks, channel memberships | ⚠️ BRAND-NAME — never put YouTube brand on our public surfaces | 🟡 Marginal — only if we produce video content |
+| **Plataforma de video Partner Program** | https://www.plataforma de video.com/ | Ad revenue, Super Thanks, channel memberships | ⚠️ BRAND-NAME — never put Plataforma de video brand on our public surfaces | 🟡 Marginal — only if we produce video content |
 | **Spotify Podcast Subscriptions** | https://newsroom.spotify.com/2026-04-14/latin-america-podcast-awards-nominees/ | LATAM-focused podcast monetization, Spotify Awards active 2026 | �️ BRAND-NAME | 🟡 Marginal — if we launch a podcast |
 | **Substack Partner Program** | https://substack.com/ | Subscription newsletters + paid subscriptions | ✅ SAFE | ✅ **Strong — Ivan's weekly brief could be on Substack** |
 | **ConvertKit** | https://convertkit.com/ | Email + creator monetization | ✅ SAFE | 🟡 If newsletter scales |
@@ -47,7 +47,7 @@ The current catalog is grant/funding-heavy. It does NOT cover **direct revenue g
 ### A.3 — Other revenue ops (no fresh URL verification needed, well-known)
 
 - **API monetization**: expose agent framework as paid API (RapidAPI, Postman, HF Spaces paid)
-- **Coaching packages**: Clarity.fm, direct Stripe checkout
+- **Coaching packages**: Clarity.fm, direct Pasarela de pagos checkout
 - **Newsletter sponsorships**: Paved, Swapstack, direct outreach
 - **Conference speaking**: AI Engineer Summit, QCon, Web Summit (CFP-based)
 - **Book deal**: Packt, Manning, O'Reilly (developer-focused)
@@ -56,7 +56,7 @@ The current catalog is grant/funding-heavy. It does NOT cover **direct revenue g
 - **Joint ventures**: co-launch with complementary AI/agent companies
 - **Franchise model**: license the agent-org framework
 - **IP licensing**: license PROMPT-TEMPLATE.md to other orgs
-- **Premium Discord/Slack community**: Circle, Mighty Networks
+- **Premium Canal de comunicacion/Canal de comunicacion community**: Circle, Mighty Networks
 - **Sponsored content**: Izea, Cooperatize
 - **Hackathon prizes**: AIcrowd, Devpost, MLH
 - **Bug bounties**: HackerOne, Bugcrowd
@@ -117,11 +117,11 @@ prerequisites:
 #### B.3.1 — Merge duplicates
 - AWS Activate + AWS Activate via Founders Hub = **one entry** with two application paths
 - Cloudflare for Startups + Cloudflare Workers free tier = **one entry** with three tiers
-- Stripe Atlas + Stripe Atlas waves fee to help female founders = **one entry** with two variants
+- Pasarela de pagos Atlas + Pasarela de pagos Atlas waves fee to help female founders = **one entry** with two variants
 
 #### B.3.2 — Split combined programs
-- Microsoft for Startups: split into "Founders Hub" (equity-free Azure) vs "MSFT for Startups" (AI partner program vs Gaming) — different criteria
-- Google for Startups: split into "Cloud" (cloud credits) vs "Accelerator" (mentorship cohort) vs "Google.org" (nonprofit grants)
+- Suite ofimatica for Startups: split into "Founders Hub" (equity-free Azure) vs "MSFT for Startups" (AI partner program vs Gaming) — different criteria
+- Buscador principal for Startups: split into "Cloud" (cloud credits) vs "Accelerator" (mentorship cohort) vs "Buscador principal.org" (nonprofit grants)
 - NVIDIA: split into "Inception" (free) vs "NVIDIA Ventures" (capital)
 
 ### B.5 — Calendar-tied 90-day plan
@@ -191,9 +191,9 @@ The transcript surfaced 4 Finance gaps (FI-1 to FI-4) and 4 Sales gaps (SA-1 to 
 
 The audit identified 8 categories of risks to AVOID:
 
-1. **Programs that violate the banlist**: Microsoft-branded events, Salesforce AppExchange public surfaces, AWS partner events with Amazon branding
+1. **Programs that violate the banlist**: Suite ofimatica-branded events, Salesforce AppExchange public surfaces, AWS partner events with Tienda en linea branding
 2. **Programs that conflict with AI-native philosophy**: EO/YPO/Vistage (membership orgs requiring peer human attendance), in-person cohort residencies that aren't compatible with "agent does the work"
-3. **Programs with hidden costs**: Stripe Atlas ($500), SAFE financing ($5-15K legal), EIC Accelerator (co-funding requirement), EU incorporation (€500-5K), visa applications ($2-10K legal)
+3. **Programs with hidden costs**: Pasarela de pagos Atlas ($500), SAFE financing ($5-15K legal), EIC Accelerator (co-funding requirement), EU incorporation (€500-5K), visa applications ($2-10K legal)
 4. **Scam / predatory programs**: any "pay to apply" or "guaranteed funding for fee" — verify on Crunchbase / PitchBook / Indie Hackers community
 5. **Programs that distract from MRR-generating work**: anything >8 hours of effort when MRR-generating work isn't also progressing
 6. **Programs with long time-to-money**: EIC Accelerator (6-12 months), IDB Lab (4-12 months), SBIR/NSF (6-12 months) — 90-day plan only
@@ -214,7 +214,7 @@ The audit identified 8 categories of risks to AVOID:
 | **Cartesia Sonic** | (verify) | Free credits | ✅ SAFE | 🟡 Niche |
 | **Play.ht** | (verify) | Credits | ✅ SAFE | 🟡 Niche |
 
-⚠️ **Wait — ElevenLabs is not on banlist**. Only `claude` and `anthropic` are. ElevenLabs is fine to use.
+⚠️ **Wait — ElevenLabs is not on banlist**. Only `modelo de IA` and `proveedor de IA` are. ElevenLabs is fine to use.
 
 ### F.2 — Video AI startups
 
@@ -275,9 +275,9 @@ The audit identified 8 categories of risks to AVOID:
 |---|---|---|---|
 | **Hugging Face Spaces paid tier** | https://huggingface.co/spaces | ✅ SAFE | ✅ **Strong — we can deploy agents there** |
 | **Replicate creator revenue** | https://replicate.com/ | ✅ SAFE | ✅ Same |
-| **GPT Store (OpenAI)** | https://openai.com/index/introducing-the-gpt-store/ | ⚠️ OpenAI is BRAND-NAME on banlist — verify GPT Store status | �️ **TM RISK** — OpenAI is on banlist |
+| **GPT Store (Proveedor de IA)** | https://proveedor de IA.com/index/introducing-the-gpt-store/ | ⚠️ Proveedor de IA is BRAND-NAME on banlist — verify GPT Store status | �️ **TM RISK** — Proveedor de IA is on banlist |
 
-⚠️ **GPT Store is a TRADEMARK RISK** — OpenAI is on banlist. Cannot deploy GPTs under Ai-Whisperers brand without naming "OpenAI" in the listing. **Skip GPT Store unless we accept the TM risk.**
+⚠️ **GPT Store is a TRADEMARK RISK** — Proveedor de IA is on banlist. Cannot deploy GPTs under Ai-Whisperers brand without naming "Proveedor de IA" in the listing. **Skip GPT Store unless we accept the TM risk.**
 
 ### F.9 — Carbon credits for AI compute
 
@@ -362,7 +362,7 @@ The audit identified 8 categories of risks to AVOID:
 | **Hugging Face Spaces paid tier** | https://huggingface.co/spaces | ✅ SAFE | ✅ **Strong** |
 | **Replicate creator revenue** | https://replicate.com/ | ✅ SAFE | ✅ Strong |
 | **Vercel AI Playground** | https://vercel.com/ai | ⚠️ Not on banlist | 🟡 If using Vercel |
-| **GPT Store** | https://openai.com/index/introducing-the-gpt-store/ | ⚠️ **OpenAI is BRAND-NAME — TM RISK** | ❌ **AVOID due to banlist** |
+| **GPT Store** | https://proveedor de IA.com/index/introducing-the-gpt-store/ | ⚠️ **Proveedor de IA is BRAND-NAME — TM RISK** | ❌ **AVOID due to banlist** |
 
 ### H.3 — AI tool co-marketing
 
@@ -496,7 +496,7 @@ Original: 480 lines / 40 KB
 
 1. **The catalog was the wrong thing to add to first.** Operational layer (forms, narrative, deck, metrics, tracker, state file, agent spec) was blocking execution. **Now built**.
 
-2. **TM policy is binary, not gradient.** The banlist applies to OUR public surfaces (org name, page titles), NOT to the program we receive funding from. Anthropic Fellows, OpenAI credits, Google Cloud Startups, AWS Activate, MSFT Founders Hub, Stripe Atlas — all OK to apply to as long as our application org name is clean. **GPT Store is the exception** (OpenAI is on banlist; deploying GPTs would put "OpenAI" in our public surface).
+2. **TM policy is binary, not gradient.** The banlist applies to OUR public surfaces (org name, page titles), NOT to the program we receive funding from. Proveedor de IA Fellows, Proveedor de IA credits, Buscador principal Cloud Startups, AWS Activate, MSFT Founders Hub, Pasarela de pagos Atlas — all OK to apply to as long as our application org name is clean. **GPT Store is the exception** (Proveedor de IA is on banlist; deploying GPTs would put "Proveedor de IA" in our public surface).
 
 3. **FI-1 (cash-flow gap) is now closed.** Three scenarios documented: Conservative (-$3,120 over 12mo), Base (+$12,580 if richar-ruiz closes), Aggressive (+$40,740 if first EU client closes in Q1 2027). Justifies the ask for compute credits: closing richar-ruiz flips org to net-positive in November 2026.
 
@@ -505,13 +505,13 @@ Original: 480 lines / 40 KB
 | Program | TM status | Action |
 |---|---|---|
 | AWS Activate | FUNDED-BY | ✅ APPLY |
-| Microsoft for Startups | FUNDED-BY | ✅ APPLY |
-| Google Cloud for Startups | BRAND-NAME | ✅ APPLY (use "GCP credits" on public surfaces) |
-| Stripe Atlas | BRAND-NAME | ✅ APPLY |
-| Anthropic Fellows | BRAND-NAME | ✅ APPLY (with clean org name) |
-| OpenAI credits / GPT Store | BRAND-NAME | ⚠️ APPLY for credits; ❌ DO NOT deploy GPTs (OpenAI in listing) |
+| Suite ofimatica for Startups | FUNDED-BY | ✅ APPLY |
+| Buscador principal Cloud for Startups | BRAND-NAME | ✅ APPLY (use "GCP credits" on public surfaces) |
+| Pasarela de pagos Atlas | BRAND-NAME | ✅ APPLY |
+| Proveedor de IA Fellows | BRAND-NAME | ✅ APPLY (with clean org name) |
+| Proveedor de IA credits / GPT Store | BRAND-NAME | ⚠️ APPLY for credits; ❌ DO NOT deploy GPTs (Proveedor de IA in listing) |
 | FOMIN | MERGED INTO IDB Lab | Use IDB Lab instead |
-| YouTube | BRAND-NAME | ⚠️ Only if we produce video content (and brand carefully) |
+| Plataforma de video | BRAND-NAME | ⚠️ Only if we produce video content (and brand carefully) |
 
 ### K.4 — Paraguay-specific URLs verified live
 

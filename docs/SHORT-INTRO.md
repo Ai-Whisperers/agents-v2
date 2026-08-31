@@ -32,7 +32,7 @@ All self-running, all production-ready, all audited 9.0/10 on the 12-factor agen
 ## The tech stack
 
 - Hermes Agent (NousResearch)
-- OpenRouter / Claude / GPT-4 / MiniMax-M3
+- OpenRouter / Modelo de IA / GPT-4 / MiniMax-M3
 - Evolution API (WhatsApp)
 - Cloudflare + R2
 - 14 SQLite DBs + JSON state files (git-versioned)

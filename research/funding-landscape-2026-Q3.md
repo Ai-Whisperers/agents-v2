@@ -9,14 +9,14 @@
 ## How to read the trademark column
 
 Every program name was checked against the trademark banlist (mechanical, no exceptions):
-`mensaje, mensajebusiness, mensaje-web, wpp, facebook, meta, instagram, insta, messenger, oculus, paypal, stripe, google, gmail, youtube, tiktok, twitter, x-com, discord, slack, microsoft, office365, apple, icloud, amazon, aws-, openai, chatgpt, anthropic, claude`
+`texto, mensajeria empresarial, canal de texto web, canal de texto, red social principal, objetivo, red social de fotos, red social de fotos, canal de mensajeria, gafas de realidad virtual, pasarela de pagos secundaria, pasarela de pagos, buscador principal, correo electronico, plataforma de video, plataforma de videos cortos, red social, red social, canal de comunicacion, canal de comunicacion, suite ofimatica, suite ofimatica, dispositivo personal, almacenamiento en la nube, tienda en linea, infraestructura-en-la-nube-, proveedor de IA, asistente de IA generativa, proveedor de IA, modelo de IA`
 
 | Tag | Meaning |
 |---|---|
 | ✅ SAFE | No banned tokens in program or org name |
-| ⚠️ BRAND-NAME | Program is named after a banned brand (e.g., "Anthropic Fellows Program"). The org's NAME on the application would need to be trademark-clean, but the funding program itself can still be applied to. Use a clean application org name. |
-| ⚠️ CARVE-OUT | OSS foundation / philanthropic arm (e.g., Google.org) — carve-out is per program, not blanket |
-| ⚠️ FUNDED-BY | The funder is a banned brand but the program has a clean identity (e.g., Microsoft for Startups Founders Hub) |
+| ⚠️ BRAND-NAME | Program is named after a banned brand (e.g., "Proveedor de IA Fellows Program"). The org's NAME on the application would need to be trademark-clean, but the funding program itself can still be applied to. Use a clean application org name. |
+| ⚠️ CARVE-OUT | OSS foundation / philanthropic arm (e.g., Buscador principal.org) — carve-out is per program, not blanket |
+| ⚠️ FUNDED-BY | The funder is a banned brand but the program has a clean identity (e.g., Suite ofimatica for Startups Founders Hub) |
 
 Per banlist policy: the **application org name** must never contain banned tokens. The **program name** can be banned if we never publish it on the public-facing surface.
 
@@ -28,10 +28,10 @@ Per banlist policy: the **application org name** must never contain banned token
 
 | Program | URL | Award | Eligibility | Cadence | TM | Fit |
 |---|---|---|---|---|---|---|
-| **AWS Activate** | https://aws.amazon.com/startups/credits/ | Up to **$200,000** in AWS credits (verified via 2026 search) | Any startup <10 yrs old, <$10M raised, not affiliated with AWS competitor | Rolling | ⚠️ FUNDED-BY | ✅ Critical — covers most infra. Apply first. |
+| **AWS Activate** | https://aws.tienda en linea.com/startups/credits/ | Up to **$200,000** in AWS credits (verified via 2026 search) | Any startup <10 yrs old, <$10M raised, not affiliated with AWS competitor | Rolling | ⚠️ FUNDED-BY | ✅ Critical — covers most infra. Apply first. |
 | **Cloudflare for Startups** | https://www.cloudflare.com/startups/ | **Up to $250,000** in Workers + R2 + Enterprise credits | Seed to Series A, <$5M raised, <100 employees | Rolling | ✅ SAFE | ✅ Excellent — already on Cloudflare stack. |
-| **Microsoft for Startups Founders Hub** | https://www.microsoft.com/en-us/startups | **$2,500-$150,000** Azure credits + GitHub Enterprise + more | Idea-stage to Series A, founder-led, <$10M raised | Rolling | ⚠️ FUNDED-BY | ✅ Strong — Azure + OpenAI service credits bundled. |
-| **Google Cloud for Startups** | https://cloud.google.com/startup | **Up to $200,000** in GCP credits | Seed to Series A, partnered with VC/accelerator | Rolling | ⚠️ BRAND-NAME | ✅ Strong — but check Vertex AI access. |
+| **Suite ofimatica for Startups Founders Hub** | https://www.suite ofimatica.com/en-us/startups | **$2,500-$150,000** Azure credits + GitHub Enterprise + more | Idea-stage to Series A, founder-led, <$10M raised | Rolling | ⚠️ FUNDED-BY | ✅ Strong — Azure + Proveedor de IA service credits bundled. |
+| **Buscador principal Cloud for Startups** | https://cloud.buscador principal.com/startup | **Up to $200,000** in GCP credits | Seed to Series A, partnered with VC/accelerator | Rolling | ⚠️ BRAND-NAME | ✅ Strong — but check Vertex AI access. |
 | **Oracle for Startups** | https://www.oracle.com/startup/ | **$500-$25,000** Oracle Cloud credits + free tier | Cloud-native startups, less than 5 yrs | Rolling | ✅ SAFE | 🟡 Marginal — only useful if using Oracle infra |
 | **DigitalOcean Hatch** | https://www.digitalocean.com/hatch | **$200-$5,000** DO credits for startups | Open-source / student / early-stage | Rolling | ✅ SAFE | 🟡 Marginal — DO is cheap anyway |
 | **Modal Startups** | https://modal.com/startups | **Up to $25,000** in Modal compute credits (verified via 2026 search) | Startups using Modal for AI/ML infra | Rolling | ✅ SAFE | ✅ Excellent — Modal is GPU serverless, perfect for AI agents |
@@ -65,7 +65,7 @@ Per banlist policy: the **application org name** must never contain banned token
 | **IDB Lab** | https://www.iadb.org/en/how-we-can-work-together/public-sector/financing-solutions/grants | Project-based grants for innovative solutions | LATAM-based, project-based | Periodic calls | ✅ SAFE | ✅ Strong — IDB Lab's Wexchange (women in STEM) call verified live. |
 | **CAF (Banco de Desarrollo de América Latina)** | https://www.caf.com/ | Project co-financing for tech/innovation | LATAM governments + partners | Project-by-project | ✅ SAFE | 🟡 Mostly via partnerships, not direct grants |
 | **FOMIN / Multilateral Investment Fund** | (subsumed into IDB Lab post-2021) | SME finance pilots | LATAM SME finance orgs | Discontinued as standalone | ✅ SAFE | ⚠️ **DEPRECATED** — FOMIN merged into IDB Lab |
-| **Google.org LATAM** | https://www.google.org/ | Impact grants for AI for Social Good | Nonprofits + impact startups | Periodic | �️ CARVE-OUT | 🟡 Need nonprofit status or fiscal sponsor |
+| **Buscador principal.org LATAM** | https://www.buscador principal.org/ | Impact grants for AI for Social Good | Nonprofits + impact startups | Periodic | �️ CARVE-OUT | 🟡 Need nonprofit status or fiscal sponsor |
 | **OAS** | https://www.oas.org/ | Various innovation / entrepreneurship programs | OAS member states (incl. PY) | Periodic | ✅ SAFE | 🟡 Worth monitoring |
 
 ## 2c. EU programs (open to non-EU / LATAM partners)
@@ -96,10 +96,10 @@ Per banlist policy: the **application org name** must never contain banned token
 
 | Program | URL | Award | Eligibility | Cadence | TM | Fit |
 |---|---|---|---|---|---|---|
-| **Anthropic Fellows Program (AI Safety)** | https://alignment.anthropic.com/2025/anthropic-fellows-program-2026/ | Fully-funded research stipends (~$95K + expenses) | Researchers in AI safety / alignment | Nov / May / July cohorts | ⚠️ BRAND-NAME | 🟡 Niche — only if Ivan pivots to AI safety research |
-| **Anthropic Economic & Policy Fellows** | (per 2026 listings) | Funded research stipends | Researchers in AI policy/economics | Periodic | ⚠️ BRAND-NAME | 🟡 Niche — policy angle |
-| **OpenAI Credits / Programs** | https://openai.com/ | Various credits for researchers / nonprofits | Per-program eligibility | Periodic | ⚠️ BRAND-NAME | ⚠️ TM exposure — must use clean application org |
-| **Google.org AI for Social Good** | https://www.google.org/impact/ai-social-good/ | Up to **$500K** + Google engineers | Nonprofits, impact orgs | Periodic | ⚠️ CARVE-OUT | 🟡 Need nonprofit / fiscal sponsor |
+| **Proveedor de IA Fellows Program (AI Safety)** | https://alignment.proveedor de IA.com/2025/proveedor de IA-fellows-program-2026/ | Fully-funded research stipends (~$95K + expenses) | Researchers in AI safety / alignment | Nov / May / July cohorts | ⚠️ BRAND-NAME | 🟡 Niche — only if Ivan pivots to AI safety research |
+| **Proveedor de IA Economic & Policy Fellows** | (per 2026 listings) | Funded research stipends | Researchers in AI policy/economics | Periodic | ⚠️ BRAND-NAME | 🟡 Niche — policy angle |
+| **Proveedor de IA Credits / Programs** | https://proveedor de IA.com/ | Various credits for researchers / nonprofits | Per-program eligibility | Periodic | ⚠️ BRAND-NAME | ⚠️ TM exposure — must use clean application org |
+| **Buscador principal.org AI for Social Good** | https://www.buscador principal.org/impact/ai-social-good/ | Up to **$500K** + Buscador principal engineers | Nonprofits, impact orgs | Periodic | ⚠️ CARVE-OUT | 🟡 Need nonprofit / fiscal sponsor |
 | **NVIDIA Inception** | https://www.nvidia.com/en-us/startups/ | Free hardware + SDKs + GPU credits | AI startups | Rolling | ✅ SAFE | ✅ **Excellent — GPU access** |
 | **a16z Open Source Fund** | https://a16z.com/announcing-the-a16z-open-source-fund/ | Investments in OSS-critical projects (not grants) | OSS projects with critical infrastructure value | Periodic | ✅ SAFE | 🟡 Investment, not grant |
 | **Hugging Face Community Grants** | (per HF blog) | Compute credits + support for OSS AI projects | OSS AI project maintainers | Periodic | ✅ SAFE | ✅ Good if org open-sources agent framework |
@@ -235,9 +235,9 @@ Per banlist policy: the **application org name** must never contain banned token
 
 | Org | URL | Type | TM | Fit |
 |---|---|---|---|---|
-| **Google for Startups LATAM (Mexico City)** | https://www.google.com.mx/startups/ | Acceleration + network | ⚠️ CARVE-OUT | ✅ Good |
+| **Buscador principal for Startups LATAM (Mexico City)** | https://www.buscador principal.com.mx/startups/ | Acceleration + network | ⚠️ CARVE-OUT | ✅ Good |
 | **AWS LATAM Startup Programs** | (per AWS site) | Tech credits + mentorship | ⚠️ FUNDED-BY | ✅ Good |
-| **Microsoft Reactor LATAM** | https://developer.microsoft.com/en-us/reactor/ | Tech community + workshops | ⚠️ FUNDED-BY | ✅ Good |
+| **Suite ofimatica Reactor LATAM** | https://developer.suite ofimatica.com/en-us/reactor/ | Tech community + workshops | ⚠️ FUNDED-BY | ✅ Good |
 | **Globant Ventures** | https://www.globant.com/about/globant-ventures | LATAM tech VC | ✅ SAFE | 🟡 Need traction |
 | **Globant Awards** | https://www.globant.com/awards | Tech innovation awards | ✅ SAFE | 🟡 Visibility play |
 | **MercadoLibre Fund / Capital** | (per ML site) | LATAM e-commerce VC | ✅ SAFE | 🟡 Only if e-commerce adjacent |
@@ -322,7 +322,7 @@ Per banlist policy: the **application org name** must never contain banned token
 |---|---|---|
 | **FOMIN (Multilateral Investment Fund)** | Merged into IDB Lab | 2021 reorganization |
 | **AI Grant (aigrant.org)** | Last cohort 2024 | Verify before applying |
-| **Microsoft for Startups (legacy)** | Replaced by Founders Hub | Apply via Founders Hub |
+| **Suite ofimatica for Startups (legacy)** | Replaced by Founders Hub | Apply via Founders Hub |
 
 ---
 
@@ -330,12 +330,12 @@ Per banlist policy: the **application org name** must never contain banned token
 
 | Program | Issue |
 |---|---|
-| **Anthropic Fellows Program** | Brand-name — fine if applied with clean org, but no public surface reference |
-| **OpenAI credits** | Brand-name — same |
-| **Google Cloud for Startups** | Brand-name — fine but use "GCP credits" on public surfaces |
-| **Microsoft for Startups Founders Hub** | Funded-by — fine but avoid Microsoft name in public-facing claims |
-| **Stripe Atlas** | Brand-name — fine but Stripe is on banlist for product names (Stripe Atlas is a Stripe product, not us) |
-| **Amazon AWS** | Brand-name — fine if we say "AWS Activate" but never "Amazon" |
+| **Proveedor de IA Fellows Program** | Brand-name — fine if applied with clean org, but no public surface reference |
+| **Proveedor de IA credits** | Brand-name — same |
+| **Buscador principal Cloud for Startups** | Brand-name — fine but use "GCP credits" on public surfaces |
+| **Suite ofimatica for Startups Founders Hub** | Funded-by — fine but avoid Suite ofimatica name in public-facing claims |
+| **Pasarela de pagos Atlas** | Brand-name — fine but Pasarela de pagos is on banlist for product names (Pasarela de pagos Atlas is a Pasarela de pagos product, not us) |
+| **Tienda en linea AWS** | Brand-name — fine if we say "AWS Activate" but never "Tienda en linea" |
 
 ---
 
@@ -346,8 +346,8 @@ Per banlist policy: the **application org name** must never contain banned token
 ## Tier S — Apply this week (rolling acceptance, zero equity, immediate utility)
 
 1. **Cloudflare for Startups** (https://www.cloudflare.com/startups/) — **up to $250K** in credits; we're already on Cloudflare
-2. **AWS Activate** (https://aws.amazon.com/startups/credits/) — **up to $200K** in credits
-3. **Microsoft for Startups Founders Hub** (https://www.microsoft.com/en-us/startups) — **$2.5K-$150K** Azure credits
+2. **AWS Activate** (https://aws.tienda en linea.com/startups/credits/) — **up to $200K** in credits
+3. **Suite ofimatica for Startups Founders Hub** (https://www.suite ofimatica.com/en-us/startups) — **$2.5K-$150K** Azure credits
 4. **NVIDIA Inception** (https://www.nvidia.com/en-us/startups/) — Free GPU credits + hardware
 5. **Modal Startups** (https://modal.com/startups) — **up to $25K** in GPU serverless credits
 6. **OnDeck Founders** (https://joinodf.com/) — Free peer network + AI track
@@ -387,7 +387,7 @@ Per banlist policy: the **application org name** must never contain banned token
 |---|---|
 | 1 | Apply: Cloudflare for Startups |
 | 1 | Apply: AWS Activate |
-| 2 | Apply: Microsoft for Startups Founders Hub |
+| 2 | Apply: Suite ofimatica for Startups Founders Hub |
 | 2 | Apply: NVIDIA Inception |
 | 3 | Apply: Modal Startups |
 | 3 | Apply: OnDeck Founders |

@@ -9,7 +9,7 @@
 
 ## Mission
 
-Keep the agent platform itself alive, healthy, observable. Operations is the **meta-department** — it doesn't ship products, it makes sure every other department can ship.
+Keep the agent platform itself alive, healthy, observable. Operations is the **objetivo-department** — it doesn't ship products, it makes sure every other department can ship.
 
 ## What this department owns
 

@@ -1,0 +1,18 @@
+{
+  "last_run": null,
+  "open_stuck": [],
+  "stale_repos": [],
+  "decisions_for_ivan": [],
+  "kpi_snapshot": {
+    "pipeline_usd": null,
+    "mrr_usd": null,
+    "leads_24h": 0,
+    "sites_up": 0,
+    "sites_down": 0
+  },
+  "founder_bandwidth": {
+    "ivan": { "hours_week": null, "severity": "low" },
+    "kiki": { "hours_week": null, "severity": "low" }
+  },
+  "override_possible": true
+}

@@ -1,0 +1,95 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://aiwhisperers.io/schemas/engineering.schema.json",
+  "title": "Engineering & Delivery Department State Schema",
+  "description": "State for engineering-roster and downstream Engineering dept agents.",
+  "type": "object",
+  "required": ["last_run", "deploys_7d", "open_prs", "incidents_72h", "kiki_commits_7d"],
+  "properties": {
+    "last_run": {
+      "type": ["string", "null"],
+      "format": "date-time"
+    },
+    "deploys_7d": {
+      "type": "array",
+      "description": "Deploys in last 7 days (with SHA, repo, status, who).",
+      "items": {
+        "type": "object",
+        "properties": {
+          "repo": { "type": "string" },
+          "sha": { "type": "string" },
+          "status": { "type": "string", "enum": ["pending", "success", "failed", "rolled_back"] },
+          "deployed_by": { "type": "string" },
+          "deployed_at": { "type": "string", "format": "date-time" }
+        }
+      }
+    },
+    "open_prs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "repo": { "type": "string" },
+          "pr_number": { "type": "integer" },
+          "title": { "type": "string" },
+          "reviewers": { "type": "array", "items": { "type": "string" } },
+          "age_days": { "type": "integer" }
+        }
+      }
+    },
+    "stale_repos_7d": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "days_stale": { "type": "integer" }
+        }
+      }
+    },
+    "incidents_72h": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "severity": { "type": "string", "enum": ["low", "medium", "high", "critical"] },
+          "summary": { "type": "string" },
+          "resolved": { "type": "boolean" },
+          "resolved_at": { "type": ["string", "null"], "format": "date-time" }
+        }
+      }
+    },
+    "kiki_commits_7d": {
+      "type": "integer",
+      "minimum": 0,
+      "default": 0
+    },
+    "infra_costs_monthly_usd": {
+      "type": ["number", "null"]
+    },
+    "tools_pending_decision": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "monthly_cost_usd": { "type": "number" },
+          "decided_by": { "type": "string" }
+        }
+      }
+    },
+    "ai_safety_state": {
+      "type": "object",
+      "description": "Filled by ai-safety-engineer.",
+      "properties": {
+        "last_chaos_test": { "type": ["string", "null"], "format": "date-time" },
+        "hard_stops_verified": { "type": "boolean" },
+        "owasp_violations_open": { "type": "integer", "default": 0 }
+      }
+    },
+    "override_possible": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

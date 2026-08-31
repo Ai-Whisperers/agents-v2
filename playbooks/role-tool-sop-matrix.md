@@ -17,7 +17,7 @@ For brevity, only Tier 1 and Tier 2 roles are listed in detail. Tier 3/4 deferre
 
 | Role | Default tool | OSS alt | Premium | Daily | Weekly | Monthly |
 |------|--------------|---------|---------|-------|--------|---------|
-| Operations Lead | Telegram + WhatsApp | Matrix (OSS) | Slack (banned) | review alerts | review OKRs | review budget |
+| Operations Lead | Telegram + WhatsApp | Matrix (OSS) | Canal de comunicacion (banned) | review alerts | review OKRs | review budget |
 | Repo Steward | `gh` CLI | Gitea | GitHub Enterprise | scan for stale | archive idle | quarterly sweep |
 | Asset Tracker | JSON inventory | Snipe-IT | Jamf | log changes | reconcile | full audit |
 | Vendor Coordinator | Spreadsheet + email | FreeScout | Vendr | — | review renewals | vendor review |
@@ -134,18 +134,18 @@ For brevity, only Tier 1 and Tier 2 roles are listed in detail. Tier 3/4 deferre
 ## Trademark-restricted tools (BANNED)
 
 Per `02-finance-legal.md` lines 64-70:
-- Slack → Matrix (OSS)
-- Discord → Matrix (OSS)
+- Canal de comunicacion → Matrix (OSS)
+- Canal de comunicacion → Matrix (OSS)
 - Salesforce → EspoCRM (OSS)
-- Meta → (no replacement, banned entirely)
-- TikTok → (no replacement, banned entirely)
-- Twitter/X → (no replacement)
-- Stripe/PayPal → (use Paraguay bank rails)
-- Google Workspace → (use Proton/Nextcloud)
-- YouTube → PeerTube (OSS) when needed
-- Office365 → LibreOffice (OSS)
+- Plataforma de Redes → (no replacement, banned entirely)
+- Plataforma de videos cortos → (no replacement, banned entirely)
+- Red social/X → (no replacement)
+- Pasarela de pagos/Pasarela de pagos secundaria → (use Paraguay bank rails)
+- Buscador principal Workspace → (use Proton/Nextcloud)
+- Plataforma de video → PeerTube (OSS) when needed
+- Suite ofimatica → LibreOffice (OSS)
 - AWS → Cloudflare R2 + Hostinger VPS
-- ChatGPT/Anthropic/Claude → use local models + litellm
+- Asistente de IA generativa/Proveedor de IA/Modelo de IA → use local models + litellm
 
 ---
 

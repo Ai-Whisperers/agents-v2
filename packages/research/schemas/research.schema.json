@@ -1,0 +1,108 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://aiwhisperers.io/schemas/research.schema.json",
+  "title": "Research & Education Department State Schema",
+  "description": "State for research-tracker and downstream Research dept agents (citation-checker, thesis-tracker, course-producer, okr-tracker, funding-coordinator).",
+  "type": "object",
+  "required": ["last_run", "thesis", "publications_pipeline", "monetization_backlog"],
+  "properties": {
+    "last_run": {
+      "type": ["string", "null"],
+      "format": "date-time"
+    },
+    "thesis": {
+      "type": "object",
+      "properties": {
+        "chapter": { "type": ["integer", "null"] },
+        "chapter_title": { "type": ["string", "null"] },
+        "last_commit": { "type": ["string", "null"], "format": "date" },
+        "target_date": { "type": ["string", "null"], "format": "date" },
+        "blocker": { "type": ["string", "null"] }
+      }
+    },
+    "publications_pipeline": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "venue": { "type": "string" },
+          "title": { "type": "string" },
+          "deadline": { "type": "string", "format": "date" },
+          "status": { "type": "string", "enum": ["drafting", "submitted", "under_review", "accepted", "rejected", "published"] }
+        }
+      }
+    },
+    "courses_ready": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "module_id": { "type": "string" },
+          "title": { "type": "string" },
+          "ready_at": { "type": "string", "format": "date" }
+        }
+      }
+    },
+    "courses_in_draft": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "module_id": { "type": "string" },
+          "title": { "type": "string" },
+          "started_at": { "type": "string", "format": "date" }
+        }
+      }
+    },
+    "monetization_backlog": {
+      "type": "array",
+      "description": "Monetization assets waiting to be packaged (course, paper, consulting IP, license).",
+      "items": {
+        "type": "object",
+        "properties": {
+          "asset": { "type": "string" },
+          "path": { "type": "string", "enum": ["course", "paper", "consulting", "license", "template"] },
+          "ready_by": { "type": "string", "format": "date" }
+        }
+      }
+    },
+    "funding_applications": {
+      "type": "array",
+      "description": "Populated by funding-coordinator.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "program": { "type": "string" },
+          "tier": { "type": "string", "enum": ["S", "A", "B", "C"] },
+          "status": { "type": "string", "enum": ["identified", "drafting", "submitted", "accepted", "rejected"] },
+          "deadline": { "type": ["string", "null"], "format": "date" },
+          "value_usd": { "type": ["number", "null"] }
+        }
+      }
+    },
+    "okrs_quarter": {
+      "type": "object",
+      "description": "Populated by okr-tracker.",
+      "properties": {
+        "quarter": { "type": "string", "pattern": "^[0-9]{4}-Q[1-4]$" },
+        "objectives": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": { "type": "string" },
+              "title": { "type": "string" },
+              "owner": { "type": "string" },
+              "key_results": { "type": "array", "items": { "type": "object" } },
+              "pct_complete": { "type": "number", "minimum": 0, "maximum": 100 }
+            }
+          }
+        }
+      }
+    },
+    "override_possible": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://aiwhisperers.io/schemas/people.schema.json",
+  "title": "People & Culture / Coaching State Schema",
+  "description": "State for kiki-coach + thesis-tracker + course-producer + coaching-customers + conversion-funnel.",
+  "type": "object",
+  "required": ["last_run", "kiki_lesson_streak_weeks", "kiki_total_lessons_completed"],
+  "properties": {
+    "last_run": {
+      "type": ["string", "null"],
+      "format": "date-time"
+    },
+    "kiki_lesson_streak_weeks": {
+      "type": "integer",
+      "minimum": 0,
+      "default": 0
+    },
+    "kiki_total_lessons_completed": {
+      "type": "integer",
+      "minimum": 0,
+      "default": 0
+    },
+    "kiki_current_focus": {
+      "type": ["string", "null"],
+      "description": "Current topic from curriculum queue (kiki.json convention)."
+    },
+    "thesis": {
+      "type": "object",
+      "properties": {
+        "chapter": { "type": ["integer", "null"] },
+        "chapter_title": { "type": ["string", "null"] },
+        "last_commit": { "type": ["string", "null"], "format": "date" },
+        "target_date": { "type": ["string", "null"], "format": "date" },
+        "blocker": { "type": ["string", "null"] }
+      }
+    },
+    "course_modules_ready": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "module_id": { "type": "string" },
+          "title": { "type": "string" },
+          "ready_at": { "type": "string", "format": "date" }
+        }
+      }
+    },
+    "contractors_active": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "monthly_cost_usd": { "type": "number" },
+          "started_at": { "type": "string", "format": "date" }
+        }
+      }
+    },
+    "founder_bandwidth_audit": {
+      "type": "object",
+      "properties": {
+        "ivan": {
+          "type": "object",
+          "properties": {
+            "billable_hours_week": { "type": ["number", "null"] },
+            "internal_hours_week": { "type": ["number", "null"] }
+          }
+        },
+        "kiki": {
+          "type": "object",
+          "properties": {
+            "billable_hours_week": { "type": ["number", "null"] },
+            "internal_hours_week": { "type": ["number", "null"] }
+          }
+        }
+      }
+    },
+    "milestones_recent": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": { "type": "string", "enum": ["signed_contract", "thesis_chapter", "deploy_win", "kiki_milestone"] },
+          "description": { "type": "string" },
+          "at": { "type": "string", "format": "date-time" }
+        }
+      }
+    },
+    "coaching_funnel_30d": {
+      "type": "object",
+      "description": "Filled by conversion-funnel agent.",
+      "properties": {
+        "free_resource_downloads": { "type": "number", "default": 0 },
+        "discovery_calls_booked": { "type": "number", "default": 0 },
+        "pilots_started": { "type": "number", "default": 0 },
+        "contracts_signed": { "type": "number", "default": 0 }
+      }
+    },
+    "override_possible": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

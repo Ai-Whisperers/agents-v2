@@ -32,7 +32,7 @@ The current catalog is grant/funding-heavy. It does NOT cover **direct revenue g
 #### A.1.1 — API monetization
 - **Concept**: Expose the agent framework as a paid API (e.g., `paraguai.ai/v1/agents/finance-controller`)
 - **Programs**: RapidAPI, Postman API Network, Hugging Face Spaces paid tier
-- **Time-to-money**: 2-4 weeks (build + Stripe billing)
+- **Time-to-money**: 2-4 weeks (build + Pasarela de pagos billing)
 - **Trademark**: ✅ SAFE if endpoints are brand-neutral
 - **Why missing**: Catalog assumes only "external funding" is money
 
@@ -52,7 +52,7 @@ The current catalog is grant/funding-heavy. It does NOT cover **direct revenue g
 
 #### A.1.4 — Coaching / consulting packages
 - **Concept**: Premium 1-on-1 with Ivan (e.g., "build your agent org in 90 days")
-- **Programs**: Clarity.fm, CoachAccountable, direct Stripe checkout
+- **Programs**: Clarity.fm, CoachAccountable, direct Pasarela de pagos checkout
 - **Time-to-money**: 1-2 weeks
 - **TM**: ✅ SAFE
 - **Why missing**: Pricing strategy section doesn't address packaging
@@ -71,7 +71,7 @@ The current catalog is grant/funding-heavy. It does NOT cover **direct revenue g
 
 #### A.1.7 — Book deal
 - **Concept**: Write a book on building agent-orgs with AI
-- **Programs**: Packt, Manning, O'Reilly (developer-focused), Self-publish via Amazon KDP / Leanpub
+- **Programs**: Packt, Manning, O'Reilly (developer-focused), Self-publish via Tienda en linea KDP / Leanpub
 - **Time-to-money**: 6-12 months
 - **TM**: ⚠️ Watch banned brand references in book
 
@@ -79,7 +79,7 @@ The current catalog is grant/funding-heavy. It does NOT cover **direct revenue g
 - **Concept**: Affiliate links for tools we already use (Cloudflare, n8n, LiteLLM)
 - **Programs**: Cloudflare Partner, n8n partner, Modal referral, AWS Partner Network
 - **Time-to-money**: Immediate (already using)
-- **TM**: ⚠️ Some affiliate programs are at brand-named companies (Microsoft, AWS) — fine to earn, fine to NOT publish
+- **TM**: ⚠️ Some affiliate programs are at brand-named companies (Suite ofimatica, AWS) — fine to earn, fine to NOT publish
 
 #### A.1.9 — Referral programs
 - **Concept**: Existing clients refer peers; we pay them a % of closed deal
@@ -111,9 +111,9 @@ The current catalog is grant/funding-heavy. It does NOT cover **direct revenue g
 - **Time-to-money**: 2-4 weeks
 - **TM**: ✅ SAFE
 
-#### A.1.14 — Premium Discord/Slack community
+#### A.1.14 — Premium Canal de comunicacion/Canal de comunicacion community
 - **Concept**: Paid founder/operator community ($50-200/mo) sharing agent-org patterns
-- **Programs**: Circle, Mighty Networks, Discord paid tier, Slack community
+- **Programs**: Circle, Mighty Networks, Canal de comunicacion paid tier, Canal de comunicacion community
 - **Time-to-money**: 4-8 weeks
 - **TM**: ✅ SAFE
 
@@ -212,9 +212,9 @@ The current catalog is grant/funding-heavy. It does NOT cover **direct revenue g
 ### A.4 — AI-native specific (8 missing)
 
 #### A.4.1 — AI safety grants
-- **Programs**: Apart Research, AI Safety Camp, AISI, Anthropic Fellows (already in catalog)
+- **Programs**: Apart Research, AI Safety Camp, AISI, Proveedor de IA Fellows (already in catalog)
 - **Time-to-money**: 2-6 months
-- **TM**: ⚠️ Brand-name carve-out for Anthropic
+- **TM**: ⚠️ Brand-name carve-out for Proveedor de IA
 
 #### A.4.2 — Open AI compute for safety research
 - **Programs**: Together AI Compute for Good, Hugging Face community compute
@@ -313,12 +313,12 @@ This separates "banlist applies to us" from "banlist applies to funder brand."
 #### B.3.1 — Merge duplicates
 - AWS Activate + AWS Activate via Founders Hub = **one entry** with two application paths
 - Cloudflare for Startups Cloudflare for Startups Cloudflare Workers free tier = **one entry** with three tiers
-- Stripe Atlas + Stripe Atlas waves fee to help female founders = **one entry** with two variants
-- Microsoft for Startups + Microsoft Reactor = **separate entries** (different program types)
+- Pasarela de pagos Atlas + Pasarela de pagos Atlas waves fee to help female founders = **one entry** with two variants
+- Suite ofimatica for Startups + Suite ofimatica Reactor = **separate entries** (different program types)
 
 #### B.3.2 — Split combined programs
-- Microsoft for Startups: split into "Founders Hub" (equity-free Azure) vs "Microsoft for Startups" (AI partner program vs Gaming) — they have different criteria
-- Google for Startups: split into "Google for Startups Cloud" (cloud credits) vs "Google for Startups Accelerator" (mentorship cohort) vs "Google.org" (nonprofit grants)
+- Suite ofimatica for Startups: split into "Founders Hub" (equity-free Azure) vs "Suite ofimatica for Startups" (AI partner program vs Gaming) — they have different criteria
+- Buscador principal for Startups: split into "Buscador principal for Startups Cloud" (cloud credits) vs "Buscador principal for Startups Accelerator" (mentorship cohort) vs "Buscador principal.org" (nonprofit grants)
 - NVIDIA: split into "NVIDIA Inception" (free) vs "NVIDIA Ventures" (capital)
 
 ### B.4 — Calendar-tied 90-day plan
@@ -575,11 +575,11 @@ The funding implication: **a closed richar-ruiz deal is the proof that earns YC 
 
 ### E.1 — Programs that violate the banlist
 
-The catalog already excludes obvious banlist programs (Stripe, Meta, etc.). But watch for:
-- **Microsoft-branded accelerator products** (e.g., "Microsoft Reactor") — fine to participate, never to put "Microsoft" on our public-facing surface
-- **AWS partner events** that require Amazon branding on event materials
+The catalog already excludes obvious banlist programs (Pasarela de pagos, Plataforma de Redes, etc.). But watch for:
+- **Suite ofimatica-branded accelerator products** (e.g., "Suite ofimatica Reactor") — fine to participate, never to put "Suite ofimatica" on our public-facing surface
+- **AWS partner events** that require Tienda en linea branding on event materials
 - **Salesforce AppExchange** listings — fine to list, never say "Salesforce app"
-- **Google Workspace marketplace** — fine, never say "Google"
+- **Buscador principal Workspace marketplace** — fine, never say "Buscador principal"
 
 ### E.2 — Programs that conflict with AI-native philosophy
 
@@ -589,7 +589,7 @@ The catalog already excludes obvious banlist programs (Stripe, Meta, etc.). But 
 
 ### E.3 — Programs with hidden costs
 
-- **Stripe Atlas** ($500 incorporation + state fees)
+- **Pasarela de pagos Atlas** ($500 incorporation + state fees)
 - **Delaware C-Corp** (registered agent fees $100-300/yr)
 - **SAFE financing** (legal fees $5-15K)
 - **EIC Accelerator** (application effort + co-funding requirement)
@@ -781,10 +781,10 @@ Read all terms carefully. Flag any "non-exclusive, perpetual, worldwide, royalty
 - **Hugging Face Spaces paid**: deploy paid agents, earn revenue share
 - **Replicate creator program**: deploy models, earn revenue
 - **Vercel AI Playground**: featured agents
-- **OpenAI GPT Store** (verify 2026 status): build + monetize GPTs
-- **Anthropic Claude.ai features** (verify 2026 status): build + monetize
+- **Proveedor de IA GPT Store** (verify 2026 status): build + monetize GPTs
+- **Proveedor de IA Modelo de IA.ai features** (verify 2026 status): build + monetize
 - **Salesforce AppExchange** (Salesforce-branded, ⚠️ TM)
-- **Microsoft Copilot Studio marketplace** (Microsoft-branded, ⚠️ TM)
+- **Suite ofimatica Copilot Studio marketplace** (Suite ofimatica-branded, ⚠️ TM)
 
 ### H.4 — AI tool co-marketing
 - **Cloudflare Workers launch partners**

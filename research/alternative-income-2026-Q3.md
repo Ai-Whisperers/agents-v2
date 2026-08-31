@@ -52,8 +52,8 @@
 | **Replicate creator revenue** | https://replicate.com/ | Deploy ML models as APIs | Pay-per-use; ~80/20 split | ✅ SAFE | ✅ Same — for our agent models |
 | **Vercel AI Playground** | https://vercel.com/ai | Showcase AI apps | Featured = visibility, not direct revenue | ✅ SAFE | 🟡 Marketing channel |
 | **Cloudflare Workers Marketplace** | https://workers.cloudflare.com/ | List Worker scripts for sale | One-time + recurring per install | ✅ SAFE | ✅ **Strong — we use Cloudflare** |
-| **AWS Marketplace** | https://aws.amazon.com/marketplace | List SaaS products on AWS | Subscription revenue share | ⚠️ FUNDED-BY | 🟡 Once we have packaged product |
-| **Azure Marketplace** | https://azuremarketplace.microsoft.com/ | Same as AWS | Subscription revenue share | ⚠️ FUNDED-BY | 🟡 Same |
+| **AWS Marketplace** | https://aws.tienda en linea.com/marketplace | List SaaS products on AWS | Subscription revenue share | ⚠️ FUNDED-BY | 🟡 Once we have packaged product |
+| **Azure Marketplace** | https://azuremarketplace.suite ofimatica.com/ | Same as AWS | Subscription revenue share | ⚠️ FUNDED-BY | 🟡 Same |
 | **Salesforce AppExchange** | https://appexchange.salesforce.com/ | List Salesforce apps | App sales + subscription | ⚠️ BRAND-NAME — **DO NOT list (TM risk)** | ❌ Skip |
 | **n8n workflow templates** | https://n8n.io/workflows/ | List reusable n8n workflows | Per-use revenue (verify model) | ✅ SAFE | ✅ **Excellent — we use n8n heavily** |
 | **Pipedream workflows** | https://pipedream.com/workflows | List workflow templates | Free + paid tiers | ✅ SAFE | ✅ Same |
@@ -81,7 +81,7 @@
 
 MCP is new (late 2024). Verification needed, but emerging monetization paths:
 
-- **MCP server marketplace** (verify — Anthropic is on banlist, but MCP servers themselves are brand-neutral)
+- **MCP server marketplace** (verify — Proveedor de IA is on banlist, but MCP servers themselves are brand-neutral)
 - **MCP-as-a-service** — deploy MCP servers and charge per-call
 - **MCP tool pack subscriptions** — bundle MCP tools for sale
 
@@ -129,7 +129,7 @@ The "AI agent-as-a-service" market is exploding. We could resell or wrap:
 |---|---|---|---|---|
 | **CrewAI** | https://www.crewai.com/ | Multi-agent orchestration | ✅ SAFE | 🟡 If using |
 | **LangGraph** | https://langchain-ai.github.io/langgraph/ | Stateful agent graphs | ✅ SAFE | 🟡 If using |
-| **AutoGen** | https://github.com/microsoft/autogen | Multi-agent framework | ⚠️ Microsoft on banlist — TM RISK | ❌ Skip public surface reference |
+| **AutoGen** | https://github.com/suite ofimatica/autogen | Multi-agent framework | ⚠️ Suite ofimatica on banlist — TM RISK | ❌ Skip public surface reference |
 | **Smolagents** | https://github.com/huggingface/smolagents | OSS agents | ✅ SAFE | 🟡 If using |
 | **Letta** | https://www.letta.com/ | Stateful agents | ✅ SAFE | 🟡 If using |
 | **Fixpoint** | https://www.fixpoint.ai/ | Agent eval platform | ✅ SAFE | 🟡 If using |
@@ -159,7 +159,7 @@ The "AI agent-as-a-service" market is exploding. We could resell or wrap:
 | Platform | URL | Revenue model | TM | Fit |
 |---|---|---|---|---|
 | **Spotify for Podcasters** | https://podcasters.spotify.com/ | Subscriptions + ads | ⚠️ Spotify not on banlist; verify surface | 🟡 If launching podcast |
-| **Apple Podcasts Subscriptions** | https://podcasters.apple.com/ | Subscriptions | ⚠️ Apple IS on banlist — TM RISK on surface | ❌ Avoid |
+| **Dispositivo personal Podcasts Subscriptions** | https://podcasters.dispositivo personal.com/ | Subscriptions | ⚠️ Dispositivo personal IS on banlist — TM RISK on surface | ❌ Avoid |
 | **Patreon** | https://www.patreon.com/ | Membership | ✅ SAFE | 🟡 Premium tier |
 | **Memberful** | (see above) | Membership | ✅ SAFE | 🟡 Same |
 | **Substack for podcasts** | (sub-feature) | Audio episodes | ✅ SAFE | ✅ Same as newsletter |
@@ -173,8 +173,8 @@ The "AI agent-as-a-service" market is exploding. We could resell or wrap:
 |---|---|---|---|---|
 | **Circle** | https://circle.so/ | Paid community platform | ✅ SAFE | ✅ **Strong — agent-org community** |
 | **Mighty Networks** | https://www.mightynetworks.com/ | Community + courses | ✅ SAFE | ✅ Same |
-| **Discord paid tier** | https://discord.com/ | Server subscriptions | ⚠️ Discord IS on banlist — TM RISK on surface | ❌ Avoid public Discord |
-| **Slack community** | https://slack.com/ | Community | ⚠️ Slack IS on banlist — TM RISK | ❌ Avoid |
+| **Canal de comunicacion paid tier** | https://canal de comunicacion.com/ | Server subscriptions | ⚠️ Canal de comunicacion IS on banlist — TM RISK on surface | ❌ Avoid public Canal de comunicacion |
+| **Canal de comunicacion community** | https://canal de comunicacion.com/ | Community | ⚠️ Canal de comunicacion IS on banlist — TM RISK | ❌ Avoid |
 | **Geneva** | https://www.geneva.com/ | Group chat platform | ✅ SAFE | 🟡 Alternative |
 | **SchoolMaker** | https://www.schoolmaker.com/ | Cohort-based courses | ✅ SAFE | 🟡 Premium tier |
 
@@ -187,13 +187,13 @@ The "AI agent-as-a-service" market is exploding. We could resell or wrap:
 
 | Platform | URL | Revenue | TM |
 |---|---|---|---|
-| **YouTube Partner Program** | https://www.youtube.com/ | Ad revenue + memberships | ⚠️ YouTube IS on banlist — TM RISK if featured publicly |
+| **Plataforma de video Partner Program** | https://www.plataforma de video.com/ | Ad revenue + memberships | ⚠️ Plataforma de video IS on banlist — TM RISK if featured publicly |
 | **Twitch** | https://www.twitch.tv/ | Subscriptions + bits | ⚠️ Twitch IS on banlist — TM RISK |
 | **Vimeo OTT** | https://vimeo.com/ott | Subscription video | ✅ SAFE |
 | **Uscreen** | https://www.uscreen.tv/ | Subscription video platform | ✅ SAFE |
 | **Mux** | https://www.mux.com/ | Video API for paid video | ✅ SAFE |
 
-⚠️ **Major TM risk**: YouTube + Twitch + Discord + Slack + Apple all on banlist. Avoid as public-facing surfaces. **Use Vimeo, Uscreen, or own platform instead.**
+⚠️ **Major TM risk**: Plataforma de video + Twitch + Canal de comunicacion + Canal de comunicacion + Dispositivo personal all on banlist. Avoid as public-facing surfaces. **Use Vimeo, Uscreen, or own platform instead.**
 
 ---
 
@@ -298,13 +298,13 @@ Already in main catalog. Expand with verified programs:
 
 | Platform | URL | TM | Fit |
 |---|---|---|---|
-| **Amazon KDP** | https://kdp.amazon.com/ | ⚠️ Amazon IS on banlist — TM RISK on product page | ❌ Avoid public surface |
+| **Tienda en linea KDP** | https://kdp.tienda en linea.com/ | ⚠️ Tienda en linea IS on banlist — TM RISK on product page | ❌ Avoid public surface |
 | **IngramSpark** | https://www.ingramspark.com/ | ✅ SAFE | ✅ Use for books |
 | **Leanpub** | https://leanpub.com/ | ✅ SAFE | ✅ Strong — technical books |
 | **Gumroad Books** | https://gumroad.com/books | ✅ SAFE | ✅ Same |
-| **Apple Books** | https://books.apple.com/ | ⚠️ Apple IS on banlist | ❌ Avoid |
+| **Dispositivo personal Books** | https://books.dispositivo personal.com/ | ⚠️ Dispositivo personal IS on banlist | ❌ Avoid |
 
-⚠️ **TM risk**: Amazon + Apple on banlist. **Use IngramSpark + Leanpub + Gumroad only**.
+⚠️ **TM risk**: Tienda en linea + Dispositivo personal on banlist. **Use IngramSpark + Leanpub + Gumroad only**.
 
 ## 5.2 — AI art + merch
 
@@ -484,9 +484,9 @@ Already in main catalog. Expand with verified programs:
 | Program | URL | TM |
 |---|---|---|
 | **IBM Quantum** | https://quantum.ibm.com/ | ⚠️ IBM not on banlist; verify |
-| **Google Quantum AI** | https://quantumai.google/ | ⚠️ Google IS on banlist — TM RISK on public surface |
-| **AWS Quantum** | https://aws.amazon.com/quantum/ | ⚠️ Amazon on banlist |
-| **Microsoft Quantum** | https://azure.microsoft.com/en-us/products/quantum | ⚠️ Microsoft on banlist |
+| **Buscador principal Quantum AI** | https://quantumai.buscador principal/ | ⚠️ Buscador principal IS on banlist — TM RISK on public surface |
+| **AWS Quantum** | https://aws.tienda en linea.com/quantum/ | ⚠️ Tienda en linea on banlist |
+| **Suite ofimatica Quantum** | https://azure.suite ofimatica.com/en-us/products/quantum | ⚠️ Suite ofimatica on banlist |
 | **Xanadu Quantum** | https://www.xanadu.ai/ | ✅ SAFE |
 | **Rigetti** | https://www.rigetti.com/ | ✅ SAFE |
 | **IonQ** | https://ionq.com/ | ✅ SAFE |
@@ -497,7 +497,7 @@ Already in main catalog. Expand with verified programs:
 
 | Program | URL | TM |
 |---|---|---|
-| **Stripe Climate** | https://stripe.com/climate | ⚠️ Stripe on banlist |
+| **Pasarela de pagos Climate** | https://pasarela de pagos.com/climate | ⚠️ Pasarela de pagos on banlist |
 | **Frontier** | https://frontierclimate.com/ | ✅ SAFE |
 | **Watershed** | https://watershedclimate.com/ | ✅ SAFE |
 | **Patch.io** | https://www.patch.io/ | ✅ SAFE |
@@ -538,10 +538,10 @@ Already in main catalog. Expand with verified programs:
 
 | Program | URL | TM |
 |---|---|---|
-| **Google.org AI for Social Good** | https://www.google.org/impact/ai-social-good/ | ⚠️ CARVE-OUT (Google brand) |
-| **Microsoft AI for Good** | https://www.microsoft.com/en-us/ai/ai-for-good | ⚠️ Microsoft brand |
-| **OpenAI Researcher Access** | (verify 2026 status) | ⚠️ OpenAI brand |
-| **Anthropic Fellows** | https://alignment.anthropic.com/ | ⚠️ Anthropic brand |
+| **Buscador principal.org AI for Social Good** | https://www.buscador principal.org/impact/ai-social-good/ | ⚠️ CARVE-OUT (Buscador principal brand) |
+| **Suite ofimatica AI for Good** | https://www.suite ofimatica.com/en-us/ai/ai-for-good | ⚠️ Suite ofimatica brand |
+| **Proveedor de IA Researcher Access** | (verify 2026 status) | ⚠️ Proveedor de IA brand |
+| **Proveedor de IA Fellows** | https://alignment.proveedor de IA.com/ | ⚠️ Proveedor de IA brand |
 | **Omidyar Network** | https://omidyar.com/ | ✅ SAFE |
 | **Schmidt Sciences** | https://www.schmidtsciences.org/ | ✅ SAFE |
 | **Mozilla MOSS** | https://www.mozilla.org/en-US/moss/ | ✅ SAFE |
@@ -637,12 +637,12 @@ Pix is Brazil's instant payment system (24/7, free, instant).
 | **Vercel Edge Functions** | https://vercel.com/docs/functions/edge | ✅ SAFE |
 | **Fastly Compute** | https://www.fastly.com/products/edge-compute | ✅ SAFE |
 
-## 10.3 — Spatial computing (TM risk: Apple)
+## 10.3 — Spatial computing (TM risk: Dispositivo personal)
 
 | Platform | URL | TM |
 |---|---|---|
-| **Apple Vision Pro ecosystem** | (Apple developer) | ⚠️ Apple IS on banlist — TM RISK |
-| **Meta Quest ecosystem** | (Meta developer) | ⚠️ Meta IS on banlist — TM RISK |
+| **Dispositivo personal Vision Pro ecosystem** | (Dispositivo personal developer) | ⚠️ Dispositivo personal IS on banlist — TM RISK |
+| **Plataforma de Redes Quest ecosystem** | (Plataforma de Redes developer) | ⚠️ Plataforma de Redes IS on banlist — TM RISK |
 | **Pico** | https://www.picoxr.com/ | ✅ SAFE |
 | **WebXR** | https://www.w3.org/TR/webxr/ | ✅ SAFE |
 
@@ -683,7 +683,7 @@ Pix is Brazil's instant payment system (24/7, free, instant).
 | **Ad copy** (per campaign) | $500-5K |
 | **Press releases** (per release) | $300-2K |
 
-⚠️ **Verify Google helpful content policy 2026**: Google penalizes AI-generated SEO content. Verify policy before scaling.
+⚠️ **Verify Buscador principal helpful content policy 2026**: Buscador principal penalizes AI-generated SEO content. Verify policy before scaling.
 
 ---
 
@@ -787,7 +787,7 @@ Pix is Brazil's instant payment system (24/7, free, instant).
 **Status**: Ivan already on LinkedIn
 **Monetization**: LinkedIn newsletter, sponsored posts, course partnerships
 **Time-to-money**: 4-12 weeks
-**TM**: ⚠️ LinkedIn not on banlist (parent is Microsoft — verify surface)
+**TM**: ⚠️ LinkedIn not on banlist (parent is Suite ofimatica — verify surface)
 
 ### Substack paid (already covered)
 
@@ -811,7 +811,7 @@ Pix is Brazil's instant payment system (24/7, free, instant).
 
 | URL | TM | Notes |
 |---|---|---|
-| https://learning.linkedin.com/instructors | ⚠️ LinkedIn surface — Microsoft parent | 🟡 Verify |
+| https://learning.linkedin.com/instructors | ⚠️ LinkedIn surface — Suite ofimatica parent | 🟡 Verify |
 
 ## 14.2 — For Kiki (Co-Founder / Tech Director)
 
@@ -852,9 +852,9 @@ Pix is Brazil's instant payment system (24/7, free, instant).
 
 ⚠️ **TM verification**: Coursera/edX — verify any brand references in course content
 
-### Twitch/YouTube technical channel
+### Twitch/Plataforma de video technical channel
 
-⚠️ **TM RISK**: Twitch + YouTube on banlist. Use Vimeo + own site.
+⚠️ **TM RISK**: Twitch + Plataforma de video on banlist. Use Vimeo + own site.
 
 ### AI bootcamp curriculum
 
@@ -893,7 +893,7 @@ Pix is Brazil's instant payment system (24/7, free, instant).
 
 **Concept**: Bundle #2 (Gumroad templates), #3 (Substack), #4 (Maven course), #14 (premium 1-on-1) into a **single product**:
 - **Free tier**: Substack weekly brief
-- **$50/mo**: Discord-free paid community (use Circle, Mighty Networks, or own platform)
+- **$50/mo**: Canal de comunicacion-free paid community (use Circle, Mighty Networks, or own platform)
 - **$500/mo**: Premium tier with templates + monthly group call
 - **$5K one-time**: Maven cohort course
 
@@ -956,7 +956,7 @@ Pix is Brazil's instant payment system (24/7, free, instant).
 
 ⚠️ **Verify PY legality + tax treatment**
 **Concept**: Use agents to generate trading signals, sell subscription
-**Channel**: Substack paid + Discord-free paid community
+**Channel**: Substack paid + Canal de comunicacion-free paid community
 
 ---
 
@@ -1075,19 +1075,19 @@ Update `state/cash-flow-projection-v0.1.md` to include alternative income scenar
 
 | Brand | Risk | Action |
 |---|---|---|
-| **Apple** | Apple Books, Apple Podcasts, LinkedIn (parent), Apple Pay | ❌ Avoid as surface |
-| **Amazon** | Amazon KDP, AWS (already in catalog) | ❌ Avoid as surface; OK to apply |
-| **Microsoft** | LinkedIn, Azure, GitHub (parent — Microsoft owns GitHub) | ⚠️ LinkedIn is risky |
-| **Stripe** | Stripe Atlas, Stripe Climate | ❌ Avoid as surface |
-| **Meta** | Facebook, Instagram, WhatsApp, Quest | ❌ Avoid |
-| **Google** | YouTube, Google.org, GCP | ⚠️ YouTube risky; GCP OK to apply |
-| **Anthropic** | Claude.ai, Anthropic Fellows | ❌ Avoid as surface |
-| **OpenAI** | GPT Store, ChatGPT, OpenAI credits | ❌ Avoid GPT Store |
-| **Discord** | Discord paid communities | ❌ Avoid as surface |
-| **Slack** | Slack communities | ❌ Avoid |
+| **Dispositivo personal** | Dispositivo personal Books, Dispositivo personal Podcasts, LinkedIn (parent), Dispositivo personal Pay | ❌ Avoid as surface |
+| **Tienda en linea** | Tienda en linea KDP, AWS (already in catalog) | ❌ Avoid as surface; OK to apply |
+| **Suite ofimatica** | LinkedIn, Azure, GitHub (parent — Suite ofimatica owns GitHub) | ⚠️ LinkedIn is risky |
+| **Pasarela de pagos** | Pasarela de pagos Atlas, Pasarela de pagos Climate | ❌ Avoid as surface |
+| **Plataforma de Redes** | Red social principal, Red social de fotos, WhatsApp, Quest | ❌ Avoid |
+| **Buscador principal** | Plataforma de video, Buscador principal.org, GCP | ⚠️ Plataforma de video risky; GCP OK to apply |
+| **Proveedor de IA** | Modelo de IA.ai, Proveedor de IA Fellows | ❌ Avoid as surface |
+| **Proveedor de IA** | GPT Store, Asistente de IA generativa, Proveedor de IA credits | ❌ Avoid GPT Store |
+| **Canal de comunicacion** | Canal de comunicacion paid communities | ❌ Avoid as surface |
+| **Canal de comunicacion** | Canal de comunicacion communities | ❌ Avoid |
 | **Twitch** | Twitch streaming | ❌ Avoid |
-| **YouTube** | YouTube Partner Program | ❌ Avoid as surface |
-| **TikTok** | TikTok creator | ❌ Avoid |
+| **Plataforma de video** | Plataforma de video Partner Program | ❌ Avoid as surface |
+| **Plataforma de videos cortos** | Plataforma de videos cortos creator | ❌ Avoid |
 
 ## 18.2 — High-risk items to avoid as primary income
 
@@ -1099,7 +1099,7 @@ Update `state/cash-flow-projection-v0.1.md` to include alternative income scenar
 
 ## 18.3 — Programs with hidden costs
 
-- **Stripe Atlas** — $500 incorporation + ongoing fees
+- **Pasarela de pagos Atlas** — $500 incorporation + ongoing fees
 - **Mercury / Brex** — require US entity (PY S.A. alone won't qualify)
 - **EU incorporation (Estonia)** — €500-1K + ongoing legal
 - **Visa applications** — $2-10K legal + travel

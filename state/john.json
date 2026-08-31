@@ -1,0 +1,133 @@
+{
+  "schema_version": "1.0",
+  "subject": "john-client",
+  "last_run": "2026-08-28T19:55:00-03:00",
+  "vps": {
+    "ip": "38.9.96.186",
+    "hostname": "WPG.paraguai.com",
+    "provider": "servarica",
+    "plan": "V2 KVM Slim Slice 2",
+    "spec": {
+      "vcpu": 2,
+      "ram_gb": 8,
+      "nvme_gb": 250
+    },
+    "monthly_usd": 7,
+    "os": "Ubuntu 26.04 (resolute)",
+    "region": "Montreal, QC",
+    "spec_vs_recommendation": "Box is provisioned as Slim Slice 2 ($7/mo) but the client-servarica-guide recommends Slim Slice 4 ($12/mo) for 2x RAM headroom. Either resize or document why Slice 2 was chosen."
+  },
+  "ssh": {
+    "operator_key_fingerprint_sha256": "BufM0G7b6r7fCObkrZlpBw6ce4HfFGOgWC8P+qj14x4",
+    "operator_label": "ivan@ai-whisperers.local",
+    "client_key_fingerprint_sha256": "Wcaj1BSULA5qKJfdGOyzL/9rLif9w3R3qX8W+yDMbdQ",
+    "client_label": "john-hermes-laptop"
+  },
+  "stack": {
+    "image": "hermes-agent:latest from upstream commit 068f58740",
+    "dashboard": "http://127.0.0.1:9119/api/status (via SSH tunnel)",
+    "dashboard_token_len": 43,
+    "api_server_key_len": 64,
+    "model": "MiniMax-M3",
+    "provider": "minimax",
+    "auth_required": false
+  },
+  "usage_since_2026-08-13": {
+    "total_calls": 506,
+    "total_in_tokens": 55048666,
+    "total_out_tokens": 350437,
+    "avg_cache_hit_pct": 94,
+    "latency_p50_seconds": 3.7,
+    "latency_p99_seconds": 125.6,
+    "errors": 0,
+    "all_model": "MiniMax-M3",
+    "all_provider": "minimax"
+  },
+  "github_artifacts": [
+    "https://github.com/Ai-Whisperers/paragu-ai-clients/blob/master/clients/john/hermes-onboarding.md",
+    "https://github.com/Ai-Whisperers/paragu-ai-clients/blob/master/clients/john/install-playbook.md",
+    "https://github.com/Ai-Whisperers/paragu-ai-clients/blob/master/clients/john/laptop-setup.md",
+    "https://github.com/Ai-Whisperers/paragu-ai-clients/blob/master/clients/john/activation-log.md"
+  ],
+  "outstanding_actions": [
+    {
+      "action": "rotate_MINIMAX_API_KEY",
+      "status": "RESOLVED",
+      "note": "Key was dead on 2026-08-13 (returned 'invalid api key' upstream). After replace, 506 successful calls confirmed."
+    },
+    {
+      "action": "setup_fee_and_retainer_quote",
+      "status": "TODO",
+      "owner": "ivan",
+      "note": "Per /opt/data/scratchpad/john-client-servarica-guide.md 'Quote to send John' section \u2014 match Ometz A/B/C tier pattern."
+    },
+    {
+      "action": "hermes_migrate_config_v0_to_v34",
+      "status": "OPTIONAL",
+      "note": "Non-blocking but recommended."
+    },
+    {
+      "action": "reboot_box",
+      "status": "OPTIONAL",
+      "note": "/var/run/reboot-required still set."
+    },
+    {
+      "action": "add_moonshot_kimi_key",
+      "status": "OPTIONAL",
+      "note": "Second cheap tier per original plan."
+    },
+    {
+      "action": "block_pending_memory_b0d300a7",
+      "status": "TODO",
+      "owner": "ivan",
+      "priority": "P0",
+      "note": "Pending memory at /opt/data/pending/memory/b0d300a7.json predates John's install (2026-08-17 vs install 2026-08-12 but doesn't know about .186). If accepted into durable memory, future agents route John queries to the wrong IP. Do NOT accept until memory is updated to include all 4 VPSes."
+    },
+    {
+      "action": "reconcile_slice2_vs_slice4",
+      "status": "TODO",
+      "owner": "ivan",
+      "note": "Box is Slice 2 ($7/mo) but guide recommends Slice 4 ($12/mo). Decide: resize up, or document why Slice 2 suffices."
+    }
+  ],
+  "known_pitfalls_documented": [
+    "Cloud-init re-enables password auth (delete 50-cloud-init.conf)",
+    "Two concurrent buildx workers race on apt cache",
+    "buildx worker can't reach Debian mirrors (use --driver-opt network=host)",
+    "Docker reads apt lock during unattended-upgrades (wait pgrep apt)",
+    "execute_code timeout=300 kills parent shell, leaves backgrounded build running (use nohup + PID file)",
+    "/api/status HEAD returns 405 (use GET)",
+    "auth_required: false means dashboard token is currently unused",
+    "Two .env files: /home/hermes/hermes-agent/.env (host) vs /home/hermes/.hermes/.env (container)",
+    "Stage2 hook auto-generates API_SERVER_KEY if missing — empty value treated as missing → duplicate line. Dedup pattern in john_minimax_replace.sh.",
+    "200 OK with X-Hermes-Error header containing 401 string means upstream rejected — always probe upstream directly."
+  ],
+  "memory_conflicts_detected": [
+    {
+      "id": "b0d300a7",
+      "file": "/opt/data/pending/memory/b0d300a7.json",
+      "created_at": "2026-08-17 (5 days AFTER John's install on 2026-08-12)",
+      "claim": "WPG.paraguai.com = 38.9.96.179 (Host A ParaguAI production)",
+      "truth_per_install_log": "WPG.paraguai.com = 38.9.96.186 (John's private Hermes VPS, installed 2026-08-12 per /opt/data/skills/client-vps-provisioning/references/servarica-john-2026-08-12.md)",
+      "verdict": "Pending memory file is OUTDATED/STALE — does not yet know about John's new box on .186. It treats WPG.paraguai.com as the OLD production box. Risk: if accepted into durable memory as-is, future agents will route John queries to the wrong IP.",
+      "fix_action": "Before accepting pending memory, either (a) reject b0d300a7 and require a fresh topology write that includes all 4 VPSes (Host A .179, Hermes .180, ParaguAI legacy .179-as-WPG, John .186), or (b) edit the payload.content to add a 4th bullet for John's box at .186. Defer to memory subsystem owner."
+    }
+  ],
+  "references": {
+    "spec": "/opt/data/scratchpad/john-client-servarica-guide.md",
+    "install_log": "/opt/data/skills/client-vps-provisioning/references/servarica-john-2026-08-12.md",
+    "activation_log": "/opt/data/skills/client-vps-provisioning/references/servarica-john-activation-2026-08-13.md",
+    "handoff_log": "/opt/data/skills/client-vps-provisioning/references/servarica-john-handoff-2026-08-13.md",
+    "ssh_key_session": "/opt/data/skills/devops/ssh-key-management/references/john-ssh-key-session.md",
+    "usage_log": "/opt/data/cache/john_agent_log_parsed.json",
+    "scripts": [
+      "/opt/data/cache/john_artifacts.sh",
+      "/opt/data/cache/john_chat_test.sh",
+      "/opt/data/cache/john_minimax_replace.sh"
+    ]
+  },
+  "decisions_for_ivan": [
+    "Setup fee + retainer number for John's Servarica VPS (TBD per john-client-servarica-guide.md)",
+    "Decide whether to push the v2.0.0 client contract template to John, or wait until 1-month check-in"
+  ]
+}

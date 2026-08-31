@@ -149,7 +149,7 @@ This is a separate document. Stubs here:
 - **Doc:** `/opt/data/agents-v2/docs/TOOLING-TIER-2.md` (TODO)
 
 ### Tier 3: Medium / 20+ people
-- **Tools:** Jira (expensive), Linear Pro, Slack, Teams, Salesforce
+- **Tools:** Jira (expensive), Linear Pro, Canal de comunicacion, Teams, Salesforce
 - **AI Layer:** Multiple Hermes instances + orchestration layer
 - **Cost:** $2000+/mo
 - **Automation:** Enterprise (full)

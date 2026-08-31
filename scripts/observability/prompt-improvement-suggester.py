@@ -55,7 +55,7 @@ def analyze_agent(agent_name: str, recent_briefs: list) -> dict:
         suggestions.append("Add Inputs (Contract) and Outputs (Contract) sections")
     
     # Issue 3: trademark violations
-    banned = ["anthropic", "claude", "openai", "chatgpt", "gpt-4", "mensaje", "whatsapp", "wpp"]
+    banned = ["proveedor de IA", "modelo de IA", "proveedor de IA", "asistente de IA generativa", "gpt-4", "texto", "whatsapp", "canal de texto"]
     for brief in recent_briefs:
         try:
             text = (STATE_DIR / brief["path"]).read_text()

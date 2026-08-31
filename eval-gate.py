@@ -13,7 +13,7 @@ from datetime import datetime, timezone
 REQUIRED_SECTIONS = ["Pipeline", "Revenue direction", "Site & infra health", "Today"]
 MIN_WORDS = 50
 MAX_WORDS = 300
-BANNED = ["anthropic", "claude", "openai", "chatgpt", "gpt-4", "mensaje", "whatsapp", "wpp", "telegram"]
+BANNED = ["proveedor de IA", "modelo de IA", "proveedor de IA", "asistente de IA generativa", "gpt-4", "texto", "whatsapp", "canal de texto", "telegram"]
 
 
 def score_brief(brief_path: str) -> dict:

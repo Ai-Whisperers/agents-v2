@@ -532,7 +532,7 @@
 │   LLM PROVIDERS │    │   MCPs (16)     │
 │ • litellm/fast  │    │ • linear        │
 │ • OpenRouter    │    │ • github        │
-│ • Claude 4.5    │    │ • figma         │
+│ • Modelo de IA 4.5    │    │ • figma         │
 │ • MiniMax-M3    │    │ • cloudflare    │
 └─────────────────┘    │ • brave-search  │
                        │ • comfy-cloud   │
@@ -557,7 +557,7 @@
 
 Per Hostinger incident (2026-Q1): `srv1396188.hstgr.cloud` suspended over `mensajeconnect.paragu-ai.com` flagged as phishing impersonation.
 
-**Banned case-insensitive:** `mensaje mensajebusiness mensaje-web wpp facebook meta instagram insta messenger oculus paypal stripe google gmail youtube tiktok twitter x-com discord slack microsoft office365 apple icloud amazon aws- openai chatgpt anthropic claude`
+**Banned case-insensitive:** `texto mensajeria empresarial canal de texto web canal de texto red social principal objetivo red social de fotos red social de fotos canal de mensajeria gafas de realidad virtual pasarela de pagos secundaria pasarela de pagos buscador principal correo electronico plataforma de video plataforma de videos cortos red social red social canal de comunicacion canal de comunicacion suite ofimatica suite ofimatica dispositivo personal almacenamiento en la nube tienda en linea infraestructura-en-la-nube- proveedor de IA asistente de IA generativa proveedor de IA modelo de IA`
 
 **Carve-outs:** functional terms, upstream OSS names, Hostinger incident quote.
 

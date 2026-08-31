@@ -1,27 +1,27 @@
 # Research-Driven Analysis — Open Source AI Agent Ecosystem
 
 > Compiled 2026-08-17 by Erebus for AI Whisperers Paraguay EAS
-> Source: GitHub API searches, repo READMEs, YouTube/community references
+> Source: GitHub API searches, repo READMEs, Plataforma de video/community references
 
 ## Tier 1 — Repos To Study (HIGH RELEVANCE)
 
 ### 1. claw-empire (⭐ 1,353)
-- Local-first, multi-provider (Claude Code, Codex, Gemini CLI, OpenCode, Kimi Code, GitHub Copilot, Antigravity)
+- Local-first, multi-provider (Modelo de IA Code, Codex, Gemini CLI, OpenCode, Kimi Code, GitHub Copilot, Antigravity)
 - Pixel-art office UI — shows the company as a living visual
 - LESSON: Our `/opt/data/dashboards/` could visualize the AIW org like this
 - URL: https://github.com/GreenSheep01201/claw-empire
 
 ### 2. nicepkg/auto-company (⭐ 185)
 - 14 AI agents (Bezos, Munger, DHH personas) brainstorm + write code + deploy
-- Powered by Claude Code
+- Powered by Modelo de IA Code
 - LESSON: We have 47 agents already — this is the "departments" version
 - URL: https://github.com/nicepkg/auto-company
 
-### 3. NikitaDmitrieff/auto-co-meta (⭐ 41)
-- ~50 lines of bash that turns Claude Code into a self-running company
+### 3. NikitaDmitrieff/auto-co-objetivo (⭐ 41)
+- ~50 lines of bash that turns Modelo de IA Code into a self-running company
 - "It's not a chatbot. It's not a framework. It's ~50 lines of bash."
 - LESSON: Our cron-based approach is right; we have MORE than 50 lines
-- URL: https://github.com/NikitaDmitrieff/auto-co-meta
+- URL: https://github.com/NikitaDmitrieff/auto-co-objetivo
 
 ### 4. Bennettxai/FounderOS-DEMO (⭐ 614)
 - "One-person business as AI-assisted departments: comms, funnel, social, finances"
@@ -82,7 +82,7 @@
 ### Insight 1: The Space Is Exploding But Immature
 
 - Most repos are 6-12 months old
-- Most use Claude Code as foundation
+- Most use Modelo de IA Code as foundation
 - Most have 14-24 agents (we have **47** — we're AHEAD)
 - Almost none have eval-gate + self-running check (we DO — we're ahead)
 - None have coaching product integration (we're UNIQUE here)
@@ -119,7 +119,7 @@ Per John's message: we should be able to build what 1000-person corps have but c
 
 **Concrete new departments we should add** (per FounderOS + user vision):
 
-1. **/comms agent** — aggregates WhatsApp, email, Slack
+1. **/comms agent** — aggregates WhatsApp, email, Canal de comunicacion
 2. **/funnel agent** — lead scoring + conversion tracking
 3. **/social agent** — posting cadence + audience growth
 4. **/content agent** — editorial calendar (already have marketing-content-producer)
@@ -130,7 +130,7 @@ Per John's message: we should be able to build what 1000-person corps have but c
 
 ### Insight 5: The Cost Equation Nobody Talks About
 
-Per auto-co-meta: **$1.80/cycle, ~30 cycles/day = $54/day/agent**
+Per auto-co-objetivo: **$1.80/cycle, ~30 cycles/day = $54/day/agent**
 
 - With 47 agents at 1 cycle/day = **$84/day = $2,520/month**
 - At 5 cycles/day = **$420/day = $12,600/month**
@@ -147,8 +147,8 @@ Per auto-co-meta: **$1.80/cycle, ~30 cycles/day = $54/day/agent**
 There's a YC-style community forming around autonomous AI companies:
 - `/r/LocalLLaMA` has threads on autonomous agents
 - HackerNews has Show HN posts monthly
-- YouTube creators (Wes Roth, AI Street Talk, NetworkChuck) review these
-- Twitter/X has #AICompany #AgentArmy hashtags
+- Plataforma de video creators (Wes Roth, AI Street Talk, NetworkChuck) review these
+- Red social/X has #AICompany #AgentArmy hashtags
 - Reddit r/AIAgents r/AI_Agents
 
 **We're positioned to be in this community. We should:**
@@ -193,7 +193,7 @@ Add the 8 new departments per Insight 4:
 
 - Write blog post (English + Spanish)
 - Submit Show HN
-- Network on HN + Reddit + Twitter
+- Network on HN + Reddit + Red social
 - Get feedback, iterate
 - Open-source the eval-gate + self-running-check patterns
 
@@ -210,5 +210,5 @@ The 12-factor audit is the right frame. Let me know which gap to close first.
 
 ---
 
-*Sources: GitHub API (August 2026), 12-factor-agents v1.x, repo READMEs, YouTube/community references*
+*Sources: GitHub API (August 2026), 12-factor-agents v1.x, repo READMEs, Plataforma de video/community references*
 *Compiled by Erebus for AI Whisperers Paraguay EAS, 2026-08-17*

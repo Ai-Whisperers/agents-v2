@@ -103,7 +103,7 @@ Port 8081, self-hosted:
 
 Per Hostinger incident (2026-Q1): `mensajeconnect.paragu-ai.com` flagged as phishing impersonation.
 
-**Banned case-insensitive:** `mensaje mensajebusiness mensaje-web wpp facebook meta instagram insta messenger oculus paypal stripe google gmail youtube tiktok twitter x-com discord slack microsoft office365 apple icloud amazon aws- openai chatgpt anthropic claude`
+**Banned case-insensitive:** `texto mensajeria empresarial canal de texto web canal de texto red social principal objetivo red social de fotos red social de fotos canal de mensajeria gafas de realidad virtual pasarela de pagos secundaria pasarela de pagos buscador principal correo electronico plataforma de video plataforma de videos cortos red social red social canal de comunicacion canal de comunicacion suite ofimatica suite ofimatica dispositivo personal almacenamiento en la nube tienda en linea infraestructura-en-la-nube- proveedor de IA asistente de IA generativa proveedor de IA modelo de IA`
 
 **Carve-outs:** bare functional terms, upstream OSS names, existing package names.
 
@@ -137,4 +137,23 @@ Ai-Whisperers/
 
 ---
 
-*Built with Hermes Agent + 12 DEMIURGE agents (49 constitution planned) + 235 skills + 90 scripts. Audited 9.0/10 on 12-factor. Self-running. Production-ready. Awaiting first customer.*
+*Built with Hermes Agent + 24 DEMIURGE agents (49 constitution planned) + 235 skills + 90 scripts. Audited 9.0/10 on 12-factor. Self-running. Production-ready. Awaiting first customer.*
+
+---
+
+## Repository renamed (2026-08-31)
+
+This repository has been renamed for clarity:
+
+| Old URL | New URL | Why |
+|---|---|---|
+| `github.com/Ai-Whisperers/agents-v2` | [`github.com/Ai-Whisperers/growth-coaching`](https://github.com/Ai-Whisperers/growth-coaching) | This repo is the **product** (the customer-facing GROW coaching platform). The old name "agents-v2" was meaningless to outsiders; "growth-coaching" describes what the product actually does. |
+| `github.com/Ai-Whisperers/agents` | [`github.com/Ai-Whisperers/agent-infra`](https://github.com/Ai-Whisperers/agent-infra) | This repo is the **infrastructure** (agent specs, runtime state, governance docs, outbox history). The old name "agents" was too generic; "agent-infra" makes the purpose clear. |
+
+GitHub redirects the old URLs automatically, so any links from docs/issues/PRs still work — they just forward to the new location.
+
+### Quick reference
+
+- **Product** (coaching service, GROW methodology, customer tiers, marketing): [`Ai-Whisperers/growth-coaching`](https://github.com/Ai-Whisperers/growth-coaching) (this repo)
+- **Infrastructure** (agent PROMPTs, runtime state, governance, decisions): [`Ai-Whisperers/agent-infra`](https://github.com/Ai-Whisperers/agent-infra)
+

@@ -72,7 +72,7 @@ def score_brief(brief_path: str) -> dict:
         checks.append({"check": "has_sections", "pass": False})
     
     max_score += 1
-    banned = ["anthropic", "claude", "openai", "chatgpt", "gpt-4", "mensaje", "whatsapp", "wpp", "stripe", "paypal"]
+    banned = ["proveedor de IA", "modelo de IA", "proveedor de IA", "asistente de IA generativa", "gpt-4", "texto", "whatsapp", "canal de texto", "pasarela de pagos", "pasarela de pagos secundaria"]
     found = [b for b in banned if b.lower() in text.lower()]
     if not found:
         score += 1

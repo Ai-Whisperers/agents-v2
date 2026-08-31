@@ -57,7 +57,7 @@ Per-agent triggers:
 
 ✅ Test message sent: 2026-08-17T12:55Z
 ✅ Key ID: 3EB04043347641FB522574 (received by Ivan)
-✅ Trademark-clean (avoided "meta" namespace)
+✅ Trademark-clean (avoided the brand-token namespace)
 ✅ Audit-clean (0 HIGH, 0 FAIL)
 
 ## How It Closes The Gap

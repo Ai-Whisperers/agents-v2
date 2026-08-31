@@ -42,7 +42,7 @@ Score: 1/9 = 11% → FAIL (exit 2)
 ✗ All 4 sections missing
 ✗ Word count: 25
 ✗ No numbers
-✗ Trademark violations: claude, whatsapp
+✗ Trademark violations: 2 banned brand tokens (model vendor + messaging app)
 ```
 
 ## Storage

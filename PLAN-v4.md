@@ -742,7 +742,7 @@ For Tier 1: Marketing = sub-function of Sales, with 2 dedicated agents.
 - Brand Manager
 - SEO Specialist
 - Email Marketing Specialist
-- Paid Ads Specialist (FORBIDDEN: trademark banlist on Meta, TikTok, etc.)
+- Paid Ads Specialist (FORBIDDEN: trademark banlist on Plataforma de Redes, Plataforma de videos cortos, etc.)
 - Community Manager
 - Event Coordinator
 - Partnerships Manager

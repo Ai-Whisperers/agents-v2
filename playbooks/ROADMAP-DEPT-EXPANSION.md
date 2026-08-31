@@ -1,8 +1,28 @@
 # Department Expansion Roadmap
 
 **Created**: 2026-08-28  
+**Last updated**: 2026-08-31 (status snapshot)  
 **Scope**: Scale from 3 active DEMIURGE departments to full org + meta-agent framework  
 **Philosophy**: Identify fast → flesh out one → extract meta-skills → scale with those skills
+
+---
+
+## Status snapshot (2026-08-31)
+
+| Phase | Item | Status | Evidence |
+|-------|------|--------|----------|
+| 1 | Identify + Stabilize | ✅ Done | `docs/INDEX.md`, `docs/ROLES-INVENTORY.md` updated; 24 DEMIURGE agents shipped |
+| 2 | Operations reference build | ✅ Done | `Kronos` ops lead + Hermes router wired (DEMIURGE-075, 076, 079, 080) |
+| 3 | Meta-agent framework | 🟡 Partial | Department Researcher (Thoth) + Echo shipped; Decorator/Finder/Coach pending |
+| 4 | Scale all departments | ⏳ Pending | 1 dept per session — Operations done, 5 remaining for next quarter |
+
+**Open Tier-1 dept activations (in priority order)**: Operations (done) → Engineering → Finance & Legal → AI Ops → Customer Success → RevOps → Research → People → Compliance → Knowledge Mgmt → Product Mgmt → Data Science → BD → Design → Executive Office
+
+**Files to keep updated**:
+- `docs/ROLES-INVENTORY.md` — 137 roles
+- `docs/MASTER-UPGRADE-CHANGELOG.md` — session log
+- `docs/phases/REMAINING-TASKS-AND-WISHLIST.md` — 135-item wishlist
+- `docs/phases/PHASE-25-AROUND-THE-CLOCK-UPGRADE.md` — most recent session
 
 ---
 

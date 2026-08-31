@@ -1,6 +1,6 @@
 ---
 name: proposal-drafter
-version: 0.2.0
+version: 0.3.0
 schedule: "on-demand"  # Triggered after discovery call
 owner: ivan
 parent_spec: /opt/data/agents/departments/03-sales-growth.md
@@ -86,6 +86,14 @@ hard_stops:
   - action: modify_pricing
     require_approval: true
     approved_human: ivan
+  - action: send_proposal_to_client
+    # NEW v0.3.0: must pass feasibility-gate before send.
+    # The gate reads the kiki_signed_off field in the scoping doc.
+    # Spec: /opt/data/agents-v2/packages/engineering/agents/feasibility-gate/PROMPT.md
+    require_approval: true
+    approved_human: ivan
+    prerequisite: feasibility_gate_decision == "ALLOW" or "BYPASS"
+    on_prerequisite_fail: emit_block_reason_to_ivan
 ```
 
 ## Idempotency contract
@@ -97,6 +105,26 @@ idempotency:
   duplicate_action: skip + log "duplicate_run"
   override: state.override_possible = true
 ```
+
+## Feasibility handoff (NEW v0.3.0)
+
+After the proposal is drafted, queue it for engineering review:
+
+1. Write a `proposal_ready` event to
+   `/opt/data/agents/scope-intake/inbox/<deal-slug>.json`
+   with the proposal body, claimed delivery date, deal ID, and
+   currency/amount. (`scope-intake` will produce the scoping doc.)
+2. **Do not** mark the proposal as `send-ready` until the
+   `feasibility-gate` returns `ALLOW` (or `BYPASS`).
+3. On `BLOCK`, surface the gate's reason to Ivan in plain English
+   and route the deal to whichever next step the gate recommends
+   ("route to scope-intake", "wait for kiki review", "request
+   re-review").
+
+The gate is fail-closed. If the scope-intake service is down,
+proposals cannot be sent — escalate to Ivan rather than bypassing.
+
+Field-name reference for the gate: `/opt/data/agents/scope-intake/inbox/twenty-schema.md`.
 
 ## Context-Packaging Escalation
 
@@ -164,4 +192,8 @@ If call notes missing or vague: queue draft with [TBD: client context] sections 
 
 ## CHANGELOG
 
+- v0.3.0 (2026-08-28): wired feasibility-gate prerequisite before
+  `send_proposal_to_client`. Drafts now produce a `proposal_ready`
+  event for `scope-intake` to review; sends wait for `ALLOW`/`BYPASS`
+  from the gate. Fails closed if the gate is unreachable.
 - v0.2.0 (2026-08-14): initial creation. HITL agent with reflection loop.

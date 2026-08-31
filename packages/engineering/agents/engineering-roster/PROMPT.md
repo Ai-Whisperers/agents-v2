@@ -1,6 +1,6 @@
 ---
 name: engineering-roster
-version: 0.2.0
+version: 0.3.0
 schedule: "0 20 * * 2,5"  # Tue+Fri 17:00 PYT (existing cron)
 owner: kiki
 parent_spec: /opt/data/agents/departments/04-engineering-delivery.md
@@ -38,6 +38,8 @@ Twice-weekly visibility into production health + Kiki's bandwidth.
 6. `/opt/data/logs/deploy-*.log` — recent deploys
 7. Kiki's recent commits (`/opt/data/agents/state/kiki-prep.json`)
 8. `/opt/data/agents/state/coord.json` — cross-repo stuck items
+9. **NEW (v0.3.0)**: `/opt/data/agents/state/delivery-tracker/delivery-tracker.json` — weekly sales-status report
+10. **NEW (v0.3.0)**: `/opt/data/agents/state/scope-intake/scope-intake.json` — signed-off scope in flight
 
 ## Output contract
 
